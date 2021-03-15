@@ -112,6 +112,7 @@ a:active {
   font-weight: 200;
   border: 2px solid #cd6326;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color .18s linear;
 }
 
@@ -185,6 +186,7 @@ a:active {
   border: none;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
   transition: background-color .18s linear;
 }
 
@@ -230,13 +232,25 @@ a:active {
   line-height: 36px;
 }
 
-.slider {
+.slider-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  width: 1200px;
   margin: 0;
   margin-top: 90px;
+  padding: 0;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.articles-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 30px;
   padding: 0;
 }
 
@@ -244,25 +258,36 @@ a:active {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  width: 320px;
+  min-width: 300px;
+  margin: 0 30px;
   height: 360px;
-  margin: 30px 30px;
   transition: all .18s linear;
 }
 
 .article:hover {
+  transform: scale(1.05);
   box-shadow: 0 0 30px #cd6326;
 }
 
 .article#first {
+  order: 1;
   background: url("img/background/deer.svg") no-repeat center / cover;
 }
 
 .article#second {
+  order: 2;
   background: url("img/background/squirrel.svg") no-repeat center / cover;
 }
+
 .article#third {
+  order: 3;
   background: url("img/background/bird.svg") no-repeat center / cover;
+}
+
+.article#fourth {
+  display: none;
+  order: 4;
+  background: url("img/background/item4.jpg") no-repeat center / cover;
 }
 
 .description {
@@ -289,10 +314,10 @@ a:active {
 }
 
 .slider-button {
-  width: 30px;
+  min-width: 30px;
   min-height: 45px;
-  margin: 15px 30px 15px 0;
-  border: none;
+  margin: 0;
+  padding: 0;
   border: 0;
   outline: 0;
   background: url(img/slider-button/slider-button-left-dark.svg) no-repeat center;
@@ -312,7 +337,7 @@ a:active {
 
 
 #right {
-  margin: 15px 0 15px 30px;
+  margin: 0;
   background: url(img/slider-button/slider-button-right-dark.svg) no-repeat center;
 }
 
