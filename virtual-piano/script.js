@@ -172,9 +172,10 @@ function playAudio(note) {
 }
 
 
+//Letter-Notes switch buttons
 let activeButton = document.querySelector('.btn-notes');
 let nonActiveButton = document.querySelector('.btn-letters');
-//Letter-Notes switch buttons
+
 const btnContainer = document.querySelector(".btn-container");
 btnContainer.addEventListener('click', (event) => {
     if(event.target == nonActiveButton) {
@@ -188,4 +189,39 @@ btnContainer.addEventListener('click', (event) => {
     }
   }
 );
+
+
+//fullscreen button 
+const fullscreenButton = document.querySelector('.fullscreen');
+fullscreenButton.addEventListener('click', (event) => {
+  doc = document.documentElement;
+  if(!document.fullscreenElement) {
+    if(doc.requestFullscreen) {
+      doc.requestFullscreen();        // W3C spec
+    }
+    else if (doc.mozRequestFullScreen) {
+      doc.mozRequestFullScreen();     // Firefox
+    }
+    else if (doc.webkitRequestFullscreen) {
+      doc.webkitRequestFullscreen();  // Safari
+    }
+    else if(doc.msRequestFullscreen) {
+      doc.msRequestFullscreen();      // IE/Edge
+    }
+  } else {
+    if(document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+  
+});
+
+
+function isHover(e) {
+  return (e.parentElement.querySelector(':hover') === e);
+}
 
