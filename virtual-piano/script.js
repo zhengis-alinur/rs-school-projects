@@ -4,7 +4,8 @@ let currentKey = undefined;
 let lastEvent = undefined;
 let lastKeyEvent = 'keyup';
 let pressed = new Set();
-console.log(keys);
+
+
 //Audio
 document.addEventListener("mouseup", (event) => {
   lastEvent = "mouseup";
@@ -30,9 +31,8 @@ piano.addEventListener("mousedown", (event) => {
 });
 
 piano.addEventListener("mouseover", (event) => {
-  const key = event.target;
-  if(key.classList.contains('piano-key') && lastEvent == 'mousedown' &&((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
-    
+  if(event.target.classList.contains('piano-key') && lastEvent == 'mousedown' &&((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
+    const key = event.target;
     key.classList.add("piano-key-active");
     const note = key.dataset.note;
     playAudio(note);
@@ -79,15 +79,15 @@ const keyUpHandler = function(event) {
       break;
     }
     case "KeyU": {
-      keys[10].classList.remove("piano-key-active");
+      keys[9].classList.remove("piano-key-active");
       break;
     }
     case "KeyI": {
-      keys[11].classList.remove("piano-key-active");
+      keys[10].classList.remove("piano-key-active");
       break;
     }
     case "KeyO": {
-      keys[12].classList.remove("piano-key-active");
+      keys[11].classList.remove("piano-key-active");
       break;
     }
   }
@@ -142,17 +142,17 @@ const keyDownHandler = function(event) {
         break;
       }
       case "KeyU": {
-        keys[10].classList.add("piano-key-active");
+        keys[9].classList.add("piano-key-active");
         playAudio('f♯');
         break;
       }
       case "KeyI": {
-        keys[11].classList.add("piano-key-active");
+        keys[10].classList.add("piano-key-active");
         playAudio('g♯');
         break;
       }
       case "KeyO": {
-        keys[12 ].classList.add("piano-key-active");
+        keys[11].classList.add("piano-key-active");
         playAudio('a♯');
         break;
       }
@@ -172,11 +172,9 @@ function playAudio(note) {
 }
 
 
-
-//Letter-Notes switch buttons
 let activeButton = document.querySelector('.btn-notes');
 let nonActiveButton = document.querySelector('.btn-letters');
-
+//Letter-Notes switch buttons
 const btnContainer = document.querySelector(".btn-container");
 btnContainer.addEventListener('click', (event) => {
     if(event.target == nonActiveButton) {
@@ -191,32 +189,3 @@ btnContainer.addEventListener('click', (event) => {
   }
 );
 
-
-//fullscreen button 
-const fullscreenButton = document.querySelector('.fullscreen');
-fullscreenButton.addEventListener('click', (event) => {
-  doc = document.documentElement;
-  if(!document.fullscreenElement) {
-    if(doc.requestFullscreen) {
-      doc.requestFullscreen();        // W3C spec
-    }
-    else if (doc.mozRequestFullScreen) {
-      doc.mozRequestFullScreen();     // Firefox
-    }
-    else if (doc.webkitRequestFullscreen) {
-      doc.webkitRequestFullscreen();  // Safari
-    }
-    else if(doc.msRequestFullscreen) {
-      doc.msRequestFullscreen();      // IE/Edge
-    }
-  } else {
-    if(document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    }
-  }
-  
-});
