@@ -146,7 +146,7 @@ body {
 	bottom: -45px;
 	left: 20px;
 	transition: 0.3s;
-  pointer-events: none;
+  pointer-events: none;g
 }
 
 .piano-key::after {
