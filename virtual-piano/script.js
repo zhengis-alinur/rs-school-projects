@@ -31,7 +31,7 @@ piano.addEventListener("mousedown", (event) => {
 });
 
 piano.addEventListener("mouseover", (event) => {
-  if(event.target.classList.contains('piano-key') && lastEvent == 'mousedown' &&((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
+  if(event.target.classList.contains('piano-key') && lastEvent == 'mousedown' && ((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
     const key = event.target;
     key.classList.add("piano-key-active");
     const note = key.dataset.note;
@@ -79,15 +79,15 @@ const keyUpHandler = function(event) {
       break;
     }
     case "KeyU": {
-      keys[9].classList.remove("piano-key-active");
-      break;
-    }
-    case "KeyI": {
       keys[10].classList.remove("piano-key-active");
       break;
     }
-    case "KeyO": {
+    case "KeyI": {
       keys[11].classList.remove("piano-key-active");
+      break;
+    }
+    case "KeyO": {
+      keys[12].classList.remove("piano-key-active");
       break;
     }
   }
@@ -142,17 +142,17 @@ const keyDownHandler = function(event) {
         break;
       }
       case "KeyU": {
-        keys[9].classList.add("piano-key-active");
+        keys[10].classList.add("piano-key-active");
         playAudio('f♯');
         break;
       }
       case "KeyI": {
-        keys[10].classList.add("piano-key-active");
+        keys[11].classList.add("piano-key-active");
         playAudio('g♯');
         break;
       }
       case "KeyO": {
-        keys[11].classList.add("piano-key-active");
+        keys[12].classList.add("piano-key-active");
         playAudio('a♯');
         break;
       }
