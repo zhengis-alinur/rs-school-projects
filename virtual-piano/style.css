@@ -159,6 +159,11 @@ body {
   color: #fff;
 }
 
+.piano-key:active::before,
+.piano-key:active::after {
+  color: #00b4a4;
+}
+
 .sharp:active {
 	border-top: 0;
 }
