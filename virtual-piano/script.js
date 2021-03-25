@@ -33,7 +33,8 @@ piano.addEventListener("mousedown", (event) => {
 
 piano.addEventListener("mouseover", (event) => {
   const key = event.target;
-  key.classList.add("piano-key-hover");
+  if((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))
+    key.classList.add("piano-key-hover");
   if(key.classList.contains('piano-key') && lastEvent == 'mousedown' &&((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
     
     key.classList.add("piano-key-active");

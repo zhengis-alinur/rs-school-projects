@@ -94,9 +94,7 @@ body {
 	transition: 0.3s;
 	cursor: pointer;
 }
-.piano-key:hover {
-	background-color: #fff;
-}
+
 
 .keys-sharp {
 	position: absolute;
@@ -121,13 +119,18 @@ body {
 	transform-origin: center top;
 }
 
-.piano-key.sharp:hover {
-  background-color: #3a444d;
-}
 
 .piano-key.piano-key-active,
 .piano-key.sharp.piano-key-active {
+  background-color: #fff;
 	transform: scale(0.96);
+}
+
+.piano-key.piano-key-hover {
+  background-color: #fff;
+}
+.piano-key.sharp.piano-key-hover {
+  background-color: #3a444d;
 }
 
 .piano-key.none {
