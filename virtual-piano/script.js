@@ -4,8 +4,7 @@ let currentKey = undefined;
 let lastEvent = undefined;
 let lastKeyEvent = 'keyup';
 let pressed = new Set();
-
-
+console.log(keys);
 //Audio
 document.addEventListener("mouseup", (event) => {
   lastEvent = "mouseup";
@@ -31,8 +30,9 @@ piano.addEventListener("mousedown", (event) => {
 });
 
 piano.addEventListener("mouseover", (event) => {
-  if(event.target.classList.contains('piano-key') && lastEvent == 'mousedown' && ((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
-    const key = event.target;
+  const key = event.target;
+  if(key.classList.contains('piano-key') && lastEvent == 'mousedown' &&((event.offsetY < event.target.offsetHeight)&&(event.offsetY > event.target.offsetHeight - event.target.clientHeight))) {
+    
     key.classList.add("piano-key-active");
     const note = key.dataset.note;
     playAudio(note);
@@ -152,7 +152,7 @@ const keyDownHandler = function(event) {
         break;
       }
       case "KeyO": {
-        keys[12].classList.add("piano-key-active");
+        keys[12 ].classList.add("piano-key-active");
         playAudio('a♯');
         break;
       }
@@ -170,6 +170,7 @@ function playAudio(note) {
   noteSound.currentTime = 0;
   noteSound.play();
 }
+
 
 
 //Letter-Notes switch buttons
@@ -219,9 +220,3 @@ fullscreenButton.addEventListener('click', (event) => {
   }
   
 });
-
-
-function isHover(e) {
-  return (e.parentElement.querySelector(':hover') === e);
-}
-
