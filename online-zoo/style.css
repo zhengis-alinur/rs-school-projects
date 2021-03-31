@@ -59,10 +59,7 @@ footer .left .logo-name {
 }
 header .main-nav,
 footer .main-nav {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
+  margin-left: 52px;
   list-style: none;
 }
 header .main-nav li,
@@ -72,6 +69,10 @@ footer .main-nav li {
 }
 header .main-nav a,
 footer .main-nav a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.74px;
   text-decoration: none;
   text-transform: uppercase;
   color: #C5E1E6;
@@ -124,7 +125,9 @@ footer .design-info {
 .intro .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+.intro .container .text {
+  margin-top: 73px;
 }
 .intro .container .title {
   color: #F3F7F8;
@@ -132,14 +135,17 @@ footer .design-info {
   font-size: 72px;
   font-weight: 300;
   line-height: 85.32px;
+  text-transform: none;
 }
-.intro .container .title span {
+.intro .container .title.bold {
   font-family: 'Rubik', sans-serif;
   font-size: 64px;
   font-weight: 500;
   line-height: 75.84px;
 }
 .intro .container .subtitle {
+  width: 480px;
+  margin-top: 27px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -147,6 +153,7 @@ footer .design-info {
   color: #F3F7F8;
 }
 .intro .container button {
+  margin-top: 87px;
   padding: 14px 84px;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -208,6 +215,7 @@ footer .design-info {
 .illustrations {
   width: 100%;
   height: 27vw;
+  margin-top: 32px;
   background: url(assets/img/illustrations/bg.svg) no-repeat center / cover;
   display: flex;
   justify-content: center;
@@ -259,12 +267,24 @@ footer .design-info {
 }
 .slider-button {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
+  border: none;
   background: url(assets/img/pets-in-zoo/slider-button.svg) no-repeat center / cover;
 }
 .slider-button.left {
   transform: rotate(180deg);
+}
+.slider-button:active {
+  outline: none;
+  border: none;
+}
+.slider-button:focus {
+  outline: none;
+  border: none;
+}
+.pets-in-zoo {
+  margin-top: 70px;
 }
 .pets-in-zoo .container {
   position: relative;
@@ -275,6 +295,24 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.pets-in-zoo .head button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 2px solid #19707D;
+  border-radius: 100px;
+  padding: 14px 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.74px;
+  text-transform: uppercase;
+  color: #19707D;
+}
+.pets-in-zoo .head button img {
+  width: 24px;
+  margin-right: 13px;
 }
 .pets-in-zoo .pets-container {
   display: flex;
@@ -350,7 +388,7 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  margin-top: 100px;
   max-width: 100vw;
   height: 29vw;
   background: url(assets/img/pay-and-feed/bg.svg) no-repeat center / cover;
@@ -360,7 +398,10 @@ footer .design-info {
   margin: 0;
 }
 .pay-and-feed .container h2 {
+  position: absolute;
   color: #C5E1E6;
+  top: -100px;
+  left: -48px;
 }
 .pay-and-feed .container .don-steps {
   display: flex;
@@ -370,6 +411,9 @@ footer .design-info {
   margin: 0 auto;
 }
 .pay-and-feed .container .don-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -380,8 +424,14 @@ footer .design-info {
   border-radius: 50%;
   background-color: white;
 }
+.pay-and-feed .container .don-step .caption {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C5E1E6;
+}
 .testimonials {
-  margin-bottom: 100px;
+  margin-top: 100px;
 }
 .testimonials .container {
   display: flex;
@@ -392,6 +442,24 @@ footer .design-info {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.testimonials .container button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 2px solid #19707D;
+  border-radius: 100px;
+  padding: 14px 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.74px;
+  text-transform: uppercase;
+  color: #19707D;
+}
+.testimonials .container button img {
+  width: 24px;
+  margin-right: 13px;
+}
 .testimonials .reviews {
   display: flex;
   justify-content: space-between;
@@ -399,13 +467,20 @@ footer .design-info {
   overflow: hidden;
 }
 .testimonials .testimonial {
+  box-sizing: border-box;
   width: 485px;
 }
 .testimonials .testimonial .review {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 485px;
   height: 187.81px;
   background: url(assets/img/testimonials/think-cloud.svg) no-repeat center / cover;
+}
+.testimonials .testimonial .review span {
+  position: relative;
+  left: 45px;
+  top: 28px;
 }
 .testimonials .date {
   font-size: 14px;
@@ -419,6 +494,7 @@ footer .design-info {
 .testimonials .person {
   display: flex;
   align-items: center;
+  margin-left: 10px;
   font-style: italic;
   line-height: 18.75px;
 }
@@ -427,6 +503,7 @@ footer .design-info {
 }
 .look-animals {
   position: relative;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 .look-animals .container {

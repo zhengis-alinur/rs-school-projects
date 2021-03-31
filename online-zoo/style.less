@@ -53,13 +53,14 @@ header, footer {
     }
   }
   .main-nav {
-    .roboto-mono(18px, 500, 24px);
+    margin-left: 52px;
     list-style: none;
     li {
       display: inline-block;
       margin-right: 52px;
     }
     a {
+      .roboto-mono(18px, 500, 23.74px);
       text-decoration: none;
       text-transform: uppercase;
       color: @custom-white;
@@ -117,19 +118,25 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    .text {
+      margin-top: 73px;
+    }
     .title {
       color: @white;
       .rubik(72px, 300, 85.32px);
-      span {
+      text-transform: none;
+      &.bold {
         .rubik(64px, 500, 75.84px);
       }
     }
     .subtitle {
+      width: 480px;
+      margin-top: 27px;
       .roboto(14px, 400, 20px);
       color: @white;
     }
     button {
+      margin-top: 87px;
       padding: 14px 84px;
       .roboto-mono(18px, 400, 23.74px);
       text-transform: uppercase;
@@ -193,6 +200,7 @@ footer {
 .illustrations {
   width: 100%;
   height: 27vw;
+  margin-top: 32px;
   background: url(assets/img/illustrations/bg.svg) no-repeat center/cover;
   display: flex;
   justify-content: center;
@@ -246,15 +254,25 @@ footer {
 
 .slider-button {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
+  border: none;
   background: url(assets/img/pets-in-zoo/slider-button.svg) no-repeat center/cover;
   &.left {
     transform: rotate(180deg);
   }
+  &:active {
+    outline: none;
+    border: none;
+  }
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }
 
 .pets-in-zoo {
+  margin-top: 70px;
   .container {
     position: relative;
     display: flex;
@@ -264,6 +282,21 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    button {
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        margin-right: 13px;
+      }
+      background: none;
+      border: 2px solid @button-lined;
+      border-radius: 100px;
+      padding: 14px 20px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @button-lined;
+    }
   }
   .pets-container {
     display: flex;
@@ -342,13 +375,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  margin-top: 100px;
   max-width: 100vw;
   height: 29vw;
   background: url(assets/img/pay-and-feed/bg.svg) no-repeat center/cover;
   .container{
     h2 {
+      position: absolute;
       color: @custom-white;
+      top: -100px;
+      left: -48px
     }
     position: relative;
     margin: 0;
@@ -360,6 +396,9 @@ footer {
       margin: 0 auto;
     }
     .don-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin: 0;
       padding: 0;
       img {
@@ -369,12 +408,18 @@ footer {
         border-radius: 50%;
         background-color: white;
       }
+      .caption {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 20px;
+        color: @custom-white;
+      }
     }
   }
 }
 
 .testimonials {
-  margin-bottom: 100px;
+  margin-top: 100px;
   .container {
     display: flex;
     flex-direction: column;
@@ -382,6 +427,21 @@ footer {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        margin-right: 13px;
+      }
+      background: none;
+      border: 2px solid @button-lined;
+      border-radius: 100px;
+      padding: 14px 20px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @button-lined;
     }
   }
   .reviews {
@@ -391,14 +451,22 @@ footer {
     overflow: hidden
   }
   .testimonial {
+    box-sizing: border-box;
     width: 485px;
     .review {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
       width: 485px;
       height: 187.81px;
       background: url(assets/img/testimonials/think-cloud.svg) no-repeat center/cover;
+      span {
+        position: relative;
+        left: 45px;
+        top: 28px;
+      }
     }
   }
+
   .date {
     font-size: 14px;
     line-height: 16.41px;
@@ -411,6 +479,7 @@ footer {
   .person {
     display: flex;
     align-items: center;
+    margin-left: 10px;
     font-style: italic;
     line-height: 18.75px;
     span {
@@ -421,6 +490,7 @@ footer {
 
 .look-animals {
   position: relative;
+  margin-top: 100px;
   margin-bottom: 100px;
   .container {
     position: relative;
