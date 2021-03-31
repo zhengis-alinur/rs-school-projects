@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>online-zoo</title>
   <link rel="stylesheet" href="style.css"> </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 <body>
   <header>
     <div class="container">
@@ -22,11 +24,11 @@
         </ul>
       </div>
       <div class="right">
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Search"> <img class="search-icon" src="" alt="">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" placeholder="Search">
         </div>
         <button class="login">log in</button>
-        <button class="signin">sign in</button>
+        <button class="signup">sign up</button>
       </div>
     </div>
   </header>
@@ -34,7 +36,7 @@
     <section class="intro">
       <div class="container">
         <div class="text">
-          <h2 class="title">Watch your favorite animals online</h2>
+          <h2 class="title">Watch your favorite <span>animals online</span></h2>
           <p class="subtitle">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
           <button class="watch-now">Watch now</button>
         </div>
@@ -109,7 +111,7 @@
           </svg>
           <div class="pet">
             <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+                <div class="pet-pic"></div>
             </div>
             <div class="caption">
               <div class="text">
@@ -217,17 +219,7 @@
           <div class="testimonial">
             <div class="review">
               <p class="date">20 December 2020</p>
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
-            </div>
-            <div class="person">
-              <img src="assets/img/testimonials/person-pic.svg" alt="">
-              <span>Adam, Spain</span>
-            </div>
-          </div>
-          <div class="testimonial">
-            <div class="review">
-              <span class="date">20 December 2020</span>
-              <span>Lorem ipsum dolor sit amet, consectetur.</span>
+              <p class="feedback">Lorem ipsum dolor sit amet, consectetur.</p>
             </div>
             <div class="person">
               <img src="assets/img/testimonials/person-pic.svg" alt="">
@@ -237,7 +229,17 @@
           <div class="testimonial">
             <div class="review">
               <p class="date">20 December 2020</p>
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              <p class="feedback">Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class="person">
+              <img src="assets/img/testimonials/person-pic.svg" alt="">
+              <span>Adam, Spain</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="review">
+              <p class="date">20 December 2020</p>
+              <p class="feedback">Lorem ipsum dolor sit amet, consectetur.</p>
             </div>
             <div class="person">
               <img src="assets/img/testimonials/person-pic.svg" alt="">

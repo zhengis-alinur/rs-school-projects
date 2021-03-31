@@ -4,10 +4,14 @@
 @import "assets/less/_mixins";
 
 
-body {
-  background-color: @background;
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: @background;
+  .roboto(16px, 400, 18px);
 }
 
 .container {
@@ -16,11 +20,14 @@ body {
   padding: 0 28px;
 }
 
-h1,
-h2,
-h3,
-p{
-  margin: 0;
+h2 {
+  .rubik(24px, 400, 28.44px);
+  text-transform: uppercase;
+  color: @custom-black;
+}
+
+h3 {
+  .roboto(24px, 500, 28.13px);
 }
 
 svg {
@@ -40,14 +47,58 @@ header, footer {
   .left {
     display: flex;
     align-items: center;
+    .logo-name {
+      .rubik(34.8387px, 500, 41px);
+      color: @custom-black;
+    }
+  }
+  .main-nav {
+    .roboto-mono(18px, 500, 24px);
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 52px;
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: @custom-white;
+    }
   }
 
   .right {
     display: flex;
   }
+}
 
-  li {
-    display: inline-block;
+header  {
+  .right {
+    .search-wrapper {
+      position: relative;
+      margin-right: 50px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: url(assets/img/header/search-icon.svg) no-repeat center/cover;
+      }
+      &::after:hover &{
+        transform: translateX(20px);
+      }
+    }
+  }
+  button {
+    .roboto(18px, 400, 21.09px);
+    color: @custom-white;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    padding: 16px 15px;
+  }
+  .signup {
+    border: 1px solid @custom-white;
+    border-radius: 100px;
   }
 }
 
@@ -67,6 +118,26 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .title {
+      color: @white;
+      .rubik(72px, 300, 85.32px);
+      span {
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    .subtitle {
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    button {
+      padding: 14px 84px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @custom-black;
+      border: none;
+      border-radius: 100px;
+      background: white;
+    }
     .intro-panda {
       background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center/cover;
       -webkit-mask-image: url("https://s8.hostingkartinok.com/uploads/images/2021/03/65a9b70adeddd4af6bb4a14f73d8d470.png");
@@ -91,6 +162,10 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 430px;
+    span {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   .icon-container {
     width: 145px;
@@ -210,8 +285,26 @@ footer {
       background-color: white;
     }
     .pet-pic{
+      position: relative;
+      width: 250px;
+      height: 220px;
+      background: url(assets/img/pets-in-zoo/panda.svg);
       clip-path: url(#path);
+      overflow: hidden;
     }
+
+    .pet-pic::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+
+    }
+
     .img-container::after {
       position: absolute;
       content: "";
@@ -229,6 +322,10 @@ footer {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background-color: white;
+    }
+    p {
+      .roboto(16px, 400, 18.72px);
+      color: @custom-gray;
     }
   }
   .slider-button {
@@ -250,6 +347,9 @@ footer {
   height: 29vw;
   background: url(assets/img/pay-and-feed/bg.svg) no-repeat center/cover;
   .container{
+    h2 {
+      color: @custom-white;
+    }
     position: relative;
     margin: 0;
     .don-steps {
@@ -299,6 +399,24 @@ footer {
       background: url(assets/img/testimonials/think-cloud.svg) no-repeat center/cover;
     }
   }
+  .date {
+    font-size: 14px;
+    line-height: 16.41px;
+    color: #b2b2b2;
+  }
+  .feedback {
+    font-style: italic;
+    line-height: 18.75px;
+  }
+  .person {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    line-height: 18.75px;
+    span {
+      margin-left: 16px;
+    }
+  }
 }
 
 .look-animals {
@@ -321,8 +439,10 @@ footer {
   .animal {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-basis: 76px 82px;
+    .roboto-mono(14px, 500, 18.46px);
+    text-transform: uppercase;
   }
   .buttons {
     display: inline-block;
@@ -339,8 +459,8 @@ footer {
 
 @media (min-width: 1921px) {
   .intro-panda {
-    width: 1150px;
-    min-height: 700px;
+    min-width: 43.9vw;
+    min-height: 36.45vw;
   }
 }
 @media (max-width: 1920px) {
@@ -353,6 +473,7 @@ footer {
   .arrow {
     width: 300px;
     height: 50px;
+    margin: 0 30px;
     background-image: url(assets/img/pay-and-feed/arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
