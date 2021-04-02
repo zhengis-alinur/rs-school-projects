@@ -1,13 +1,17 @@
 // compress: false
 
-@import "_vars";
-@import "_mixins";
+@import "assets/less/_vars";
+@import "assets/less/_mixins";
 
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: @background;
-  margin: 0;
-  padding: 0;
+  .roboto(16px, 400, 18px);
 }
 
 .container {
@@ -16,48 +20,21 @@ body {
   padding: 0 28px;
 }
 
-h1,
-h2,
-h3,
-p{
-  margin: 0;
+h2 {
+  .rubik(24px, 400, 28.44px);
+  text-transform: uppercase;
+  color: @custom-black;
+}
+
+h3 {
+  .roboto(24px, 500, 28.13px);
 }
 
 svg {
   position: absolute;
 }
 
-header, footer {
-  width: 100%;
-  height: 140px;
-  background-color: @primary;
-  .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .left {
-    display: flex;
-    align-items: center;
-  }
-
-  .right {
-    display: flex;
-  }
-
-  li {
-    display: inline-block;
-  }
-}
-
-footer {
-  height: 200px;
-  .design-info{
-    display: flex;
-    flex-direction: column;
-  }
-}
+@import "assets/less/_header";
 
 .intro {
   width: 100%;
@@ -66,7 +43,18 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    .text {
+      margin-top: 3.8%;
+    }
+    button {
+      padding: 14px 84px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @custom-black;
+      border: none;
+      border-radius: 100px;
+      background: white;
+    }
     .intro-panda {
       background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center/cover;
       -webkit-mask-image: url("https://s8.hostingkartinok.com/uploads/images/2021/03/65a9b70adeddd4af6bb4a14f73d8d470.png");
@@ -91,6 +79,10 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 430px;
+    span {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   .icon-container {
     width: 145px;
@@ -118,6 +110,7 @@ footer {
 .illustrations {
   width: 100%;
   height: 27vw;
+  margin-top: 32px;
   background: url(assets/img/illustrations/bg.svg) no-repeat center/cover;
   display: flex;
   justify-content: center;
@@ -152,7 +145,6 @@ footer {
       width: 4.65vw;
       height: 8.22vw;
       background: url(assets/img/illustrations/smallTree.svg) no-repeat center/cover;
-
     }
     .panda {
       position: relative;
@@ -169,32 +161,81 @@ footer {
   }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .slider-button {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: url(assets/img/pets-in-zoo/slider-button.svg) no-repeat center/cover;
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: url(assets/img/icons/slider-button.svg) no-repeat center/cover;
   &.left {
     transform: rotate(180deg);
+  }
+  &:active {
+    outline: none;
+    border: none;
+  }
+  &:focus {
+    outline: none;
+    border: none;
   }
 }
 
 .pets-in-zoo {
+  margin-top: 70px;
   .container {
     position: relative;
     display: flex;
     flex-direction: column;
   }
+
+  .penguin {
+    position: absolute;
+    width: 33px;
+    height: 65.69px;
+    left: 100%;
+    top: 88%;
+    background: url(assets/img/pets-in-zoo/Penguin.svg) no-repeat center/cover;
+  }
+
   .head {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    button {
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        margin-right: 13px;
+      }
+      background: none;
+      border: 2px solid @button-lined;
+      border-radius: 100px;
+      padding: 14px 20px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @button-lined;
+    }
   }
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .pets-container {
+    position: relative;
+    left: -35px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 98%;
     margin-top: 62px;
   }
   .pet {
@@ -204,14 +245,31 @@ footer {
       display: flex;
       justify-content: center;
       position: relative;
-      padding: 20px 125px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       background-color: white;
     }
     .pet-pic{
+      position: relative;
+      width: 250px;
+      height: 220px;
+      background: url(assets/img/pets-in-zoo/panda.svg);
       clip-path: url(#path);
+      overflow: hidden;
     }
+
+    .pet-pic::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+
+    }
+
     .img-container::after {
       position: absolute;
       content: "";
@@ -229,6 +287,16 @@ footer {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background-color: white;
+      .button-tv {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: url(assets/img/icons/tv-icon.svg) no-repeat center/cover;
+      }
+    }
+    p {
+      .roboto(16px, 400, 18.72px);
+      color: @custom-gray;
     }
   }
   .slider-button {
@@ -245,11 +313,17 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  margin-top: 100px;
   max-width: 100vw;
   height: 29vw;
   background: url(assets/img/pay-and-feed/bg.svg) no-repeat center/cover;
   .container{
+    h2 {
+      position: absolute;
+      color: @custom-white;
+      top: -100px;
+      left: -48px
+    }
     position: relative;
     margin: 0;
     .don-steps {
@@ -260,6 +334,9 @@ footer {
       margin: 0 auto;
     }
     .don-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin: 0;
       padding: 0;
       img {
@@ -269,12 +346,18 @@ footer {
         border-radius: 50%;
         background-color: white;
       }
+      .caption {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 20px;
+        color: @custom-white;
+      }
     }
   }
 }
 
 .testimonials {
-  margin-bottom: 100px;
+  margin-top: 100px;
   .container {
     display: flex;
     flex-direction: column;
@@ -282,6 +365,21 @@ footer {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        margin-right: 13px;
+      }
+      background: none;
+      border: 2px solid @button-lined;
+      border-radius: 100px;
+      padding: 14px 20px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      color: @button-lined;
     }
   }
   .reviews {
@@ -291,18 +389,46 @@ footer {
     overflow: hidden
   }
   .testimonial {
+    box-sizing: border-box;
     width: 485px;
     .review {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
       width: 485px;
       height: 187.81px;
       background: url(assets/img/testimonials/think-cloud.svg) no-repeat center/cover;
+      span {
+        position: relative;
+        left: 45px;
+        top: 28px;
+      }
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    line-height: 16.41px;
+    color: #b2b2b2;
+  }
+  .feedback {
+    font-style: italic;
+    line-height: 18.75px;
+  }
+  .person {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-style: italic;
+    line-height: 18.75px;
+    span {
+      margin-left: 16px;
     }
   }
 }
 
 .look-animals {
   position: relative;
+  margin-top: 100px;
   margin-bottom: 100px;
   .container {
     position: relative;
@@ -315,32 +441,27 @@ footer {
   .slider {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+  }
+  .animals {
+    display: flex;
     width: 90%;
+    justify-content: space-between;
   }
   .animal {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-basis: 76px 82px;
-  }
-  .buttons {
-    display: inline-block;
-    position: absolute;
-    left: 95%;
-    top: 90px;
-  }
-  .slider-button {
-    &.left {
-      top: 35px;
-    }
+    .roboto-mono(14px, 500, 18.46px);
+    text-transform: uppercase;
   }
 }
 
 @media (min-width: 1921px) {
   .intro-panda {
-    width: 1150px;
-    min-height: 700px;
+    width: 803px;
+    height: 666px;
   }
 }
 @media (max-width: 1920px) {
@@ -353,19 +474,70 @@ footer {
   .arrow {
     width: 300px;
     height: 50px;
-    background-image: url(assets/img/pay-and-feed/arrow.svg);
+    margin: 0 30px;
+    background-image: url(assets/img/icons/arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
+  .intro {
+    .title {
+      position: relative;
+      color: @white;
+      .rubik(72px, 300, 85.32px);
+      text-transform: none;
+      &.bold {
+        width: 500px;
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    button {
+      margin-top: 87px;
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      max-height: 800px;
+    }
+  }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1220px){
   .arrow {
     width: 204px;
     height: 50px;
-    background-image: url(assets/img/pay-and-feed/arrow-desktop.svg);
+    background-image: url(assets/img/icons/arrow-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
+  }
+  .main-nav {
+    width: 550px;
+  }
+  .intro {
+    .title {
+      color: @white;
+      .rubik(48px, 300, 56.88px);
+      text-transform: none;
+      &.bold {
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      width: 560px;
+      height: 460px;
+    }
+    button {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -373,7 +545,7 @@ footer {
   .arrow {
     width: 10vw;
     height: 21px;
-    background-image: url(assets/img/pay-and-feed/small-arrow.svg);
+    background-image: url(assets/img/icons/small-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
   }

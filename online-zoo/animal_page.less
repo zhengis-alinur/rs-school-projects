@@ -1,0 +1,175 @@
+@import "assets/less/_vars";
+@import "assets/less/_mixins";
+
+
+body {
+  background-color: @background;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+h1,
+h2,
+h3,
+p{
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+}
+
+@import "assets/less/_header";
+
+main {
+  margin: 0 auto;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 420px;
+      min-width: 155px;
+    }
+    .img-wrapper {
+      display: flex;
+      position: relative;
+      margin: 0 auto;
+      justify-content: center;
+      .frame {
+        width: 105px;
+        height: 105px;
+        &.current {
+          background: url(assets/img/animal-page/frame.svg) no-repeat center/cover;
+        }
+
+      }
+      .img {
+        position: absolute;
+        top: 15px;
+        left: 45px;
+      }
+    }
+    .content {
+      min-width: 86.5%;
+      margin: 0;
+      iframe {
+        width: 100%;
+        height: 600px;
+        border-radius: 20px;
+      }
+      .side-cameras {
+        display: flex;
+        flex-direction: column;
+
+      }
+      .slider {
+        display: flex;
+        justify-content: space-between;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+
+        .slider-button {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background: url(assets/img/pets-in-zoo/slider-button.svg) no-repeat center/cover;
+          &.left {
+            top: 40px;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .cameras {
+        display: flex;
+        width: 90.4%;
+        overflow: hidden;
+        .shot {
+          min-width: 31.5%;
+          min-height: 240px;
+          margin-right: 32px;
+          background-color: aqua;
+          border-radius: 10px;
+        }
+      }
+
+
+      .about {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .illustrations {
+  width: 100%;
+  height: 27vw;
+  background: url(assets/img/illustrations/bg.svg) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: @illustrations-height;
+    overflow: hidden;
+    .bamboo.small {
+      position: relative;
+      width: 6.05vw;
+      height: 11.5vw;
+      background: url(assets/img/illustrations/Bamboo.svg) no-repeat center/cover;
+    }
+    .tree.one{
+      position: relative;
+      width: 6.77vw;
+      height: 11.97vw;
+      background: url(assets/img/illustrations/bigTree.svg) no-repeat center/cover;
+    }
+    .tree.two{
+      position: relative;
+      width: 6.77vw;
+      height: 11.97vw;
+      background: url(assets/img/illustrations/bigTree.svg) no-repeat center/cover;
+    }
+    .tree.small {
+      position: relative;
+      width: 4.65vw;
+      height: 8.22vw;
+      background: url(assets/img/illustrations/smallTree.svg) no-repeat center/cover;
+
+    }
+    .panda {
+      position: relative;
+      width: 8.8vw;
+      height: 8.07vw;
+      background: url(assets/img/illustrations/Panda.svg) no-repeat center/cover;
+    }
+    .bamboo {
+      position: relative;
+      width: 6.05vw;
+      height: 11.5vw;
+      background: url(assets/img/illustrations/Bamboo.svg) no-repeat center/cover;
+    }
+  }
+}
+}
+
+
+

@@ -1,0 +1,29 @@
+//main: ../../style.less
+.image-frame(@width, @height, @bg) {
+    position: relative;
+    min-width: @width;
+    min-height: @height;
+    background: url(@bg) center/cover;
+    overflow: hidden;
+}
+
+.roboto(@size, @weight, @line-height) {
+  font-family: 'Roboto', sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
+
+.roboto-mono(@size, @weight, @line-height) {
+  font-family: 'Roboto Mono', monospace;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
+
+.rubik(@size, @weight, @line-height) {
+  font-family: 'Rubik', sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
