@@ -8,24 +8,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <div class="left">
         <div class="logo-container">
           <img src="assets/img/header/logo-large.svg" alt="">
         </div>
         <ul class="main-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Map</a></li>
-          <li><a href="#">Zoos</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">Design</a></li>
+          <li><a href="index.html" class="link current">About</a></li>
+          <li><a href="map.html" class="link">Map</a></li>
+          <li><a href="animal_page.html" class="link">Zoos</a></li>
+          <li><a href="#" class="link">Contact us</a></li>
+          <li><a href="#" class="link">Design</a></li>
         </ul>
       </div>
       <div class="right">
         <div class="search-wrapper">
           <input type="text" class="search-input" placeholder="Search">
         </div>
+        <div class="search-button"></div>
         <button class="login">log in</button>
         <button class="signup">sign up</button>
       </div>
@@ -97,93 +98,98 @@
         <div class="head">
           <h2 class="title">Pets in zoo</h2>
           <button>
-            <img src="assets/img/pets-in-zoo/heart-icon.svg" alt="">
+            <img src="assets/img/icons/heart-icon.svg" alt="">
             <span>choose your favorite</span>
           </button>
         </div>
-        <div class="pets-container">
-          <svg>
-            <defs>
-              <clipPath id="path">
-                <path d="M208.771 45.8713C228.621 72.65 234.135 109.15 223.842 137.212C213.549 165.275 187.817 185.084 158.225 200.49C128.817 215.897 95.5484 227.086 67.2429 217.365C38.9373 207.827 15.4106 177.747 5.3015 142.164C-4.62382 106.582 -1.13158 65.4968 20.1895 38.5347C41.6944 11.3893 80.8442 -1.81665 117.788 0.200917C154.549 2.21848 188.92 19.2761 208.771 45.8713Z"/>
-              </clipPath>
-            </defs>
-          </svg>
-          <div class="pet">
-            <div class="img-container">
-                <div class="pet-pic"></div>
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
+        <div class="slider">
+          <div class="pets-container">
+            <svg>
+              <defs>
+                <clipPath id="path">
+                  <path d="M208.771 45.8713C228.621 72.65 234.135 109.15 223.842 137.212C213.549 165.275 187.817 185.084 158.225 200.49C128.817 215.897 95.5484 227.086 67.2429 217.365C38.9373 207.827 15.4106 177.747 5.3015 142.164C-4.62382 106.582 -1.13158 65.4968 20.1895 38.5347C41.6944 11.3893 80.8442 -1.81665 117.788 0.200917C154.549 2.21848 188.92 19.2761 208.771 45.8713Z"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="pet">
+              <div class="img-container">
+                  <div class="pet-pic"></div>
               </div>
-              <button class="button-tv"></button>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
+            </div>
+            <div class="pet">
+              <div class="img-container">
+                  <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
+            </div>
+            <div class="pet">
+              <div class="img-container">
+                  <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
+            </div>
+            <div class="pet">
+              <div class="img-container">
+                  <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
+            </div>
+            <div class="pet">
+              <div class="img-container">
+                  <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
+            </div>
+            <div class="pet">
+              <div class="img-container">
+                  <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
+              </div>
+              <div class="caption">
+                <div class="text">
+                  <h3>Pandas</h3>
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <button class="button-tv"></button>
+              </div>
             </div>
           </div>
-          <div class="pet">
-            <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-              <button class="button-tv"></button>
-            </div>
-          </div>
-          <div class="pet">
-            <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-              <button class="button-tv"></button>
-            </div>
-          </div>
-          <div class="pet">
-            <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-              <button class="button-tv"></button>
-            </div>
-          </div>
-          <div class="pet">
-            <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-              <button class="button-tv"></button>
-            </div>
-          </div>
-          <div class="pet">
-            <div class="img-container">
-                <img src="assets/img/pets-in-zoo/panda.svg" class="pet-pic">
-            </div>
-            <div class="caption">
-              <div class="text">
-                <h3>Pandas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-              <button class="button-tv"></button>
-            </div>
+          <div class="buttons">
+            <button class="slider-button"></button>
+            <button class="slider-button left"></button>
           </div>
         </div>
-        <button class="slider-button"></button>
-        <button class="slider-button left"></button>
+      <div class="penguin"></div>
       </div>
     </section>
     <section class="pay-and-feed">
@@ -214,7 +220,7 @@
         <div class="head">
           <h2>Testimonials</h2>
           <button>
-            <img src="assets/img/testimonials/leave-fdbk-icon.svg" alt="">
+            <img src="assets/img/icons/leave-fdbk-icon.svg" alt="">
             <span>leave feedback</span>
           </button>
         </div>
@@ -258,39 +264,42 @@
           <h2>Look at this beautiful animals</h2>
         </div>
         <div class="slider">
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
+          <div class="animals">
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
+            <div class="animal">
+              <img src="assets/img/look-animals/animal-pic.svg" alt="">
+              <span>Pandas</span>
+            </div>
           </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
-          </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
-          </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
-          </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
-          </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
-          </div>
-          <div class="animal">
-            <img src="assets/img/look-animals/animal-pic.svg" alt="">
-            <span>Pandas</span>
+          <div class="buttons">
+            <button class="slider-button"></button>
+            <button class="slider-button left"></button>
           </div>
         </div>
-        <div class="buttons">
-          <button class="slider-button"></button>
-          <button class="slider-button left"></button>
-        </div>
+
       </div>
     </section>
   </main>
@@ -300,13 +309,13 @@
        <div class="logo-container">
           <img src="assets/img/header/logo-large.svg" alt="">
         </div>
-      <ul class="main-nav">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Map</a></li>
-        <li><a href="#">Zoos</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Design</a></li>
-      </ul>
+        <ul class="main-nav">
+          <li><a href="index.html" class="link current">About</a></li>
+          <li><a href="map.html" class="link">Map</a></li>
+          <li><a href="animal_page.html" class="link">Zoos</a></li>
+          <li><a href="#" class="link">Contact us</a></li>
+          <li><a href="#" class="link">Design</a></li>
+        </ul>
      </div>
      <div class="design-info">
        <p class="designer">Lorem ipsum dolor sit.</p>
@@ -314,6 +323,7 @@
      </div>
     </div>
   </footer>
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>

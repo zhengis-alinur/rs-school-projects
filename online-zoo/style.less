@@ -34,82 +34,7 @@ svg {
   position: absolute;
 }
 
-header, footer {
-  width: 100%;
-  height: 140px;
-  background-color: @primary;
-  .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .left {
-    display: flex;
-    align-items: center;
-    .logo-name {
-      .rubik(34.8387px, 500, 41px);
-      color: @custom-black;
-    }
-  }
-  .main-nav {
-    margin-left: 52px;
-    list-style: none;
-    li {
-      display: inline-block;
-      margin-right: 52px;
-    }
-    a {
-      .roboto-mono(18px, 500, 23.74px);
-      text-decoration: none;
-      text-transform: uppercase;
-      color: @custom-white;
-    }
-  }
-
-  .right {
-    display: flex;
-  }
-}
-
-header  {
-  .right {
-    .search-wrapper {
-      position: relative;
-      margin-right: 50px;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        background: url(assets/img/header/search-icon.svg) no-repeat center/cover;
-      }
-      &::after:hover &{
-        transform: translateX(20px);
-      }
-    }
-  }
-  button {
-    .roboto(18px, 400, 21.09px);
-    color: @custom-white;
-    text-transform: uppercase;
-    border: none;
-    background: none;
-    padding: 16px 15px;
-  }
-  .signup {
-    border: 1px solid @custom-white;
-    border-radius: 100px;
-  }
-}
-
-footer {
-  height: 200px;
-  .design-info{
-    display: flex;
-    flex-direction: column;
-  }
-}
+@import "assets/less/_header";
 
 .intro {
   width: 100%;
@@ -119,24 +44,9 @@ footer {
     display: flex;
     justify-content: space-between;
     .text {
-      margin-top: 73px;
-    }
-    .title {
-      color: @white;
-      .rubik(72px, 300, 85.32px);
-      text-transform: none;
-      &.bold {
-        .rubik(64px, 500, 75.84px);
-      }
-    }
-    .subtitle {
-      width: 480px;
-      margin-top: 27px;
-      .roboto(14px, 400, 20px);
-      color: @white;
+      margin-top: 3.8%;
     }
     button {
-      margin-top: 87px;
       padding: 14px 84px;
       .roboto-mono(18px, 400, 23.74px);
       text-transform: uppercase;
@@ -235,7 +145,6 @@ footer {
       width: 4.65vw;
       height: 8.22vw;
       background: url(assets/img/illustrations/smallTree.svg) no-repeat center/cover;
-
     }
     .panda {
       position: relative;
@@ -252,12 +161,15 @@ footer {
   }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .slider-button {
-  position: absolute;
   width: 52px;
   height: 52px;
   border: none;
-  background: url(assets/img/pets-in-zoo/slider-button.svg) no-repeat center/cover;
+  background: url(assets/img/icons/slider-button.svg) no-repeat center/cover;
   &.left {
     transform: rotate(180deg);
   }
@@ -278,6 +190,16 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .penguin {
+    position: absolute;
+    width: 33px;
+    height: 65.69px;
+    left: 100%;
+    top: 88%;
+    background: url(assets/img/pets-in-zoo/Penguin.svg) no-repeat center/cover;
+  }
+
   .head {
     display: flex;
     justify-content: space-between;
@@ -298,11 +220,22 @@ footer {
       color: @button-lined;
     }
   }
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .pets-container {
+    position: relative;
+    left: -35px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 98%;
     margin-top: 62px;
   }
   .pet {
@@ -312,7 +245,6 @@ footer {
       display: flex;
       justify-content: center;
       position: relative;
-      padding: 20px 125px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       background-color: white;
@@ -355,6 +287,12 @@ footer {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background-color: white;
+      .button-tv {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: url(assets/img/icons/tv-icon.svg) no-repeat center/cover;
+      }
     }
     p {
       .roboto(16px, 400, 18.72px);
@@ -503,8 +441,12 @@ footer {
   .slider {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+  }
+  .animals {
+    display: flex;
     width: 90%;
+    justify-content: space-between;
   }
   .animal {
     display: flex;
@@ -514,23 +456,12 @@ footer {
     .roboto-mono(14px, 500, 18.46px);
     text-transform: uppercase;
   }
-  .buttons {
-    display: inline-block;
-    position: absolute;
-    left: 95%;
-    top: 90px;
-  }
-  .slider-button {
-    &.left {
-      top: 35px;
-    }
-  }
 }
 
 @media (min-width: 1921px) {
   .intro-panda {
-    min-width: 43.9vw;
-    min-height: 36.45vw;
+    width: 803px;
+    height: 666px;
   }
 }
 @media (max-width: 1920px) {
@@ -544,19 +475,69 @@ footer {
     width: 300px;
     height: 50px;
     margin: 0 30px;
-    background-image: url(assets/img/pay-and-feed/arrow.svg);
+    background-image: url(assets/img/icons/arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
+  .intro {
+    .title {
+      position: relative;
+      color: @white;
+      .rubik(72px, 300, 85.32px);
+      text-transform: none;
+      &.bold {
+        width: 500px;
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    button {
+      margin-top: 87px;
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      max-height: 800px;
+    }
+  }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1220px){
   .arrow {
     width: 204px;
     height: 50px;
-    background-image: url(assets/img/pay-and-feed/arrow-desktop.svg);
+    background-image: url(assets/img/icons/arrow-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
+  }
+  .main-nav {
+    width: 550px;
+  }
+  .intro {
+    .title {
+      color: @white;
+      .rubik(48px, 300, 56.88px);
+      text-transform: none;
+      &.bold {
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      width: 560px;
+      height: 460px;
+    }
+    button {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -564,7 +545,7 @@ footer {
   .arrow {
     width: 10vw;
     height: 21px;
-    background-image: url(assets/img/pay-and-feed/small-arrow.svg);
+    background-image: url(assets/img/icons/small-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
