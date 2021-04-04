@@ -7,9 +7,11 @@ footer {
 }
 header .container,
 footer .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 25%;
 }
 header .left,
 footer .left {
@@ -70,17 +72,21 @@ header .right,
 footer .right {
   display: flex;
 }
+header .right {
+  display: flex;
+  align-items: center;
+}
 header .right .search-wrapper {
   overflow: hidden;
 }
 header .right .search-wrapper .search-input {
-  width: 500px;
-  height: 32px;
   position: relative;
-  transition: transform 0.2s linear;
-  left: 200px;
+  width: 200px;
+  height: 32px;
+  left: 250px;
   border: none;
   border-radius: 10px;
+  transition: transform 0.2s ease;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -97,11 +103,11 @@ header .right .search-wrapper .search-input:active {
 header .right .search-button {
   width: 32px;
   height: 32px;
-  background: url(assets/img/icons/search-icon.svg) no-repeat center / cover;
+  background: url(../../assets/icons/search-icon.svg) no-repeat center / cover;
   transition: background 0.2s linear;
 }
 header .right .search-button:hover {
-  background: url(assets/img/icons/search-icon-light.svg) no-repeat center / cover;
+  background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
 }
 header button {
   font-family: 'Roboto', sans-serif;
@@ -114,14 +120,42 @@ header button {
   background: none;
   padding: 16px 15px;
 }
+header button:hover {
+  color: white;
+}
+header button:focus {
+  outline: none;
+  border: none;
+}
+header button:active {
+  outline: none;
+  border: none;
+  color: #F3F7F8;
+}
 header .signup {
+  border: 1px solid #C5E1E6;
+  border-radius: 100px;
+}
+header .signup:active {
+  color: #216E7A;
+  background-color: #C5E1E6;
+}
+header .signup:focus {
+  outline: none;
   border: 1px solid #C5E1E6;
   border-radius: 100px;
 }
 footer {
   height: 200px;
+  background-color: #196469;
 }
 footer .design-info {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-transform: uppercase;
+  color: #fff;
   display: flex;
   flex-direction: column;
 }

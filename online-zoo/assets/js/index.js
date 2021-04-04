@@ -3,7 +3,7 @@ let searchButton = document.querySelector(".search-button");
 let header = document.querySelector(".header");
 
 searchButton.addEventListener("click", (e) => {
-  searchInput.style = "transform: translateX(-200px);";
+  searchInput.style = "transform: translateX(-250px);";
   console.log("sdfs");
 });
 header.addEventListener("mouseleave", (e) => {
