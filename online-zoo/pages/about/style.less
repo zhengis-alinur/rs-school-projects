@@ -1,0 +1,654 @@
+// compress: false
+
+@import "../../assets/less/_vars";
+@import "../../assets/less/_mixins";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: @background;
+  .roboto(16px, 400, 18px);
+}
+
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+h2 {
+  .rubik(24px, 400, 28.44px);
+  text-transform: uppercase;
+  color: @custom-black;
+}
+
+h3 {
+  .roboto(24px, 500, 28.13px);
+}
+
+svg {
+  position: absolute;
+}
+
+@import "../../assets/less/_header";
+
+.intro {
+  width: 100%;
+  height: 41vw;
+  background: url(../../assets/images/intro/intro-bg.svg) no-repeat center/cover;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      margin-top: 3.8%;
+    }
+    .watch-now {
+      position: relative;
+      top: 100px;
+      width: 200px;
+      height: 50px;
+      padding: 14px 84px;
+      .roboto-mono(18px, 400, 23.74px);
+      text-transform: uppercase;
+      text-decoration: none;
+      color: @custom-black;
+      border: none;
+      border-radius: 100px;
+      background: white;
+      transition: background .1s linear;
+      &:hover {
+        background: @custom-white;
+        outline: none;
+        border: none;
+      }
+      &:active {
+        background: @primary-dark;
+        color: @white;
+        outline: none;
+        border: none;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    .intro-panda {
+      position: relative;
+      background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center/cover;
+      -webkit-mask-image: url("https://s8.hostingkartinok.com/uploads/images/2021/03/65a9b70adeddd4af6bb4a14f73d8d470.png");
+      -webkit-mask-size: cover;
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        width: 120px;
+        height: 120px;
+        background: url(../../assets/icons/yt-logo.svg) no-repeat center/cover;
+      }
+    }
+  }
+}
+
+.btn-with-icon {
+  display: flex;
+  align-items: center;
+  img {
+    width: 24px;
+    margin-right: 13px;
+  }
+  background: none;
+  border: 2px solid @button-lined;
+  border-radius: 100px;
+  padding: 14px 20px;
+  .roboto-mono(18px, 400, 23.74px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @button-lined;
+  transition: transform .3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    background-color: @custom-white;
+  }
+  &:focus {
+    border: 2px solid @button-lined;
+    border-radius: 100px;
+    outline: none;
+  }
+}
+
+.how-it-works {
+  margin-top: 60px;
+  position: relative;
+  .title {
+    position: absolute;
+    top: -98px;
+  }
+  .steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  .step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+    span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .icon-container {
+    width: 145px;
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+
+.tree {
+  width: 6.77vw;
+  height: 11.97vw;
+  background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
+}
+.bamboo {
+  position: relative;
+  width: 6.05vw;
+  height: 11.5vw;
+  background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
+}
+
+@import "../../assets/less/_illustrations";
+
+.buttons {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.slider-button {
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: url(../../assets/icons/slider-button.svg) no-repeat center/cover;
+  transition: transform .3s ease;
+
+  &.left {
+    background: url(../../assets/icons/slider-button-left.svg) no-repeat center/cover;
+  }
+  &:hover {
+    outline: none;
+    border: none;
+    transform: scale(1.1);
+  }
+  &:active {
+    outline: none;
+    border: none;
+    transform: scale(0.9);
+  }
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+.pets-in-zoo {
+  margin-top: 70px;
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .penguin {
+    position: absolute;
+    width: 33px;
+    height: 65.69px;
+    left: 100%;
+    top: 88%;
+    background: url(../../assets/images/pets-in-zoo/Penguin.svg) no-repeat center/cover;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pets-container {
+    position: relative;
+    left: -15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 98%;
+    margin-top: 62px;
+  }
+  .pet {
+    width: 31.25%;
+    margin: 0 20px 20px 0;
+    .img-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 20px 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: white;
+    }
+    .pet-pic{
+      position: relative;
+      width: 250px;
+      height: 260px;
+      clip-path: url(#path);
+      overflow: hidden;
+      transition: transform .5s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../../assets/images/pets-in-zoo/panda.svg);
+        transition: transform .5s ease;
+      }
+      &:hover {
+        transform: rotate(360deg);
+      }
+      &:hover::before{
+        transform: rotate(-360deg);
+      }
+      &.panda::before {
+        background: url(../../assets/images/look-animals/panda.png);
+      }
+      &.eagle::before {
+        background: url(../../assets/images/look-animals/eagle.png);
+      }
+      &.gorilla::before {
+        background: url(../../assets/images/look-animals/gorilla.png);
+      }
+      &.alligator::before {
+        background: url(../../assets/images/look-animals/alligator.png);
+      }
+      &.elephant::before {
+        background: url(../../assets/images/look-animals/elephant.png);
+      }
+      &.lemur::before {
+        background: url(../../assets/images/look-animals/lemur.png);
+      }
+    }
+
+    .img-container::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #E5EAEB;
+      bottom:0;
+    }
+
+    .caption {
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: white;
+      .button-tv {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: url(../../assets/icons/tv-icon.svg) no-repeat center/cover;
+      }
+    }
+    p {
+      .roboto(16px, 400, 18.72px);
+      color: @custom-gray;
+    }
+  }
+  .slider-button {
+    left: 97.2%;
+    top: 50%;
+    &.left {
+      top: 55%;
+    }
+  }
+}
+
+.pay-and-feed {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  max-width: 100vw;
+  height: 29vw;
+  background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center/cover;
+  .container{
+    .head {
+      display: flex;
+      position: relative;
+      top: -70px;
+      h2 {
+        width: 100%;
+        color: @custom-white;
+        top: -100px;
+        left: -48px
+      }
+      .donate-button {
+        width: 450px;
+        padding: 14px 78px;
+        .roboto-mono(18px, 400, 23.75px);
+        text-transform: uppercase;
+        border-radius: 100px;
+        border: none;
+        background-color: @custom-white;
+        transition: all .2s linear;
+        &:hover {
+          background-color: @white;
+          outline: none;
+          border: none;
+        }
+        &:focus {
+          outline: none;
+          border: none;
+        }
+        &:active {
+          transform: scale(0.98);
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    position: relative;
+    margin: 0;
+    .don-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .don-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      img {
+        width: 64px;
+        height: 64px;
+        padding: 40.5px;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .caption {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 20px;
+        color: @custom-white;
+      }
+    }
+  }
+}
+
+.testimonials {
+  margin-top: 100px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+  .reviews {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden
+  }
+  .testimonial {
+    box-sizing: border-box;
+    width: 485px;
+    .review {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 485px;
+      height: 187.81px;
+      margin: 0 5px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px 1px rgba(0,0,0, 0.06);
+      &::after {
+        content: "";
+        position: absolute;
+        left: 15%; bottom: -25px;
+        border: 10px solid transparent;
+        border-top: 15px solid #fff;
+      }
+      span {
+        position: relative;
+        width: 80%;
+        margin-top: 10px;
+        left: 45px;
+        top: 18px;
+      }
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    line-height: 16.41px;
+    color: #b2b2b2;
+  }
+  .feedback {
+    font-style: italic;
+    line-height: 18.75px;
+  }
+  .person {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-style: italic;
+    line-height: 18.75px;
+    span {
+      margin-left: 16px;
+    }
+  }
+}
+
+.look-animals {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .animals {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .animal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 76px 82px;
+    .roboto-mono(14px, 500, 18.46px);
+    text-transform: uppercase;
+    .img-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 20px 0;
+    }
+    .pet-pic{
+      position: relative;
+      width: 88px;
+      height: 85px;
+      clip-path: url(#pathSmall);
+      overflow: hidden;
+      transition: transform .5s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: transform .5s ease;
+      }
+      &:hover {
+        transform: rotate(360deg);
+      }
+      &:hover::before{
+        transform: rotate(-360deg);
+      }
+      &.panda::before {
+        background: url(../../assets/images/look-animals/panda.png);
+      }
+      &.eagle::before {
+        background: url(../../assets/images/look-animals/eagle.png);
+      }
+      &.gorilla::before {
+        background: url(../../assets/images/look-animals/gorilla.png);
+      }
+      &.alligator::before {
+        background: url(../../assets/images/look-animals/alligator.png);
+      }
+      &.elephant::before {
+        background: url(../../assets/images/look-animals/elephant.png);
+      }
+      &.lemur::before {
+        background: url(../../assets/images/look-animals/lemur.png);
+      }
+    }
+  }
+}
+
+@media (min-width: 1921px) {
+  .intro-panda {
+    width: 803px;
+    height: 666px;
+  }
+}
+@media (max-width: 1920px) {
+  .intro-panda {
+    min-width: 43.9vw;
+    min-height: 36.45vw;
+  }
+}
+@media (min-width: 1201px){
+  .arrow {
+    width: 300px;
+    height: 50px;
+    margin: 0 30px;
+    background-image: url(../../assets/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .intro {
+    .title {
+      position: relative;
+      color: @white;
+      .rubik(72px, 300, 85.32px);
+      text-transform: none;
+      &.bold {
+        width: 500px;
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    button {
+      margin-top: 87px;
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      max-height: 800px;
+    }
+  }
+}
+
+@media (max-width: 1220px){
+  .arrow {
+    width: 204px;
+    height: 50px;
+    background-image: url(../../assets/icons/arrow-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .main-nav {
+    width: 550px;
+  }
+  .intro {
+    .title {
+      color: @white;
+      .rubik(48px, 300, 56.88px);
+      text-transform: none;
+      &.bold {
+        .rubik(64px, 500, 75.84px);
+      }
+    }
+    .subtitle {
+      width: 480px;
+      margin-top: 27px;
+      .roboto(14px, 400, 20px);
+      color: @white;
+    }
+    .intro-panda {
+      width: 560px;
+      height: 460px;
+    }
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 1045px){
+  .arrow {
+    width: 10vw;
+    height: 21px;
+    background-image: url(../../assets/icons/small-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+

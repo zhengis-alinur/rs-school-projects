@@ -1,0 +1,130 @@
+@import "../../assets/less/_vars";
+@import "../../assets/less/_mixins";
+
+
+body {
+  background-color: @background;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+h1,
+h2,
+h3,
+p{
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+}
+
+@import "../../assets/less/_header";
+
+.content {
+  background-color: @primary;
+  .wrapper {
+    width: 100%;
+    height: 1000px;
+  }
+  .title {
+    .rubik(24px, 400, 28.44px);
+    color: @custom-white;
+    text-transform: uppercase;
+  }
+  .map {
+    position: relative;
+    width: 1480px;
+    height: 930px;
+    background: url(../../assets/images/map/map.svg) no-repeat center;
+  }
+
+  .img-wrapper {
+    position: absolute;
+    &.eagle {
+      top: 40%;
+      left: 12%;
+    }
+    &.alligator {
+      top: 47%;
+      left: 22%;
+    }
+    &.gorilla {
+      top: 57%;
+      left: 47%;
+    }
+    &.panda {
+      top: 43%;
+      left: 70.5%;
+    }
+    .frame {
+      width: 110px;
+      height: 103px;
+      background: url(../../assets/images/map/frame.svg) no-repeat center/cover;
+      transition: transform .5s linear;
+    }
+    &:hover .frame {
+      transform: rotate(360deg);
+    }
+    &:active .frame {
+      background: url(../../assets/images/map/frame-active.svg) no-repeat center/cover;
+    }
+    .tooltip {
+      position: relative;
+      display: none;
+      min-width: 400px;
+      padding: 5px 10px;
+      .roboto(14px, 400, 20px);
+      background: #ffffff;
+      color: @custom-black;
+      border-radius: 5px;
+      text-align: center;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 200px; bottom: -20px;
+        border: 10px solid transparent;
+        border-top: 15px solid #fff;
+      }
+    }
+    &:hover .tooltip {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: -160px;;
+      top: -40px;
+    }
+  }
+  .animal {
+      position: relative;
+      top: -92px;
+      right: -16px;
+      width: 77px;
+      height: 75px;
+    &.eagle {
+      background: url(../../assets/images/animal-page/eagle.png) no-repeat center/cover;
+    }
+    &.alligator {
+      background: url(../../assets/images/animal-page/alligator.png) no-repeat center/cover;
+    }
+    &.gorilla {
+      background: url(../../assets/images/animal-page/gorilla.png) no-repeat center/cover;
+    }
+    &.panda {
+      background: url(../../assets/images/animal-page/panda.png) no-repeat center/cover;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .wrapper {
+    overflow: scroll;
+  }
+}
