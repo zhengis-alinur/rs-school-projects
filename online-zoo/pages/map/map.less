@@ -1,6 +1,10 @@
 @import "../../assets/less/_vars";
 @import "../../assets/less/_mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: @background;
@@ -9,7 +13,10 @@ body {
 }
 
 .container {
-  max-width: 1536px;
+  position: relative;
+  left: 8px;
+  box-sizing: border-box;
+  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -31,7 +38,8 @@ svg {
   background-color: @primary;
   .wrapper {
     width: 100%;
-    height: 1000px;
+    height: 940px;
+    margin-top: 50px;
   }
   .title {
     .rubik(24px, 400, 28.44px);
@@ -40,6 +48,7 @@ svg {
   }
   .map {
     position: relative;
+    left: -10px;
     width: 1480px;
     height: 930px;
     background: url(../../assets/images/map/map.svg) no-repeat center;
@@ -119,6 +128,39 @@ svg {
     }
     &.panda {
       background: url(../../assets/images/animal-page/panda.png) no-repeat center/cover;
+    }
+  }
+  .buttons {
+    position: absolute;
+    display: flex;
+    top: 94%;
+    left: 99.5%;
+    .scale {
+      width: 32px;
+      height: 32px;
+      margin-left: 15px;
+      border-radius: 50%;
+      outline: none;
+      border: 1px solid #fff;
+      background: url(../../assets/icons/scale+.svg) no-repeat center;
+      background-color: rgba(255, 255, 255, .4);
+      &:hover {
+        outline: none;
+        border: none;
+      }
+      &:active {
+        transform: scale(0.98);
+        outline: none;
+        border: none;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &.min {
+        background: url(../../assets/icons/scale-.svg) no-repeat center;
+        background-color: rgba(255, 255, 255, .4);
+      }
     }
   }
 }

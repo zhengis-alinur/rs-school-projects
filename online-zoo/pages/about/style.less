@@ -1,9 +1,6 @@
 // compress: false
-
 @import "../../assets/less/_vars";
 @import "../../assets/less/_mixins";
-
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +12,10 @@ body {
 }
 
 .container {
-  max-width: 1536px;
+  position: relative;
+  left: 8px;
+  box-sizing: border-box;
+  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -35,16 +35,16 @@ svg {
 }
 
 @import "../../assets/less/_header";
-
 .intro {
   width: 100%;
   height: 41vw;
   background: url(../../assets/images/intro/intro-bg.svg) no-repeat center/cover;
+  background-color: white;
   .container {
     display: flex;
     justify-content: space-between;
     .text {
-      margin-top: 3.8%;
+      margin-top: 5.5%;
     }
     .watch-now {
       position: relative;
@@ -78,9 +78,28 @@ svg {
     }
     .intro-panda {
       position: relative;
-      background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center/cover;
-      -webkit-mask-image: url("https://s8.hostingkartinok.com/uploads/images/2021/03/65a9b70adeddd4af6bb4a14f73d8d470.png");
-      -webkit-mask-size: cover;
+      width: 200px;
+      height: 77px;
+      clip-path: url(#intro-path);
+      overflow: hidden;
+      transition: transform .5s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center/cover;
+        transition: transform .5s ease;
+      }
+      &:hover {
+        transform: rotate(360deg);
+      }
+      &:hover::before,
+      {
+        transform: rotate(-360deg);
+      }
       &::after {
         display: block;
         content: "";
@@ -90,6 +109,10 @@ svg {
         width: 120px;
         height: 120px;
         background: url(../../assets/icons/yt-logo.svg) no-repeat center/cover;
+        transition: transform .5s ease;
+      }
+      &:hover::after {
+        transform: rotate(-360deg);
       }
     }
   }
@@ -106,7 +129,9 @@ svg {
   border: 2px solid @button-lined;
   border-radius: 100px;
   padding: 14px 20px;
-  .roboto-mono(18px, 400, 23.74px);
+  .roboto-mono(18px,
+  400,
+  23.74px);
   text-transform: uppercase;
   text-decoration: none;
   color: @button-lined;
@@ -125,7 +150,7 @@ svg {
 }
 
 .how-it-works {
-  margin-top: 60px;
+  margin-top: 45px;
   position: relative;
   .title {
     position: absolute;
@@ -134,13 +159,15 @@ svg {
   .steps {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .step-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 430px;
+    width: 480px;
     span {
+      margin-top: 15px;
       font-size: 14px;
       line-height: 20px;
     }
@@ -161,6 +188,7 @@ svg {
   height: 11.97vw;
   background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
 }
+
 .bamboo {
   position: relative;
   width: 6.05vw;
@@ -169,18 +197,17 @@ svg {
 }
 
 @import "../../assets/less/_illustrations";
-
 .buttons {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .slider-button {
   width: 52px;
   height: 52px;
   border: none;
   background: url(../../assets/icons/slider-button.svg) no-repeat center/cover;
   transition: transform .3s ease;
-
   &.left {
     background: url(../../assets/icons/slider-button-left.svg) no-repeat center/cover;
   }
@@ -201,13 +228,12 @@ svg {
 }
 
 .pets-in-zoo {
-  margin-top: 70px;
+  margin-top: 77px;
   .container {
     position: relative;
     display: flex;
     flex-direction: column;
   }
-
   .penguin {
     position: absolute;
     width: 33px;
@@ -216,20 +242,17 @@ svg {
     top: 88%;
     background: url(../../assets/images/pets-in-zoo/Penguin.svg) no-repeat center/cover;
   }
-
   .head {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-
   .slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-
   .pets-container {
     position: relative;
     left: -15px;
@@ -247,12 +270,12 @@ svg {
       display: flex;
       justify-content: center;
       position: relative;
-      padding: 20px 0;
+      padding: 10px 0 0;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       background-color: white;
     }
-    .pet-pic{
+    .pet-pic {
       position: relative;
       width: 250px;
       height: 260px;
@@ -272,7 +295,7 @@ svg {
       &:hover {
         transform: rotate(360deg);
       }
-      &:hover::before{
+      &:hover::before {
         transform: rotate(-360deg);
       }
       &.panda::before {
@@ -294,7 +317,6 @@ svg {
         background: url(../../assets/images/look-animals/lemur.png);
       }
     }
-
     .img-container::after {
       position: absolute;
       content: "";
@@ -302,17 +324,18 @@ svg {
       width: 100%;
       height: 1px;
       background-color: #E5EAEB;
-      bottom:0;
+      bottom: 0;
     }
-
     .caption {
       display: flex;
       justify-content: space-between;
-      padding: 17px;
+      padding: 17px 30px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background-color: white;
       .button-tv {
+        position: relative;
+        top: 12px;
         width: 32px;
         height: 32px;
         border: none;
@@ -320,7 +343,10 @@ svg {
       }
     }
     p {
-      .roboto(16px, 400, 18.72px);
+      margin: 7px 0;
+      .roboto(16px,
+      400,
+      18.72px);
       color: @custom-gray;
     }
   }
@@ -338,25 +364,32 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 80px;
   max-width: 100vw;
   height: 29vw;
   background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center/cover;
-  .container{
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .head {
       display: flex;
       position: relative;
-      top: -70px;
+      width: 100%;
+      left: -6.5px;
+      top: -65px;
       h2 {
+        position: relative;
+        top: 11px;
         width: 100%;
         color: @custom-white;
-        top: -100px;
-        left: -48px
       }
       .donate-button {
-        width: 450px;
-        padding: 14px 78px;
-        .roboto-mono(18px, 400, 23.75px);
+        width: 430px;
+        padding: 14px 63px;
+        .roboto-mono(18px,
+        400,
+        23.75px);
         text-transform: uppercase;
         border-radius: 100px;
         border: none;
@@ -378,14 +411,15 @@ svg {
         }
       }
     }
-    position: relative;
-    margin: 0;
     .don-steps {
+      position: relative;
+      top: 10px;
+      left: -21px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
-      margin: 0 auto;
+      width: 1212px;
+      margin-top: 20px;
     }
     .don-step {
       display: flex;
@@ -407,11 +441,26 @@ svg {
         color: @custom-white;
       }
     }
+    .arrow {
+      position: absolute;
+      top: 50px;
+      width: 300px;
+      height: 50px;
+      background-image: url(../../assets/icons/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      &.one {
+        left: 240px;
+      }
+      &.two {
+        left: 735px;
+      }
+    }
   }
 }
 
 .testimonials {
-  margin-top: 100px;
+  margin-top: 108px;
   .container {
     display: flex;
     flex-direction: column;
@@ -419,34 +468,38 @@ svg {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
+      h2 {
+        position: relative;
+        top: 14px;
+      }
     }
   }
   .reviews {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    left: 0;
     overflow: hidden
   }
   .testimonial {
-    box-sizing: border-box;
-    width: 485px;
     .review {
       position: relative;
       display: flex;
       flex-direction: column;
-      width: 485px;
-      height: 187.81px;
-      margin: 0 5px;
+      width: 480px;
+      height: 170px;
       background-color: #fff;
       border-radius: 10px;
       margin-bottom: 10px;
-      box-shadow: 0 0 10px 1px rgba(0,0,0, 0.06);
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.06);
       &::after {
         content: "";
         position: absolute;
-        left: 15%; bottom: -25px;
-        border: 10px solid transparent;
-        border-top: 15px solid #fff;
+        left: 60px;
+        bottom: -35px;
+        border: 20px solid transparent;
+        border-top: 20px solid #fff;
       }
       span {
         position: relative;
@@ -457,7 +510,6 @@ svg {
       }
     }
   }
-
   .date {
     font-size: 14px;
     line-height: 16.41px;
@@ -470,7 +522,8 @@ svg {
   .person {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-top: 18px;
+    margin-left: 18px;
     font-style: italic;
     line-height: 18.75px;
     span {
@@ -482,7 +535,7 @@ svg {
 .look-animals {
   position: relative;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
   .container {
     position: relative;
     display: flex;
@@ -492,29 +545,34 @@ svg {
     }
   }
   .slider {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    top: 13px;
   }
   .animals {
     display: flex;
-    width: 90%;
+    width: 89%;
     justify-content: space-between;
   }
   .animal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 76px 82px;
+    justify-content: center;
     .roboto-mono(14px, 500, 18.46px);
     text-transform: uppercase;
     .img-container {
       display: flex;
       justify-content: center;
       position: relative;
-      padding: 20px 0;
     }
-    .pet-pic{
+    span {
+      position: relative;
+      left: -8px;
+    }
+    .pet-pic {
       position: relative;
       width: 88px;
       height: 85px;
@@ -533,26 +591,26 @@ svg {
       &:hover {
         transform: rotate(360deg);
       }
-      &:hover::before{
+      &:hover::before {
         transform: rotate(-360deg);
       }
       &.panda::before {
-        background: url(../../assets/images/look-animals/panda.png);
+        background: url(../../assets/images/look-animals/panda.png) no-repeat center/cover;
       }
       &.eagle::before {
-        background: url(../../assets/images/look-animals/eagle.png);
+        background: url(../../assets/images/look-animals/eagle.png) no-repeat center/cover;
       }
       &.gorilla::before {
-        background: url(../../assets/images/look-animals/gorilla.png);
+        background: url(../../assets/images/look-animals/gorilla.png) no-repeat center/cover;
       }
       &.alligator::before {
-        background: url(../../assets/images/look-animals/alligator.png);
+        background: url(../../assets/images/look-animals/alligator.png) no-repeat center/cover;
       }
       &.elephant::before {
-        background: url(../../assets/images/look-animals/elephant.png);
+        background: url(../../assets/images/look-animals/elephant.png) no-repeat center/cover;
       }
       &.lemur::before {
-        background: url(../../assets/images/look-animals/lemur.png);
+        background: url(../../assets/images/look-animals/lemur.png) no-repeat center/cover;
       }
     }
   }
@@ -564,30 +622,28 @@ svg {
     height: 666px;
   }
 }
+
 @media (max-width: 1920px) {
   .intro-panda {
     min-width: 43.9vw;
     min-height: 36.45vw;
   }
 }
-@media (min-width: 1201px){
-  .arrow {
-    width: 300px;
-    height: 50px;
-    margin: 0 30px;
-    background-image: url(../../assets/icons/arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+
+@media (min-width: 1201px) {
   .intro {
     .title {
       position: relative;
       color: @white;
-      .rubik(72px, 300, 85.32px);
+      .rubik(72px,
+      300,
+      85.32px);
       text-transform: none;
       &.bold {
         width: 500px;
-        .rubik(64px, 500, 75.84px);
+        .rubik(64px,
+        500,
+        75.84px);
       }
     }
     button {
@@ -596,7 +652,9 @@ svg {
     .subtitle {
       width: 480px;
       margin-top: 27px;
-      .roboto(14px, 400, 20px);
+      .roboto(14px,
+      400,
+      20px);
       color: @white;
     }
     .intro-panda {
@@ -605,7 +663,7 @@ svg {
   }
 }
 
-@media (max-width: 1220px){
+@media (max-width: 1220px) {
   .arrow {
     width: 204px;
     height: 50px;
@@ -619,16 +677,22 @@ svg {
   .intro {
     .title {
       color: @white;
-      .rubik(48px, 300, 56.88px);
+      .rubik(48px,
+      300,
+      56.88px);
       text-transform: none;
       &.bold {
-        .rubik(64px, 500, 75.84px);
+        .rubik(64px,
+        500,
+        75.84px);
       }
     }
     .subtitle {
       width: 480px;
       margin-top: 27px;
-      .roboto(14px, 400, 20px);
+      .roboto(14px,
+      400,
+      20px);
       color: @white;
     }
     .intro-panda {
@@ -641,7 +705,7 @@ svg {
   }
 }
 
-@media (max-width: 1045px){
+@media (max-width: 1045px) {
   .arrow {
     width: 10vw;
     height: 21px;
@@ -650,5 +714,3 @@ svg {
     background-position: center;
   }
 }
-
-
