@@ -11,7 +11,10 @@ body {
   line-height: 18px;
 }
 .container {
-  max-width: 1536px;
+  position: relative;
+  left: 8px;
+  box-sizing: border-box;
+  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -35,16 +38,15 @@ svg {
 header,
 footer {
   width: 100%;
-  height: 140px;
+  height: 110px;
   background-color: #2A8086;
+  padding: 11px 0;
 }
 header .container,
 footer .container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 25%;
 }
 header .left,
 footer .left {
@@ -61,13 +63,14 @@ footer .left .logo-name {
 }
 header .main-nav,
 footer .main-nav {
+  margin: 0;
   margin-left: 52px;
   list-style: none;
 }
 header .main-nav li,
 footer .main-nav li {
   display: inline-block;
-  margin-right: 52px;
+  margin-right: 49px;
 }
 header .main-nav .link,
 footer .main-nav .link {
@@ -182,27 +185,38 @@ footer {
   height: 200px;
   background-color: #196469;
 }
+footer .container {
+  margin-top: 45px;
+}
+footer .main-nav {
+  margin-left: 78px;
+}
 footer .design-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  top: 18px;
+  height: 47px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18.75px;
   text-transform: uppercase;
   color: #fff;
-  display: flex;
-  flex-direction: column;
 }
 .intro {
   width: 100%;
   height: 41vw;
   background: url(../../assets/images/intro/intro-bg.svg) no-repeat center / cover;
+  background-color: white;
 }
 .intro .container {
   display: flex;
   justify-content: space-between;
 }
 .intro .container .text {
-  margin-top: 3.8%;
+  margin-top: 5.5%;
 }
 .intro .container .watch-now {
   position: relative;
@@ -239,9 +253,27 @@ footer .design-info {
 }
 .intro .container .intro-panda {
   position: relative;
+  width: 200px;
+  height: 77px;
+  clip-path: url(#intro-path);
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.intro .container .intro-panda::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center / cover;
-  -webkit-mask-image: url("https://s8.hostingkartinok.com/uploads/images/2021/03/65a9b70adeddd4af6bb4a14f73d8d470.png");
-  -webkit-mask-size: cover;
+  transition: transform 0.5s ease;
+}
+.intro .container .intro-panda:hover {
+  transform: rotate(360deg);
+}
+.intro .container .intro-panda:hover::before {
+  transform: rotate(-360deg);
 }
 .intro .container .intro-panda::after {
   display: block;
@@ -252,6 +284,10 @@ footer .design-info {
   width: 120px;
   height: 120px;
   background: url(../../assets/icons/yt-logo.svg) no-repeat center / cover;
+  transition: transform 0.5s ease;
+}
+.intro .container .intro-panda:hover::after {
+  transform: rotate(-360deg);
 }
 .btn-with-icon {
   display: flex;
@@ -285,7 +321,7 @@ footer .design-info {
   outline: none;
 }
 .how-it-works {
-  margin-top: 60px;
+  margin-top: 45px;
   position: relative;
 }
 .how-it-works .title {
@@ -295,14 +331,16 @@ footer .design-info {
 .how-it-works .steps {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .how-it-works .step-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 430px;
+  width: 480px;
 }
 .how-it-works .step-item span {
+  margin-top: 15px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -329,7 +367,7 @@ footer .design-info {
 .illustrations {
   width: 100%;
   height: 27vw;
-  margin-top: 32px;
+  margin-top: 95px;
   background: url(../../assets/images/illustrations/bg.svg) no-repeat center / cover;
   display: flex;
   justify-content: center;
@@ -408,7 +446,7 @@ footer .design-info {
   border: none;
 }
 .pets-in-zoo {
-  margin-top: 70px;
+  margin-top: 77px;
 }
 .pets-in-zoo .container {
   position: relative;
@@ -452,7 +490,7 @@ footer .design-info {
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 20px 0;
+  padding: 10px 0 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: white;
@@ -511,18 +549,21 @@ footer .design-info {
 .pets-in-zoo .pet .caption {
   display: flex;
   justify-content: space-between;
-  padding: 17px;
+  padding: 17px 30px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: white;
 }
 .pets-in-zoo .pet .caption .button-tv {
+  position: relative;
+  top: 12px;
   width: 32px;
   height: 32px;
   border: none;
   background: url(../../assets/icons/tv-icon.svg) no-repeat center / cover;
 }
 .pets-in-zoo .pet p {
+  margin: 7px 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -541,29 +582,32 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 80px;
   max-width: 100vw;
   height: 29vw;
   background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
 }
 .pay-and-feed .container {
-  position: relative;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .pay-and-feed .container .head {
   display: flex;
   position: relative;
-  top: -70px;
+  width: 100%;
+  left: -6.5px;
+  top: -65px;
 }
 .pay-and-feed .container .head h2 {
+  position: relative;
+  top: 11px;
   width: 100%;
   color: #C5E1E6;
-  top: -100px;
-  left: -48px;
 }
 .pay-and-feed .container .head .donate-button {
-  width: 450px;
-  padding: 14px 78px;
+  width: 430px;
+  padding: 14px 63px;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   font-weight: 400;
@@ -589,11 +633,14 @@ footer .design-info {
   border: none;
 }
 .pay-and-feed .container .don-steps {
+  position: relative;
+  top: 10px;
+  left: -21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
+  width: 1212px;
+  margin-top: 20px;
 }
 .pay-and-feed .container .don-step {
   display: flex;
@@ -615,8 +662,23 @@ footer .design-info {
   line-height: 20px;
   color: #C5E1E6;
 }
+.pay-and-feed .container .arrow {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  height: 50px;
+  background-image: url(../../assets/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pay-and-feed .container .arrow.one {
+  left: 240px;
+}
+.pay-and-feed .container .arrow.two {
+  left: 735px;
+}
 .testimonials {
-  margin-top: 100px;
+  margin-top: 108px;
 }
 .testimonials .container {
   display: flex;
@@ -627,23 +689,24 @@ footer .design-info {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.testimonials .container .head h2 {
+  position: relative;
+  top: 14px;
+}
 .testimonials .reviews {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  left: 0;
   overflow: hidden;
-}
-.testimonials .testimonial {
-  box-sizing: border-box;
-  width: 485px;
 }
 .testimonials .testimonial .review {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 485px;
-  height: 187.81px;
-  margin: 0 5px;
+  width: 480px;
+  height: 170px;
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -652,10 +715,10 @@ footer .design-info {
 .testimonials .testimonial .review::after {
   content: "";
   position: absolute;
-  left: 15%;
-  bottom: -25px;
-  border: 10px solid transparent;
-  border-top: 15px solid #fff;
+  left: 60px;
+  bottom: -35px;
+  border: 20px solid transparent;
+  border-top: 20px solid #fff;
 }
 .testimonials .testimonial .review span {
   position: relative;
@@ -676,7 +739,8 @@ footer .design-info {
 .testimonials .person {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-top: 18px;
+  margin-left: 18px;
   font-style: italic;
   line-height: 18.75px;
 }
@@ -686,7 +750,7 @@ footer .design-info {
 .look-animals {
   position: relative;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
 }
 .look-animals .container {
   position: relative;
@@ -697,20 +761,22 @@ footer .design-info {
   margin-bottom: 50px;
 }
 .look-animals .slider {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  top: 13px;
 }
 .look-animals .animals {
   display: flex;
-  width: 90%;
+  width: 89%;
   justify-content: space-between;
 }
 .look-animals .animal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 76px 82px;
+  justify-content: center;
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   font-weight: 500;
@@ -721,7 +787,10 @@ footer .design-info {
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 20px 0;
+}
+.look-animals .animal span {
+  position: relative;
+  left: -8px;
 }
 .look-animals .animal .pet-pic {
   position: relative;
@@ -747,22 +816,22 @@ footer .design-info {
   transform: rotate(-360deg);
 }
 .look-animals .animal .pet-pic.panda::before {
-  background: url(../../assets/images/look-animals/panda.png);
+  background: url(../../assets/images/look-animals/panda.png) no-repeat center / cover;
 }
 .look-animals .animal .pet-pic.eagle::before {
-  background: url(../../assets/images/look-animals/eagle.png);
+  background: url(../../assets/images/look-animals/eagle.png) no-repeat center / cover;
 }
 .look-animals .animal .pet-pic.gorilla::before {
-  background: url(../../assets/images/look-animals/gorilla.png);
+  background: url(../../assets/images/look-animals/gorilla.png) no-repeat center / cover;
 }
 .look-animals .animal .pet-pic.alligator::before {
-  background: url(../../assets/images/look-animals/alligator.png);
+  background: url(../../assets/images/look-animals/alligator.png) no-repeat center / cover;
 }
 .look-animals .animal .pet-pic.elephant::before {
-  background: url(../../assets/images/look-animals/elephant.png);
+  background: url(../../assets/images/look-animals/elephant.png) no-repeat center / cover;
 }
 .look-animals .animal .pet-pic.lemur::before {
-  background: url(../../assets/images/look-animals/lemur.png);
+  background: url(../../assets/images/look-animals/lemur.png) no-repeat center / cover;
 }
 @media (min-width: 1921px) {
   .intro-panda {
@@ -777,14 +846,6 @@ footer .design-info {
   }
 }
 @media (min-width: 1201px) {
-  .arrow {
-    width: 300px;
-    height: 50px;
-    margin: 0 30px;
-    background-image: url(../../assets/icons/arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .intro .title {
     position: relative;
     color: #F3F7F8;

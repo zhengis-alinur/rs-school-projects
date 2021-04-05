@@ -1,19 +1,22 @@
 @import "../../assets/less/_vars";
 @import "../../assets/less/_mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: @background;
   margin: 0;
   padding: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 .container {
-  max-width: 1536px;
+  position: relative;
+  left: 8px;
+  box-sizing: border-box;
+  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -30,6 +33,14 @@ svg {
 }
 
 @import "../../assets/less/_header";
+
+.header {
+  .container {
+    position: relative;
+    top: 10px;
+  }
+  height: 95px;
+}
 
 header .right .search-button {
   width: 32px;
@@ -57,12 +68,13 @@ main {
   margin-bottom: 0;
   .container {
     position: relative;
+    left: -20px; top: -6px;
     display: flex;
     justify-content: space-between;
     .sidebar {
       position: sticky;
       top: 0;
-      height: 420px;
+      height: 800px;
       min-width: 155px;
     }
     .img-wrapper {
@@ -70,7 +82,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 auto;
+      margin: 0 auto 45px;
       justify-content: center;
       .frame {
         width: 98px;
@@ -111,18 +123,24 @@ main {
       }
     }
     .content {
+      position: relative;
+      left: -13px;
       min-width: 86.5%;
       margin: 0;
       .head {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
         height: 45px;
+        top: 20px;
         .buttons {
+          position: relative;
           display: flex;
           justify-content: space-between;
           width: 118px;
+          left: 35px;
           a {
             transition: transform .3s ease;
             &:hover {
@@ -145,7 +163,7 @@ main {
       .live-yt {
         margin-top: 42px;
         iframe {
-          width: 100%;
+          width: 103%;
           height: 600px;
           margin-top: 8px;
           border-radius: 20px;
@@ -205,9 +223,9 @@ main {
         overflow: hidden;
         .shot {
           position: relative;
-          min-width: 31.5%;
+          min-width: 33%;
           height: 240px;
-          margin-right: 32px;
+          margin-right: 35px;
           border-radius: 10px;
           background: url(../../assets/images/animal-page/preview-photo.jpg) no-repeat center/cover;
         }
@@ -226,16 +244,26 @@ main {
       justify-content: space-between;
       margin-top: 100px;
       color: @custom-black;
+      .title {
+          margin-bottom: 25px;
+      }
       .information {
         max-width: 600px;
         .info {
-          margin-top: 25px;
+          margin-bottom: 40px;
         }
       }
       .interesting-facts {
+        position: relative;
+        left: -40px;
         width: 574px;
         ul {
+          position: relative;
+          left: 22px;
           list-style-image: url(../../assets/images/animal-page/list-image.svg);
+          li {
+            margin-bottom: 15px;
+          }
         }
       }
 
@@ -264,7 +292,7 @@ main {
     align-items: center;
     width: 100%;
     height: 20vw;
-    margin-top: 32px;
+
     background: url(../../assets/images/illustrations/bg.svg) no-repeat center/cover;
     background-position: top;
     .pics {
@@ -272,15 +300,10 @@ main {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      overflow: hidden;
-      .bamboo.small {
-        position: relative;
-        width: 6.05vw;
-        height: 11.5vw;
-        background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
-      }
       .tree.one{
         position: relative;
+        top: -3.5vw;
+        left: 20vw;
         width: 6.77vw;
         height: 11.97vw;
         background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
@@ -289,32 +312,32 @@ main {
         position: relative;
         width: 6.77vw;
         height: 11.97vw;
+        top: 3vw;
+        left: -4vw;
         background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
-      }
-      .tree.small {
-        position: relative;
-        width: 4.65vw;
-        height: 8.22vw;
-        background: url(../../assets/images/illustrations/smallTree.svg) no-repeat center/cover;
       }
       .panda {
         position: relative;
+        top: -2vw;
+        left: 19vw;
         width: 8.8vw;
         height: 8.07vw;
         background: url(../../assets/images/illustrations/Panda.svg) no-repeat center/cover;
       }
       .bamboo {
         position: relative;
-        width: 6.05vw;
+        width: 8vw;
         height: 11.5vw;
+        top: -4vw;
+        left: -8vw;
         background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
       }
     }
       .donate-button {
         position: absolute;
-        bottom: 1vw;
+        bottom: 3vw;
         margin: 0 auto;
-        padding: 14px 78px;
+        padding: 14px 68px;
         .roboto-mono(18px, 400, 23.75px);
         text-transform: uppercase;
         border-radius: 100px;
