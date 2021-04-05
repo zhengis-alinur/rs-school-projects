@@ -502,8 +502,8 @@ main .illustrations .pics .panda {
 }
 main .illustrations .pics .bamboo {
   position: relative;
-  width: 8vw;
-  height: 11.5vw;
+  width: 7.5vw;
+  height: 14.5vw;
   top: -4vw;
   left: -8vw;
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
