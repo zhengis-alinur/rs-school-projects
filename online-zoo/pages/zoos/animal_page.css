@@ -196,11 +196,11 @@ footer .design-info {
   color: #fff;
 }
 .header {
-  height: 95px;
+  height: 90px;
 }
 .header .container {
   position: relative;
-  top: 10px;
+  top: 0;
 }
 header .right .search-button {
   width: 32px;
