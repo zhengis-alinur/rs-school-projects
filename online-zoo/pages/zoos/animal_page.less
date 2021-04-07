@@ -95,6 +95,7 @@ main {
       &:hover .frame.current{
         transform: rotate(360deg);
       }
+
       .tooltip {
         position: relative;
         display: none;
@@ -113,7 +114,13 @@ main {
         position: absolute;
         top: 25px;
         left: 38px;
+        transition: transform .5s linear;
       }
+
+      &:hover .img.active {
+        transform: rotate(360deg);
+      }
+
       .pet-name {
         position: absolute;
         bottom: -15px;
