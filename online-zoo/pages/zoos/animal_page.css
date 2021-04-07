@@ -302,6 +302,12 @@ main .container .img-wrapper .pet-name {
   line-height: 18.46px;
   text-transform: uppercase;
 }
+main .container .img-wrapper:hover .pet-name {
+  color: #2A8086;
+}
+main .container .img-wrapper:hover .pet-name.current {
+  color: black;
+}
 main .container .content {
   position: relative;
   left: -13px;
