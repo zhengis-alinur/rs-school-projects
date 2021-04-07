@@ -509,6 +509,11 @@ footer .design-info {
 .pets-in-zoo .pet {
   width: 31.25%;
   margin: 0 20px 20px 0;
+  transition: transform 0.2s linear;
+}
+.pets-in-zoo .pet:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 .pets-in-zoo .pet .img-container {
   display: flex;
