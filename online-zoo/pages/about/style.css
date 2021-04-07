@@ -334,7 +334,7 @@ footer .design-info {
 }
 .how-it-works .title {
   position: absolute;
-  top: -98px;
+  top: -125px;
 }
 .how-it-works .steps {
   display: flex;
@@ -472,6 +472,10 @@ footer .design-info {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.pets-in-zoo .title {
+  position: relative;
+  top: 12px;
 }
 .pets-in-zoo .penguin {
   position: absolute;
