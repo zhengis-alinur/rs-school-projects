@@ -288,6 +288,10 @@ main .container .img-wrapper .img {
   position: absolute;
   top: 25px;
   left: 38px;
+  transition: transform 0.5s linear;
+}
+main .container .img-wrapper:hover .img.active {
+  transform: rotate(360deg);
 }
 main .container .img-wrapper .pet-name {
   position: absolute;
