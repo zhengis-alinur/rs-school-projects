@@ -19,6 +19,18 @@ header, footer {
       color: @custom-black;
     }
   }
+
+  label {
+    font-size: 40px;
+    line-height: 70px;
+    color: white;
+  }
+
+  #toggle {
+    display: none;
+    right: 0;
+  }
+
   .main-nav {
     margin: 0;
     margin-left: 52px;
@@ -72,6 +84,7 @@ header  {
     height: 8px;
     margin: 0 auto;
     box-shadow: 0px 8px 8px rgba(0,0,0,.1);
+    z-index: 10;
   }
   .right {
     display: flex;
@@ -105,6 +118,13 @@ header  {
       &:hover {
         background: url(../../assets/icons/search-icon-light.svg) no-repeat center/cover;
       }
+    }
+    .user-button {
+      width: 56px;
+      height: 56px;
+      margin-left: 31px;
+      border-radius: 50%;
+      background-color: aqua;
     }
   }
   button {
@@ -163,3 +183,64 @@ footer {
     color: #fff;
   }
 }
+
+@media (min-width: 1221px) {
+  .user-button {
+    display: none;
+  }
+}
+
+@media (max-width: 1220px) {
+  .user-button {
+    display: block;
+  }
+  .login,
+  .signup {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  label {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    .right {
+      display: none;
+    }
+  }
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  header {
+    .main-nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: -52px;
+      top: 100px;
+      width: 100vw;
+      padding-top: 32px;
+      background-color: @primary;
+      .roboto-mono(16ppx, 700, 23.74px);
+      z-index: 9;
+      li {
+        text-align: center;
+        display: inline;
+        margin: 0 0 32px;
+        .link.current::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+

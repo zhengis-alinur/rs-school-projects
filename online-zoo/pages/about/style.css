@@ -12,9 +12,7 @@ body {
 }
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -60,6 +58,17 @@ footer .left .logo-name {
   font-weight: 500;
   line-height: 41px;
   color: #0D444D;
+}
+header label,
+footer label {
+  font-size: 40px;
+  line-height: 70px;
+  color: white;
+}
+header #toggle,
+footer #toggle {
+  display: none;
+  right: 0;
 }
 header .main-nav,
 footer .main-nav {
@@ -116,6 +125,7 @@ header::after {
   height: 8px;
   margin: 0 auto;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 header .right {
   display: flex;
@@ -153,6 +163,13 @@ header .right .search-button {
 }
 header .right .search-button:hover {
   background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
+}
+header .right .user-button {
+  width: 56px;
+  height: 56px;
+  margin-left: 31px;
+  border-radius: 50%;
+  background-color: aqua;
 }
 header button {
   font-family: 'Roboto', sans-serif;
@@ -214,10 +231,63 @@ footer .design-info {
   text-transform: uppercase;
   color: #fff;
 }
+@media (min-width: 1221px) {
+  .user-button {
+    display: none;
+  }
+}
+@media (max-width: 1220px) {
+  .user-button {
+    display: block;
+  }
+  .login,
+  .signup {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  label {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  header .right {
+    display: none;
+  }
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  header .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -52px;
+    top: 100px;
+    width: 100vw;
+    padding-top: 32px;
+    background-color: #2A8086;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16ppx;
+    font-weight: 700;
+    line-height: 23.74px;
+    z-index: 9;
+  }
+  header .main-nav li {
+    text-align: center;
+    display: inline;
+    margin: 0 0 32px;
+  }
+  header .main-nav li .link.current::after {
+    display: none;
+  }
+}
 .intro {
   width: 100%;
   height: 41vw;
-  background: url(../../assets/images/intro/intro-bg.svg) no-repeat center / cover;
 }
 .intro .container {
   display: flex;
@@ -478,6 +548,7 @@ footer .design-info {
   top: 12px;
 }
 .pets-in-zoo .penguin {
+  display: none;
   position: absolute;
   width: 33px;
   height: 65.69px;
@@ -613,7 +684,6 @@ footer .design-info {
   align-items: center;
   margin-top: 80px;
   max-width: 100vw;
-  height: 29vw;
   background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
 }
 .pay-and-feed .container {
@@ -625,8 +695,7 @@ footer .design-info {
   display: flex;
   position: relative;
   width: 100%;
-  left: -6.5px;
-  top: -65px;
+  top: -4.39vw;
 }
 .pay-and-feed .container .head h2 {
   position: relative;
@@ -636,6 +705,7 @@ footer .design-info {
 }
 .pay-and-feed .container .head .donate-button {
   width: 430px;
+  white-space: nowrap;
   padding: 14px 63px;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -668,8 +738,7 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1212px;
-  margin-top: 20px;
+  width: 100%;
 }
 .pay-and-feed .container .don-step {
   display: flex;
@@ -694,17 +763,10 @@ footer .design-info {
 .pay-and-feed .container .arrow {
   position: absolute;
   top: 50px;
-  width: 300px;
-  height: 50px;
-  background-image: url(../../assets/icons/arrow.svg);
+  z-index: 100;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-.pay-and-feed .container .arrow.one {
-  left: 240px;
-}
-.pay-and-feed .container .arrow.two {
-  left: 735px;
 }
 .testimonials {
   margin-top: 108px;
@@ -728,13 +790,11 @@ footer .design-info {
   justify-content: space-between;
   width: 100%;
   left: 0;
-  overflow: hidden;
 }
 .testimonials .testimonial .review {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 480px;
   height: 170px;
   background-color: #fff;
   border-radius: 10px;
@@ -862,19 +922,60 @@ footer .design-info {
 .look-animals .animal .pet-pic.lemur::before {
   background: url(../../assets/images/look-animals/lemur.png) no-repeat center / cover;
 }
-@media (min-width: 1921px) {
-  .intro-panda {
-    min-width: 43.9vw;
-    min-height: 36.45vw;
+@media (min-width: 1780px) {
+  .container {
+    width: 80%;
+  }
+  .pay-and-feed {
+    height: 29vw;
+    background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
+  }
+  .arrow {
+    width: 300px;
+    height: 50px;
+    background-image: url(../../assets/icons/arrow.svg);
+  }
+  .arrow.one {
+    left: 15vw;
+  }
+  .arrow.two {
+    left: 47vw;
+  }
+  .testimonial {
+    width: 25vw;
   }
 }
-@media (max-width: 1920px) {
-  .intro-panda {
-    min-width: 43.9vw;
-    min-height: 36.45vw;
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
+  }
+  .intro {
+    background: url(../../assets/images/intro/bg-1200.svg) no-repeat center / cover;
+    height: 55vw;
+  }
+  .arrow {
+    width: 204px;
+    height: 50px;
+    background-image: url(../../assets/icons/arrow-desktop.svg);
+  }
+  .arrow.one {
+    left: 20vw;
+  }
+  .arrow.two {
+    left: 51vw;
+  }
+  .pay-and-feed {
+    height: 47vw;
+    background: url(../../assets/images/pay-and-feed/bg-1200.svg) no-repeat center / cover;
+  }
+  .testimonial {
+    width: 30.5vw;
   }
 }
-@media (min-width: 1201px) {
+@media (min-width: 1221px) {
+  .intro {
+    background: url(../../assets/images/intro/intro-bg.svg) no-repeat center / cover;
+  }
   .intro .title {
     position: relative;
     color: #F3F7F8;
@@ -908,37 +1009,30 @@ footer .design-info {
   }
 }
 @media (max-width: 1220px) {
-  .arrow {
-    width: 204px;
-    height: 50px;
-    background-image: url(../../assets/icons/arrow-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .main-nav {
-    width: 550px;
+  .intro .text {
+    margin-top: 90px;
   }
   .intro .title {
     color: #F3F7F8;
     font-family: 'Rubik', sans-serif;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 300;
-    line-height: 56.88px;
+    line-height: 85.32px;
     text-transform: none;
   }
   .intro .title.bold {
     font-family: 'Rubik', sans-serif;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
-    line-height: 75.84px;
+    line-height: 56.88px;
   }
   .intro .subtitle {
     width: 480px;
     margin-top: 27px;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 30px;
     color: #F3F7F8;
   }
   .intro .intro-panda {
@@ -946,15 +1040,24 @@ footer .design-info {
     height: 460px;
   }
   .intro button {
-    margin-top: 20px;
+    top: 50px;
+  }
+  .donate-button {
+    position: relative;
+    left: 6vw;
   }
 }
-@media (max-width: 1045px) {
+@media (max-width: 1150px) {
   .arrow {
-    width: 10vw;
-    height: 21px;
+    width: 32px;
+    height: 32px;
+    margin: auto 0;
     background-image: url(../../assets/icons/small-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+  }
+  .arrow.one {
+    left: 25vw;
+  }
+  .arrow.two {
+    left: 56vw;
   }
 }
