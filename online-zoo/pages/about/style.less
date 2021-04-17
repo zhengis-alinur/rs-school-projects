@@ -151,7 +151,6 @@ svg {
 
   .title {
     position: absolute;
-    top: -125px;
   }
   .steps {
     display: flex;
@@ -698,6 +697,11 @@ svg {
       max-height: 800px;
     }
   }
+  .how-it-works {
+    .title {
+      top: -125px;
+    }
+  }
 }
 
 @media (max-width: 1220px) {
@@ -733,9 +737,21 @@ svg {
       top: 50px;
     }
   }
+
+  .how-it-works {
+    .title {
+      top: -80px;
+    }
+  }
+
   .donate-button {
     position: relative;
     left: 6vw;
+  }
+  .look-animals {
+    .animal.last-panda {
+      display: none;
+    }
   }
 }
 

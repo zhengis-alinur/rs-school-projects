@@ -7,12 +7,11 @@ body {
   background-color: #F6F9FA;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -50,6 +49,17 @@ footer .left .logo-name {
   font-weight: 500;
   line-height: 41px;
   color: #0D444D;
+}
+header label,
+footer label {
+  font-size: 40px;
+  line-height: 70px;
+  color: white;
+}
+header #toggle,
+footer #toggle {
+  display: none;
+  right: 0;
 }
 header .main-nav,
 footer .main-nav {
@@ -106,6 +116,7 @@ header::after {
   height: 8px;
   margin: 0 auto;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 header .right {
   display: flex;
@@ -143,6 +154,13 @@ header .right .search-button {
 }
 header .right .search-button:hover {
   background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
+}
+header .right .user-button {
+  width: 56px;
+  height: 56px;
+  margin-left: 31px;
+  border-radius: 50%;
+  background-color: aqua;
 }
 header button {
   font-family: 'Roboto', sans-serif;
@@ -203,6 +221,63 @@ footer .design-info {
   line-height: 18.75px;
   text-transform: uppercase;
   color: #fff;
+}
+@media (min-width: 1221px) {
+  .user-button {
+    display: none;
+  }
+}
+@media (max-width: 1220px) {
+  .user-button {
+    display: block;
+  }
+  .login,
+  .signup {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  label {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+  }
+}
+@media (max-width: 1100px) {
+  header .right {
+    display: none;
+  }
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  header .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -52px;
+    top: 100px;
+    width: 100vw;
+    padding-top: 32px;
+    background-color: #2A8086;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16ppx;
+    font-weight: 700;
+    line-height: 23.74px;
+    z-index: 9;
+  }
+  header .main-nav li {
+    text-align: center;
+    display: inline;
+    margin: 0 0 32px;
+  }
+  header .main-nav li .link.current::after {
+    display: none;
+  }
 }
 .header {
   height: 90px;
@@ -324,11 +399,9 @@ main .container .content .head {
   top: 20px;
 }
 main .container .content .head .buttons {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  width: 118px;
-  left: 35px;
+  width: 116px;
 }
 main .container .content .head .buttons a {
   transition: transform 0.3s ease;
@@ -408,13 +481,11 @@ main .container .content .slider .buttons .slider-button:focus {
 }
 main .container .content .cameras {
   display: flex;
-  width: 90.4%;
+  width: 91.4%;
   overflow: hidden;
 }
 main .container .content .cameras .shot {
   position: relative;
-  min-width: 33%;
-  height: 240px;
   margin-right: 35px;
   border-radius: 10px;
   background: url(../../assets/images/animal-page/preview-photo.jpg) no-repeat center / cover;
@@ -555,4 +626,34 @@ main .illustrations .donate-button:active {
   transform: scale(0.98);
   outline: none;
   border: none;
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+  .shot {
+    min-width: 360px;
+    height: 240px;
+  }
+}
+@media (min-width: 1780px) and (max-width: 1920px) {
+  .container {
+    width: 80%;
+  }
+  .shot {
+    min-width: 19.7vw;
+    height: 12.5vw;
+  }
+}
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
+  }
+  .buttons {
+    margin-left: 10px;
+  }
 }

@@ -215,6 +215,9 @@ footer .design-info {
   label {
     display: none;
   }
+  .main-nav {
+    display: flex;
+  }
 }
 @media (max-width: 1100px) {
   header .right {

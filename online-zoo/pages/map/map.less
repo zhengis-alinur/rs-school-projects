@@ -6,6 +6,7 @@
   padding: 0;
 }
 
+html,
 body {
   background-color: @background;
   margin: 0;
@@ -14,9 +15,7 @@ body {
 
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -131,10 +130,10 @@ svg {
     }
   }
   .buttons {
-    position: absolute;
+    position: relative;
     display: flex;
-    top: 94%;
-    left: 99.5%;
+    flex-direction: row-reverse;
+    top: -50px;
     .scale {
       width: 32px;
       height: 32px;
@@ -168,5 +167,23 @@ svg {
 @media (max-width: 1500px) {
   .wrapper {
     overflow: scroll;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+@media (min-width: 1780px) and (max-width: 1920px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
   }
 }
