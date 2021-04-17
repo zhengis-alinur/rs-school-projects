@@ -11,3 +11,10 @@ header.addEventListener("mouseleave", (e) => {
   console.log("leave");
 });
 
+let toggle = document.querySelector("#toggle");
+let menu = document.querySelector(".menu");
+toggle.addEventListener("click", (e) => {
+  const menuDisplay = getComputedStyle(menu).display;
+  menuDisplay === "none" ? menu.style.display = "block" : menu.style.display = "none";
+});
+

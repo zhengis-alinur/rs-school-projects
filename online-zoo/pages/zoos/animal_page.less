@@ -9,14 +9,13 @@ body {
   background-color: @background;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -149,11 +148,9 @@ main {
         height: 45px;
         top: 20px;
         .buttons {
-          position: relative;
           display: flex;
           justify-content: space-between;
-          width: 118px;
-          left: 35px;
+          width: 116px;
           a {
             transition: transform .3s ease;
             &:hover {
@@ -232,12 +229,10 @@ main {
       }
       .cameras {
         display: flex;
-        width: 90.4%;
+        width: 91.4%;
         overflow: hidden;
         .shot {
           position: relative;
-          min-width: 33%;
-          height: 240px;
           margin-right: 35px;
           border-radius: 10px;
           background: url(../../assets/images/animal-page/preview-photo.jpg) no-repeat center/cover;
@@ -373,3 +368,39 @@ main {
       }
   }
 }
+
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+  .shot {
+    min-width: 360px;
+    height: 240px;
+  }
+}
+
+@media (min-width: 1780px) and (max-width: 1920px) {
+  .container {
+    width: 80%;
+  }
+  .shot {
+    min-width: 19.7vw;
+    height: 12.5vw;
+  }
+}
+
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
+  }
+  .buttons {
+    margin-left: 10px;
+  }
+}
+
+
