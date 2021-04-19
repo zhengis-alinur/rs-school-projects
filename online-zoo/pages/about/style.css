@@ -109,7 +109,6 @@ footer .right {
   display: flex;
 }
 header::after {
-  position: absolute;
   content: '';
   display: block;
   width: 100%;
@@ -245,10 +244,6 @@ footer .design-info {
   }
 }
 @media (max-width: 1100px) {
-  header,
-  footer {
-    height: 80px;
-  }
   header .right {
     display: none;
   }
@@ -923,6 +918,11 @@ footer .design-info {
     height: 750px;
     clip-path: url(#intro-path);
   }
+  .pet-pic {
+    width: 250px;
+    height: 260px;
+    clip-path: url(#path);
+  }
   .pay-and-feed {
     height: 29vw;
     background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
@@ -950,6 +950,11 @@ footer .design-info {
   .testimonial {
     width: 25vw;
   }
+  .pet-pic {
+    width: 250px;
+    height: 260px;
+    clip-path: url(#path);
+  }
   .intro-panda {
     margin-top: 120px;
     width: 560px;
@@ -975,6 +980,11 @@ footer .design-info {
   }
   .arrow.two {
     left: 51vw;
+  }
+  .pet-pic {
+    width: 170px;
+    height: 164px;
+    clip-path: url(#path-640);
   }
   .pay-and-feed {
     height: 47vw;
@@ -1077,6 +1087,7 @@ footer .design-info {
   .watch-now {
     width: 200px;
     padding: 14px 84px;
+    top: 40px;
   }
   .watch-now.donate {
     display: none;
@@ -1084,11 +1095,6 @@ footer .design-info {
   .pet {
     width: 31.25%;
     margin: 0 20px 20px 0;
-  }
-  .pet .pet-pic {
-    width: 250px;
-    height: 260px;
-    clip-path: url(#path);
   }
   .pay-and-feed {
     background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
@@ -1137,10 +1143,10 @@ footer .design-info {
     background-image: url(../../assets/icons/small-arrow.svg);
   }
   .arrow.one {
-    left: 25vw;
+    left: 28vw;
   }
   .arrow.two {
-    left: 56vw;
+    left: 60vw;
   }
   .intro-panda {
     margin-top: 33px;
@@ -1162,11 +1168,6 @@ footer .design-info {
   .pet .img-container {
     height: 220px;
   }
-  .pet .pet-pic {
-    width: 170px;
-    height: 164px;
-    clip-path: url(#path-640);
-  }
   .pet.lemur,
   .pet.elephant {
     display: none;
@@ -1175,7 +1176,8 @@ footer .design-info {
     height: 400px;
     background: url(../../assets/images/pay-and-feed/bg-640.svg) no-repeat center / cover;
   }
-  .pay-and-feed .tree {
+  .pay-and-feed .tree,
+  .pay-and-feed .bamboo {
     display: none;
   }
   .look-animals .animal.lemur,
@@ -1188,5 +1190,22 @@ footer .design-info {
   }
   .testimonials .testimonial {
     min-width: 256px;
+  }
+}
+@media (max-width: 500px) {
+  .intro .container {
+    flex-direction: column;
+  }
+  .how-it-works .steps {
+    flex-direction: column;
+  }
+  .pay-and-feed {
+    height: 1000px;
+  }
+  .pay-and-feed .don-steps {
+    flex-direction: column;
+  }
+  .testimonials .reviews {
+    flex-direction: column;
   }
 }

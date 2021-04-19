@@ -75,7 +75,6 @@ footer .right {
   display: flex;
 }
 header::after {
-  position: absolute;
   content: '';
   display: block;
   width: 100%;
@@ -211,10 +210,6 @@ footer .design-info {
   }
 }
 @media (max-width: 1100px) {
-  header,
-  footer {
-    height: 80px;
-  }
   header .right {
     display: none;
   }

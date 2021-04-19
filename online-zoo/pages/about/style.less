@@ -612,6 +612,11 @@ svg {
     height: 750px;
     clip-path: url(#intro-path);
   }
+  .pet-pic {
+    width: 250px;
+    height: 260px;
+    clip-path: url(#path);
+  }
   .pay-and-feed {
     height: 29vw;
     background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center/cover;
@@ -639,6 +644,11 @@ svg {
   .testimonial {
     width: 25vw;
   }
+  .pet-pic {
+    width: 250px;
+    height: 260px;
+    clip-path: url(#path);
+  }
   .intro-panda {
     margin-top: 120px;
     width: 560px;
@@ -665,6 +675,11 @@ svg {
     &.two {
       left: 51vw;
     }
+  }
+  .pet-pic {
+    width: 170px;
+    height: 164px;
+    clip-path: url(#path-640);
   }
   .pay-and-feed {
     height: 47vw;
@@ -746,7 +761,6 @@ svg {
       top: 50px;
     }
   }
-
   .how-it-works {
     .title {
       top: -80px;
@@ -776,17 +790,13 @@ svg {
   .watch-now {
     width: 200px;
     padding: 14px 84px;
+    top: 40px;
     &.donate {
       display: none;
     }
   }
   .pet {
     width: 31.25%;
-    .pet-pic {
-      width: 250px;
-      height: 260px;
-      clip-path: url(#path);
-    }
     margin: 0 20px 20px 0;
   }
   .pay-and-feed {
@@ -833,10 +843,10 @@ svg {
     margin: auto 0;
     background-image: url(../../assets/icons/small-arrow.svg);
     &.one {
-      left: 25vw;
+      left: 28vw;
     }
     &.two {
-      left: 56vw;
+      left: 60vw;
     }
   }
   .intro-panda {
@@ -858,11 +868,6 @@ svg {
     }
     height: 298px;
     width: 245px;
-    .pet-pic {
-      width: 170px;
-      height: 164px;
-      clip-path: url(#path-640);
-    }
     &.lemur,
     &.elephant {
       display: none;
@@ -871,7 +876,8 @@ svg {
   .pay-and-feed {
     height: 400px;
     background: url(../../assets/images/pay-and-feed/bg-640.svg) no-repeat center/cover;
-    .tree {
+    .tree,
+    .bamboo {
       display: none;
     }
   }
@@ -890,6 +896,30 @@ svg {
     }
     .testimonial {
       min-width: 256px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    .container {
+      flex-direction: column;
+    }
+  }
+  .how-it-works {
+    .steps {
+      flex-direction: column;
+    }
+  }
+  .pay-and-feed {
+    height: 1000px;
+    .don-steps {
+      flex-direction: column;
+    }
+  }
+  .testimonials {
+    .reviews {
+      flex-direction: column;
     }
   }
 }
