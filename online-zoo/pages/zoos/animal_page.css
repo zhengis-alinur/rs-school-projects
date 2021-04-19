@@ -5,9 +5,10 @@
 }
 body {
   background-color: #F6F9FA;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
 }
 .container {
   position: relative;
@@ -15,11 +16,19 @@ body {
   margin: 0 auto;
   padding: 0 28px;
 }
-h1,
-h2,
-h3,
-p {
-  margin: 0;
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.44px;
+  text-transform: uppercase;
+  color: #0D444D;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.13px;
 }
 svg {
   position: absolute;
@@ -27,7 +36,6 @@ svg {
 header,
 footer {
   width: 100%;
-  height: 110px;
   background-color: #2A8086;
   padding: 11px 0;
 }
@@ -41,14 +49,6 @@ header .left,
 footer .left {
   display: flex;
   align-items: center;
-}
-header .left .logo-name,
-footer .left .logo-name {
-  font-family: 'Rubik', sans-serif;
-  font-size: 34.8387px;
-  font-weight: 500;
-  line-height: 41px;
-  color: #0D444D;
 }
 header label,
 footer label {
@@ -109,7 +109,6 @@ footer .right {
   display: flex;
 }
 header::after {
-  position: absolute;
   content: '';
   display: block;
   width: 100%;
@@ -248,6 +247,12 @@ footer .design-info {
   header .right {
     display: none;
   }
+  footer .main-nav {
+    display: none;
+  }
+  .logo-img {
+    width: 49.08px;
+  }
   label {
     display: block;
     cursor: pointer;
@@ -260,7 +265,7 @@ footer .design-info {
     flex-direction: column;
     position: absolute;
     left: -52px;
-    top: 100px;
+    top: 80px;
     width: 100vw;
     padding-top: 32px;
     background-color: #2A8086;
@@ -279,25 +284,6 @@ footer .design-info {
     display: none;
   }
 }
-.header {
-  height: 90px;
-}
-.header .container {
-  position: relative;
-  top: 0;
-}
-header .right .search-button {
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/icons/search-icon.svg) no-repeat center / cover;
-  transition: background 0.2s linear;
-}
-header .right .search-button:hover {
-  background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
-}
-footer {
-  z-index: 20;
-}
 .title {
   font-family: 'Rubik', sans-serif;
   font-size: 24px;
@@ -314,24 +300,18 @@ main {
 }
 main .container {
   position: relative;
-  left: -20px;
   top: -6px;
   display: flex;
   justify-content: space-between;
 }
 main .container .sidebar {
-  position: sticky;
-  top: 15px;
-  height: 800px;
+  height: 240px;
   min-width: 155px;
 }
 main .container .img-wrapper {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 0 auto 45px;
-  justify-content: center;
 }
 main .container .img-wrapper .frame {
   width: 98px;
@@ -360,17 +340,12 @@ main .container .img-wrapper:hover .tooltip {
   position: absolute;
 }
 main .container .img-wrapper .img {
-  position: absolute;
-  top: 25px;
-  left: 38px;
   transition: transform 0.5s linear;
 }
 main .container .img-wrapper:hover .img.active {
   transform: rotate(360deg);
 }
 main .container .img-wrapper .pet-name {
-  position: absolute;
-  bottom: -15px;
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   font-weight: 500;
@@ -385,8 +360,6 @@ main .container .img-wrapper:hover .pet-name.current {
 }
 main .container .content {
   position: relative;
-  left: -13px;
-  min-width: 86.5%;
   margin: 0;
 }
 main .container .content .head {
@@ -424,9 +397,9 @@ main .container .content .live-yt {
   margin-top: 42px;
 }
 main .container .content .live-yt iframe {
-  width: 103%;
-  height: 600px;
+  width: 100%;
   margin-top: 8px;
+  margin-right: 20px;
   border-radius: 20px;
 }
 main .container .content .p-title {
@@ -439,6 +412,7 @@ main .container .content .p-title {
 main .container .content .side-cameras {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-top: 56px;
 }
 main .container .content .side-cameras .cameras {
@@ -501,6 +475,7 @@ main .container .content .cameras .live-icon {
 main .container .about {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-top: 100px;
   color: #0D444D;
 }
@@ -516,7 +491,7 @@ main .container .about .information .info {
 main .container .about .interesting-facts {
   position: relative;
   left: -40px;
-  width: 574px;
+  max-width: 574px;
 }
 main .container .about .interesting-facts ul {
   position: relative;
@@ -631,6 +606,13 @@ main .illustrations .donate-button:active {
   .container {
     max-width: 1536px;
   }
+  .content {
+    width: calc(100% - 155px);
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
   .shot {
     min-width: 360px;
     height: 240px;
@@ -640,14 +622,34 @@ main .illustrations .donate-button:active {
   .container {
     width: 80%;
   }
+  .content {
+    width: calc(100% - 155px);
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+  .live-yt iframe {
+    height: 600px;
+  }
   .shot {
     min-width: 19.7vw;
     height: 12.5vw;
   }
 }
-@media (max-width: 1780px) {
+@media (max-width: 1780px) and (min-width: 1200px) {
   .container {
     width: 100%;
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+  .content {
+    width: 86.5%;
+  }
+  .live-yt iframe {
+    height: 600px;
   }
   .shot {
     min-width: 23vw;
@@ -655,5 +657,88 @@ main .illustrations .donate-button:active {
   }
   .buttons {
     margin-left: 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1199px) {
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 45px;
+  }
+  .content {
+    width: calc(100% - 155px);
+  }
+  .live-yt iframe {
+    height: 314px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
+  }
+}
+@media (min-width: 600px) {
+  .sidebar .img-wrapper {
+    justify-content: center;
+  }
+  .sidebar .img {
+    position: absolute;
+    top: 25px;
+    left: 38px;
+    transition: transform 0.5s linear;
+  }
+  .sidebar .pet-name {
+    position: absolute;
+    bottom: -15px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.46px;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+  }
+  main .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    left: -28px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .sidebar .frame {
+    display: none;
+  }
+  .sidebar .img-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #2A8086;
+  }
+  .sidebar .img-wrapper .img {
+    margin-left: 20px;
+    top: -30px;
+    width: 40px;
+  }
+  .sidebar .pet-name {
+    margin-left: 20px;
+    color: white;
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
   }
 }

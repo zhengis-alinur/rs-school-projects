@@ -1,3 +1,4 @@
+// compress: false
 @import "../../assets/less/_vars";
 @import "../../assets/less/_mixins";
 * {
@@ -12,9 +13,7 @@ body {
 
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -33,33 +32,8 @@ svg {
   position: absolute;
 }
 
-
 @import "../../assets/less/_header";
 
-.header {
-  .container {
-    position: relative;
-    top: 0;
-  }
-  height: 90px;
-}
-
-header .right .search-button {
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/icons/search-icon.svg) no-repeat center/cover;
-  transition: background .2s linear;
-  &:hover {
-    background: url(../../assets/icons/search-icon-light.svg) no-repeat center/cover;
-  }
-}
-footer {
-  .container {
-    position: relative;
-    top: 15px;
-  }
-  z-index: 20;
-}
 
 main {
   .container {
@@ -165,5 +139,20 @@ main {
         background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
       }
     }
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+@media (min-width: 1780px) and (max-width: 1920px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
   }
 }

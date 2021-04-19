@@ -2,7 +2,6 @@
 @import "_mixins";
 header, footer {
   width: 100%;
-  height: 110px;
   background-color: @primary;
   padding: 11px 0;
   .container{
@@ -14,10 +13,6 @@ header, footer {
   .left {
     display: flex;
     align-items: center;
-    .logo-name {
-      .rubik(34.8387px, 500, 41px);
-      color: @custom-black;
-    }
   }
 
   label {
@@ -77,7 +72,6 @@ header, footer {
 
 header  {
   &::after {
-    position: absolute;
     content: '';
     display: block;
     width: 100%;
@@ -210,11 +204,24 @@ footer {
 }
 
 @media (max-width: 1100px) {
+  header,
+  footer {
+  }
   header {
     .right {
       display: none;
     }
   }
+  footer {
+    .main-nav {
+      display: none;
+    }
+  }
+
+  .logo-img {
+    width: 49.08px;
+  }
+
   label {
     display: block;
     cursor: pointer;
@@ -228,7 +235,7 @@ footer {
       flex-direction: column;
       position: absolute;
       left: -52px;
-      top: 100px;
+      top: 80px;
       width: 100vw;
       padding-top: 32px;
       background-color: @primary;
@@ -244,6 +251,10 @@ footer {
       }
     }
   }
+}
+
+@media (max-width: 600px) {
+
 }
 
 

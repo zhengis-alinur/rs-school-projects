@@ -12,9 +12,7 @@ body {
 }
 .container {
   position: relative;
-  left: 8px;
   box-sizing: border-box;
-  width: 1536px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -38,7 +36,6 @@ svg {
 header,
 footer {
   width: 100%;
-  height: 110px;
   background-color: #2A8086;
   padding: 11px 0;
 }
@@ -53,13 +50,16 @@ footer .left {
   display: flex;
   align-items: center;
 }
-header .left .logo-name,
-footer .left .logo-name {
-  font-family: 'Rubik', sans-serif;
-  font-size: 34.8387px;
-  font-weight: 500;
-  line-height: 41px;
-  color: #0D444D;
+header label,
+footer label {
+  font-size: 40px;
+  line-height: 70px;
+  color: white;
+}
+header #toggle,
+footer #toggle {
+  display: none;
+  right: 0;
 }
 header .main-nav,
 footer .main-nav {
@@ -109,13 +109,13 @@ footer .right {
   display: flex;
 }
 header::after {
-  position: absolute;
   content: '';
   display: block;
   width: 100%;
   height: 8px;
   margin: 0 auto;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 header .right {
   display: flex;
@@ -153,6 +153,13 @@ header .right .search-button {
 }
 header .right .search-button:hover {
   background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
+}
+header .right .user-button {
+  width: 56px;
+  height: 56px;
+  margin-left: 31px;
+  border-radius: 50%;
+  background-color: aqua;
 }
 header button {
   font-family: 'Roboto', sans-serif;
@@ -214,28 +221,68 @@ footer .design-info {
   text-transform: uppercase;
   color: #fff;
 }
-.header {
-  height: 90px;
+@media (min-width: 1221px) {
+  .user-button {
+    display: none;
+  }
 }
-.header .container {
-  position: relative;
-  top: 0;
+@media (max-width: 1220px) {
+  .user-button {
+    display: block;
+  }
+  .login,
+  .signup {
+    display: none;
+  }
 }
-header .right .search-button {
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/icons/search-icon.svg) no-repeat center / cover;
-  transition: background 0.2s linear;
+@media (min-width: 1100px) {
+  label {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+  }
 }
-header .right .search-button:hover {
-  background: url(../../assets/icons/search-icon-light.svg) no-repeat center / cover;
-}
-footer {
-  z-index: 20;
-}
-footer .container {
-  position: relative;
-  top: 15px;
+@media (max-width: 1100px) {
+  header .right {
+    display: none;
+  }
+  footer .main-nav {
+    display: none;
+  }
+  .logo-img {
+    width: 49.08px;
+  }
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  header .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -52px;
+    top: 80px;
+    width: 100vw;
+    padding-top: 32px;
+    background-color: #2A8086;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16ppx;
+    font-weight: 700;
+    line-height: 23.74px;
+    z-index: 9;
+  }
+  header .main-nav li {
+    text-align: center;
+    display: inline;
+    margin: 0 0 32px;
+  }
+  header .main-nav li .link.current::after {
+    display: none;
+  }
 }
 main .container {
   display: flex;
@@ -341,4 +388,19 @@ main .illustrations .pics .bamboo {
   top: -4vw;
   left: -8vw;
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+@media (min-width: 1780px) and (max-width: 1920px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1780px) {
+  .container {
+    width: 100%;
+  }
 }

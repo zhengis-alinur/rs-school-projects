@@ -1,17 +1,15 @@
+// compress: false
 @import "../../assets/less/_vars";
 @import "../../assets/less/_mixins";
-
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: @background;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  .roboto(16px, 400, 18px);
 }
-
 
 .container {
   position: relative;
@@ -20,11 +18,14 @@ body {
   padding: 0 28px;
 }
 
-h1,
-h2,
-h3,
-p{
-  margin: 0;
+h2 {
+  .rubik(24px, 400, 28.44px);
+  text-transform: uppercase;
+  color: @custom-black;
+}
+
+h3 {
+  .roboto(24px, 500, 28.13px);
 }
 
 svg {
@@ -32,26 +33,6 @@ svg {
 }
 
 @import "../../assets/less/_header";
-
-.header {
-  .container {
-    position: relative;
-    top: 0;
-  }
-  height: 90px;
-}
-header .right .search-button {
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/icons/search-icon.svg) no-repeat center/cover;
-  transition: background .2s linear;
-  &:hover {
-    background: url(../../assets/icons/search-icon-light.svg) no-repeat center/cover;
-  }
-}
-footer {
-  z-index: 20;
-}
 
 .title {
   .rubik(24px, 400, 28.44px);
@@ -66,22 +47,17 @@ main {
   margin-bottom: 0;
   .container {
     position: relative;
-    left: -20px; top: -6px;
+    top: -6px;
     display: flex;
     justify-content: space-between;
     .sidebar {
-      position: sticky;
-      top: 15px;
-      height: 800px;
+      height: 240px;
       min-width: 155px;
     }
     .img-wrapper {
       position: relative;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      margin: 0 auto 45px;
-      justify-content: center;
       .frame {
         width: 98px;
         height: 95px;
@@ -110,9 +86,6 @@ main {
         position: absolute;
       }
       .img {
-        position: absolute;
-        top: 25px;
-        left: 38px;
         transition: transform .5s linear;
       }
 
@@ -121,8 +94,6 @@ main {
       }
 
       .pet-name {
-        position: absolute;
-        bottom: -15px;
         .roboto-mono(14px, 500, 18.46px);
         text-transform: uppercase;
       }
@@ -136,8 +107,6 @@ main {
     }
     .content {
       position: relative;
-      left: -13px;
-      min-width: 86.5%;
       margin: 0;
       .head {
         position: relative;
@@ -173,9 +142,9 @@ main {
       .live-yt {
         margin-top: 42px;
         iframe {
-          width: 103%;
-          height: 600px;
+          width: 100%;
           margin-top: 8px;
+          margin-right: 20px;
           border-radius: 20px;
         }
       }
@@ -186,6 +155,7 @@ main {
       .side-cameras {
         display: flex;
         flex-direction: column;
+        width: 100%;
         margin-top: 56px;
         .cameras {
           margin-top: 8px;
@@ -250,6 +220,7 @@ main {
     .about {
       display: flex;
       justify-content: space-between;
+      width: 100%;
       margin-top: 100px;
       color: @custom-black;
       .title {
@@ -264,7 +235,7 @@ main {
       .interesting-facts {
         position: relative;
         left: -40px;
-        width: 574px;
+        max-width: 574px;
         ul {
           position: relative;
           left: 22px;
@@ -374,6 +345,13 @@ main {
   .container {
     max-width: 1536px;
   }
+  .content {
+    width: ~"calc(100% - 155px)"
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
   .shot {
     min-width: 360px;
     height: 240px;
@@ -384,15 +362,42 @@ main {
   .container {
     width: 80%;
   }
+  .content {
+    width: ~"calc(100% - 155px)"
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+
+  .live-yt {
+    iframe {
+      height: 600px;
+    }
+  }
+
   .shot {
     min-width: 19.7vw;
     height: 12.5vw;
   }
+
 }
 
-@media (max-width: 1780px) {
+@media (max-width: 1780px) and (min-width: 1200px) {
   .container {
     width: 100%;
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+  .content {
+    width: 86.5%;
+  }
+  .live-yt {
+    iframe {
+      height: 600px;
+    }
   }
   .shot {
     min-width: 23vw;
@@ -403,4 +408,91 @@ main {
   }
 }
 
+@media (min-width: 601px) and (max-width: 1199px) {
+  .sidebar {
+    position: sticky;
+    top: 15px;
+  }
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 45px;
+  }
+  .content {
+    width: ~"calc(100% - 155px)"
+  }
+  .live-yt {
+    iframe {
+      height: 314px;
+    }
+  }
+  .about {
+    flex-direction: column;
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .sidebar {
+    .img-wrapper {
+      justify-content: center;
+    }
+    .img {
+      position: absolute;
+      top: 25px;
+      left: 38px;
+      transition: transform .5s linear;
+    }
+
+    .pet-name {
+      position: absolute;
+      bottom: -15px;
+      .roboto-mono(14px, 500, 18.46px);
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+    .container {
+      flex-direction: column;
+    }
+  }
+  .sidebar {
+    position: relative;
+    left: -28px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    .frame {
+      display: none;
+    }
+    .img-wrapper {
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100vw;
+      height: 60px;
+      margin: 0;
+      padding: 0;
+      background-color: @primary;
+      .img {
+        margin-left: 20px;
+        top: -30px;
+        width: 40px;
+      }
+    }
+    .pet-name {
+      margin-left: 20px;
+      color: white;
+    }
+  }
+  .shot {
+    min-width: 23vw;
+    height: 14vw;
+  }
+}
 

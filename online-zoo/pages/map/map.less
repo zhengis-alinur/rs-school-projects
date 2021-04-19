@@ -11,6 +11,7 @@ body {
   background-color: @background;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -37,7 +38,6 @@ svg {
   background-color: @primary;
   .wrapper {
     width: 100%;
-    height: 940px;
     margin-top: 50px;
   }
   .title {
@@ -48,9 +48,8 @@ svg {
   .map {
     position: relative;
     left: -10px;
-    width: 1480px;
-    height: 930px;
-    background: url(../../assets/images/map/map.svg) no-repeat center;
+
+    background: url(../../assets/images/map/map.svg) no-repeat center/cover;
   }
 
   .img-wrapper {
@@ -164,15 +163,13 @@ svg {
   }
 }
 
-@media (max-width: 1500px) {
-  .wrapper {
-    overflow: scroll;
-  }
-}
-
 @media (min-width: 1920px) {
   .container {
     max-width: 1536px;
+  }
+  .map {
+    width: 1480px;
+    height: 930px;
   }
 }
 
@@ -180,10 +177,28 @@ svg {
   .container {
     width: 80%;
   }
+  .map {
+    width: 1480px;
+    height: 930px;
+  }
 }
 
 @media (max-width: 1780px) {
   .container {
     width: 100%;
+  }
+  .map {
+    width: 97vw;
+    height: 63vw;
+  }
+}
+
+@media (max-width: 700px) and (max-device-width: 700px) {
+  .wrapper {
+    overflow: scroll;
+  }
+  .map {
+    width: 709px;
+    height: 460px;
   }
 }

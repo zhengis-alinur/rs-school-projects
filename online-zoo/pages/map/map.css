@@ -8,6 +8,7 @@ body {
   background-color: #F6F9FA;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .container {
   position: relative;
@@ -27,7 +28,6 @@ svg {
 header,
 footer {
   width: 100%;
-  height: 110px;
   background-color: #2A8086;
   padding: 11px 0;
 }
@@ -41,14 +41,6 @@ header .left,
 footer .left {
   display: flex;
   align-items: center;
-}
-header .left .logo-name,
-footer .left .logo-name {
-  font-family: 'Rubik', sans-serif;
-  font-size: 34.8387px;
-  font-weight: 500;
-  line-height: 41px;
-  color: #0D444D;
 }
 header label,
 footer label {
@@ -109,7 +101,6 @@ footer .right {
   display: flex;
 }
 header::after {
-  position: absolute;
   content: '';
   display: block;
   width: 100%;
@@ -248,6 +239,12 @@ footer .design-info {
   header .right {
     display: none;
   }
+  footer .main-nav {
+    display: none;
+  }
+  .logo-img {
+    width: 49.08px;
+  }
   label {
     display: block;
     cursor: pointer;
@@ -260,7 +257,7 @@ footer .design-info {
     flex-direction: column;
     position: absolute;
     left: -52px;
-    top: 100px;
+    top: 80px;
     width: 100vw;
     padding-top: 32px;
     background-color: #2A8086;
@@ -284,7 +281,6 @@ footer .design-info {
 }
 .content .wrapper {
   width: 100%;
-  height: 940px;
   margin-top: 50px;
 }
 .content .title {
@@ -298,9 +294,7 @@ footer .design-info {
 .content .map {
   position: relative;
   left: -10px;
-  width: 1480px;
-  height: 930px;
-  background: url(../../assets/images/map/map.svg) no-repeat center;
+  background: url(../../assets/images/map/map.svg) no-repeat center / cover;
 }
 .content .img-wrapper {
   position: absolute;
@@ -415,23 +409,39 @@ footer .design-info {
   background: url(../../assets/icons/scale-.svg) no-repeat center;
   background-color: rgba(255, 255, 255, 0.4);
 }
-@media (max-width: 1500px) {
-  .wrapper {
-    overflow: scroll;
-  }
-}
 @media (min-width: 1920px) {
   .container {
     max-width: 1536px;
+  }
+  .map {
+    width: 1480px;
+    height: 930px;
   }
 }
 @media (min-width: 1780px) and (max-width: 1920px) {
   .container {
     width: 80%;
   }
+  .map {
+    width: 1480px;
+    height: 930px;
+  }
 }
 @media (max-width: 1780px) {
   .container {
     width: 100%;
+  }
+  .map {
+    width: 97vw;
+    height: 63vw;
+  }
+}
+@media (max-width: 700px) and (max-device-width: 700px) {
+  .wrapper {
+    overflow: scroll;
+  }
+  .map {
+    width: 709px;
+    height: 460px;
   }
 }
