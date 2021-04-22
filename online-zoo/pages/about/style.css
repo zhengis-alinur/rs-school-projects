@@ -868,7 +868,6 @@ footer .design-info {
   color: #C5E1E6;
 }
 .pay-and-feed .container .head .donate-button {
-  position: relative;
   white-space: nowrap;
   text-transform: uppercase;
   border-radius: 100px;
@@ -1750,6 +1749,12 @@ footer .design-info {
   .pets-in-zoo .btn-with-icon.bottom {
     display: none;
   }
+  .pay-and-feed .donate-button {
+    position: relative;
+  }
+  .testimonials .btn-with-icon {
+    position: relative;
+  }
 }
 @media (max-width: 500px) {
   .intro {
@@ -1827,17 +1832,103 @@ footer .design-info {
     position: relative;
     top: 20px;
   }
+  .pets-in-zoo .penguin {
+    display: none;
+  }
+  .pets-in-zoo .btn-with-icon {
+    margin-top: 45px;
+  }
   .pay-and-feed {
-    height: 1000px;
     margin-bottom: 0;
+    background: url(../../assets/images/pay-and-feed/bg-320.svg) no-repeat center / cover;
+    height: 900px;
+  }
+  .pay-and-feed .title {
+    top: -10px;
+    min-width: 150px;
+  }
+  .pay-and-feed .container {
+    left: -15px;
+    top: -53px;
   }
   .pay-and-feed .don-steps {
     flex-direction: column;
+    justify-content: space-between;
+    height: 640px;
   }
   .pay-and-feed .donate-button {
-    display: none;
+    position: absolute;
+    top: 750px;
+    left: 10px;
+    height: 40px;
+    padding: 10px 50px;
+  }
+  .pay-and-feed .arrow {
+    width: 21px;
+    height: 21px;
+    margin: auto 0;
+    background-image: url(../../assets/icons/small-arrow.svg);
+    transform: rotate(90deg);
+    left: 39vw;
+  }
+  .pay-and-feed .arrow.one {
+    top: 185px;
+  }
+  .pay-and-feed .arrow.two {
+    top: 425px;
+  }
+  .testimonials {
+    margin-top: 35px;
+  }
+  .testimonials .container {
+    padding: 0 10px;
   }
   .testimonials .reviews {
+    margin-top: 10px;
+    left: 2px;
     flex-direction: column;
+  }
+  .testimonials .reviews .testimonial {
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .testimonials .btn-with-icon {
+    position: absolute;
+    top: 705px;
+    left: 10px;
+    height: 25px;
+    padding: 5px 50px;
+  }
+  .look-animals {
+    margin-top: 58px;
+    margin-bottom: 0;
+  }
+  .look-animals .title {
+    width: 300px;
+  }
+  .look-animals .slider {
+    flex-direction: column;
+    left: 10px;
+  }
+  .look-animals .animals {
+    flex-wrap: wrap;
+    width: 300px;
+  }
+  .look-animals .animals .animal {
+    margin-bottom: 50px;
+  }
+  .look-animals .animals .animal.lemur,
+  .look-animals .animals .animal.elephant {
+    display: block;
+  }
+  .look-animals .buttons {
+    top: -20px;
+    left: 115px;
+  }
+  .look-animals .slider-button {
+    transform: rotate(90deg);
+  }
+  .look-animals .slider-button.left {
+    display: none;
   }
 }
