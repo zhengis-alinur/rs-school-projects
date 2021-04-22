@@ -936,7 +936,7 @@ footer .design-info {
   display: flex;
   width: 89%;
   justify-content: space-between;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .look-animals .buttons {
   position: relative;
