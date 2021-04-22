@@ -296,10 +296,6 @@ footer .design-info {
 }
 .intro .container .watch-now {
   position: relative;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.74px;
   text-transform: uppercase;
   text-decoration: none;
   color: #0D444D;
@@ -339,7 +335,7 @@ footer .design-info {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url("https://s8.hostingkartinok.com/uploads/images/2021/03/5e2f11f9d8f2e5c3021af139c3f167a4.png") no-repeat center / cover;
+  background: url(../../assets/images/intro/intro-panda.png) no-repeat center / cover;
   transition: transform 0.5s ease;
 }
 .intro .container .intro-panda:hover {
@@ -364,10 +360,6 @@ footer .design-info {
   align-items: center;
   background: none;
   border: 2px solid #19707D;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.74px;
   text-transform: uppercase;
   text-decoration: none;
   color: #19707D;
@@ -399,13 +391,12 @@ footer .design-info {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .how-it-works .step-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 480px;
+  text-align: center;
 }
 .how-it-works .step-item span {
   margin-top: 15px;
@@ -413,8 +404,6 @@ footer .design-info {
   line-height: 20px;
 }
 .how-it-works .icon-container {
-  width: 145px;
-  height: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -613,6 +602,49 @@ footer .design-info {
     height: 280px;
   }
 }
+@media (max-width: 800px) {
+  .illustrations {
+    background-position-x: -120px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .pics {
+    top: 25px;
+  }
+  .pics .bamboo.small {
+    display: none;
+  }
+  .pics .tree.one {
+    position: absolute;
+    left: 33px;
+    top: 120px;
+    width: 72px;
+    height: 128px;
+  }
+  .pics .tree.small {
+    position: absolute;
+    left: 225px;
+    top: 150px;
+    width: 49.74px;
+    height: 87.9px;
+  }
+  .pics .panda {
+    position: absolute;
+    left: 395px;
+    top: 225px;
+    width: 90px;
+    height: 83px;
+  }
+  .pics .bamboo {
+    position: absolute;
+    left: 440px;
+    top: 165px;
+    width: 82px;
+    height: 155px;
+  }
+}
 .buttons {
   display: flex;
   flex-direction: column-reverse;
@@ -676,7 +708,6 @@ footer .design-info {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 98%;
   margin-top: 62px;
 }
 .pets-in-zoo .pet {
@@ -759,13 +790,6 @@ footer .design-info {
 .pets-in-zoo .pet p {
   color: #909090;
 }
-.pets-in-zoo .slider-button {
-  left: 97.2%;
-  top: 50%;
-}
-.pets-in-zoo .slider-button.left {
-  top: 55%;
-}
 .pay-and-feed {
   position: relative;
   display: flex;
@@ -815,6 +839,7 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 .pay-and-feed .container .don-step {
   display: flex;
@@ -824,9 +849,6 @@ footer .design-info {
   padding: 0;
 }
 .pay-and-feed .container .don-step img {
-  width: 64px;
-  height: 64px;
-  padding: 40.5px;
   border-radius: 50%;
   background-color: white;
 }
@@ -892,13 +914,7 @@ footer .design-info {
   top: 18px;
 }
 .testimonials .date {
-  font-size: 14px;
-  line-height: 16.41px;
   color: #b2b2b2;
-}
-.testimonials .feedback {
-  font-style: italic;
-  line-height: 18.75px;
 }
 .testimonials .person {
   display: flex;
@@ -1128,6 +1144,10 @@ footer .design-info {
     line-height: 28.13px;
   }
   .btn-with-icon {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.74px;
     border-radius: 100px;
     padding: 14px 20px;
   }
@@ -1231,6 +1251,10 @@ footer .design-info {
     padding: 32px 0 10px 10px;
   }
   .pets-in-zoo .btn-with-icon {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.74px;
     top: 10px;
     left: -8px;
     border-radius: 100px;
@@ -1272,15 +1296,6 @@ footer .design-info {
   .pay-and-feed .head h2 {
     top: 11px;
     left: -70px;
-  }
-  .pay-and-feed .head .donate-button {
-    top: -10px;
-    width: 430px;
-    padding: 7px 63px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23.75px;
   }
   .testimonials {
     margin-top: 60px;
@@ -1345,32 +1360,82 @@ footer .design-info {
   }
 }
 @media (min-width: 1151px) {
+  .pay-and-feed .don-steps {
+    top: 10px;
+    left: 2px;
+  }
+  .pay-and-feed .don-steps .don-step img {
+    width: 64px;
+    height: 64px;
+    padding: 38px;
+  }
+  .pay-and-feed .don-steps .don-step .caption {
+    position: relative;
+    top: -10px;
+    max-width: 180px;
+  }
   .intro-panda::after {
     left: 45%;
     top: 50%;
     width: 120px;
     height: 120px;
   }
+  .how-it-works .step-item {
+    width: 480px;
+  }
+  .how-it-works .icon-container {
+    width: 145px;
+    height: 145px;
+  }
   .watch-now {
     width: 200px;
     padding: 14px 84px;
     top: 40px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.74px;
   }
   .watch-now.donate {
     display: none;
+  }
+  .pets-in-zoo .slider-button {
+    left: 97.2%;
+    top: 50%;
+  }
+  .pets-in-zoo .slider-button.left {
+    top: 55%;
+  }
+  .pets-container {
+    max-width: 98%;
   }
   .pet {
     width: 31.25%;
     margin: 0 20px 20px 0;
   }
+  .testimonial .date {
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .testimonial .feedback {
+    font-style: italic;
+    line-height: 18.75px;
+  }
 }
 @media (max-width: 1150px) {
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.33px;
+  }
   .intro {
     background: url(../../assets/images/intro/123.svg) no-repeat center / cover;
     height: 400px;
   }
   .intro .text {
-    margin-top: 90px;
+    margin-top: 8px;
+    left: -8px;
   }
   .intro .title {
     color: #F3F7F8;
@@ -1396,21 +1461,60 @@ footer .design-info {
     color: #F3F7F8;
   }
   .intro .watch-now {
-    top: 25px;
+    top: 35px;
     width: 100px;
-    padding: 10px 35px;
+    padding: 10px 45px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.46px;
+  }
+  .intro .watch-now.donate {
+    left: 20px;
+    padding: 10px 45px;
+  }
+  .intro .intro-panda {
+    font-size: 14px;
+    line-height: 18.46px;
+    top: -20px;
+    left: -10px;
+  }
+  .how-it-works {
+    margin-top: 20px;
+  }
+  .how-it-works .title {
+    top: -67px;
+    left: 18px;
+  }
+  .how-it-works .steps {
+    overflow: hidden;
+    left: -18px;
+    width: 103%;
+  }
+  .how-it-works .step-item {
+    max-width: 200px;
+  }
+  .how-it-works .step-item span {
+    margin-top: 25px;
+  }
+  .how-it-works .icon-container {
+    width: 80px;
+    height: 80px;
+  }
+  .how-it-works .icon-container img {
+    width: 42px;
   }
   .arrow {
-    width: 32px;
-    height: 32px;
+    width: 21px;
+    height: 21px;
     margin: auto 0;
     background-image: url(../../assets/icons/small-arrow.svg);
   }
   .arrow.one {
-    left: 28vw;
+    left: 28.5vw;
   }
   .arrow.two {
-    left: 60vw;
+    left: 62.5vw;
   }
   .intro-panda {
     margin-top: 33px;
@@ -1424,19 +1528,60 @@ footer .design-info {
     width: 90px;
     height: 90px;
   }
-  .pet {
-    margin: 0 20px 40px 0;
+  .pets-in-zoo {
+    margin-top: 27px;
+    overflow-x: hidden;
+  }
+  .pets-in-zoo .container {
+    padding: 0 20px;
+  }
+  .pets-in-zoo .btn-with-icon {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.46px;
+    top: 1px;
+    left: -8px;
+    border-radius: 100px;
+    padding: 5px 20px;
+  }
+  .pets-in-zoo .btn-with-icon img {
+    width: 22px;
+  }
+  .pets-in-zoo .pets-container {
+    margin-top: 20px;
+    min-width: 560px;
+    left: 5px;
+  }
+  .pets-in-zoo .pet {
     height: 298px;
-    width: 245px;
+    width: 260px;
+    margin: 0 20px 20px 0;
   }
-  .pet .img-container {
-    height: 220px;
+  .pets-in-zoo .pet .img-container {
+    height: 180px;
   }
-  .pet.lemur,
-  .pet.elephant {
+  .pets-in-zoo .pet .text {
+    position: relative;
+    top: -7px;
+  }
+  .pets-in-zoo .pet.lemur,
+  .pets-in-zoo .pet.elephant {
     display: none;
   }
+  .pets-in-zoo .pet .button-tv {
+    top: -220px;
+  }
+  .pets-in-zoo .slider-button {
+    position: relative;
+    left: -35%;
+    top: 10px;
+  }
+  .pets-in-zoo .slider-button.left {
+    top: 10px;
+  }
   .pay-and-feed {
+    margin-top: 15px;
     height: 400px;
     background: url(../../assets/images/pay-and-feed/bg-640.svg) no-repeat center / cover;
   }
@@ -1444,16 +1589,61 @@ footer .design-info {
   .pay-and-feed .bamboo {
     display: none;
   }
+  .pay-and-feed .head {
+    left: 0px;
+    top: -30px;
+  }
+  .pay-and-feed .head .title {
+    position: relative;
+    left: 10px;
+  }
+  .pay-and-feed .don-steps {
+    top: 10px;
+    left: 2px;
+    overflow: hidden;
+    width: 102%;
+  }
+  .pay-and-feed .don-steps .don-step img {
+    width: 40px;
+    height: 40px;
+    padding: 38px;
+  }
+  .pay-and-feed .don-steps .don-step .caption {
+    position: relative;
+    top: -10px;
+    max-width: 180px;
+  }
+  .pay-and-feed .donate-button {
+    width: 270px;
+    left: -12px;
+    padding: 12px 63px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.46px;
+  }
   .look-animals .animal.lemur,
   .look-animals .animal.elephant,
   .look-animals .animal.last-panda {
     display: none;
+  }
+  .testimonials {
+    margin-top: 24px;
   }
   .testimonials .reviews {
     overflow-x: hidden;
   }
   .testimonials .testimonial {
     min-width: 256px;
+  }
+  .testimonials .testimonial .date {
+    font-size: 12px;
+    line-height: 14.06px;
+  }
+  .testimonials .testimonial .feedback {
+    font-style: italic;
+    line-height: 14px;
+    line-height: 20px;
   }
 }
 @media (max-width: 500px) {

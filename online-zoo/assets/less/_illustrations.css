@@ -180,3 +180,46 @@
     height: 280px;
   }
 }
+@media (max-width: 800px) {
+  .illustrations {
+    background-position-x: -120px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .pics {
+    top: 25px;
+  }
+  .pics .bamboo.small {
+    display: none;
+  }
+  .pics .tree.one {
+    position: absolute;
+    left: 33px;
+    top: 120px;
+    width: 72px;
+    height: 128px;
+  }
+  .pics .tree.small {
+    position: absolute;
+    left: 225px;
+    top: 150px;
+    width: 49.74px;
+    height: 87.9px;
+  }
+  .pics .panda {
+    position: absolute;
+    left: 395px;
+    top: 225px;
+    width: 90px;
+    height: 83px;
+  }
+  .pics .bamboo {
+    position: absolute;
+    left: 440px;
+    top: 165px;
+    width: 82px;
+    height: 155px;
+  }
+}
