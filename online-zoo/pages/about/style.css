@@ -876,7 +876,6 @@ footer .design-info {
 .testimonials .container .head {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 .testimonials .container .head h2 {
   position: relative;
@@ -908,10 +907,6 @@ footer .design-info {
 }
 .testimonials .testimonial .review span {
   position: relative;
-  width: 80%;
-  margin-top: 10px;
-  left: 45px;
-  top: 18px;
 }
 .testimonials .date {
   color: #b2b2b2;
@@ -952,7 +947,7 @@ footer .design-info {
   display: flex;
   width: 89%;
   justify-content: space-between;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .look-animals .buttons {
   position: relative;
@@ -1421,6 +1416,15 @@ footer .design-info {
     font-style: italic;
     line-height: 18.75px;
   }
+  .testimonials .head {
+    margin-bottom: 50px;
+  }
+  .testimonials span {
+    width: 80%;
+    margin-top: 10px;
+    left: 45px;
+    top: 18px;
+  }
 }
 @media (max-width: 1150px) {
   h2 {
@@ -1630,20 +1634,55 @@ footer .design-info {
   .testimonials {
     margin-top: 24px;
   }
+  .testimonials .head {
+    margin-bottom: 30px;
+  }
   .testimonials .reviews {
+    left: -8px;
     overflow-x: hidden;
   }
   .testimonials .testimonial {
     min-width: 256px;
+    margin-right: 20px;
+  }
+  .testimonials .testimonial .review {
+    padding: 19px 0 0 15px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .testimonials .testimonial .review span {
+    margin-bottom: 15px;
   }
   .testimonials .testimonial .date {
+    margin: 0;
     font-size: 12px;
     line-height: 14.06px;
   }
   .testimonials .testimonial .feedback {
+    margin: 0;
+    font-size: 14px;
     font-style: italic;
-    line-height: 14px;
     line-height: 20px;
+  }
+  .testimonials .testimonial .person {
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .testimonials .testimonial .person img {
+    width: 40px;
+  }
+  .look-animals {
+    left: -20px;
+    margin-bottom: 50px;
+  }
+  .look-animals .title {
+    position: relative;
+    top: 14px;
+    left: 12px;
+  }
+  .look-animals .buttons {
+    position: relative;
+    left: 36px;
   }
 }
 @media (max-width: 500px) {
