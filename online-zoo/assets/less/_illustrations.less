@@ -1,10 +1,6 @@
 @import "_vars";
 @import "_mixins";
 .illustrations {
-  width: 100%;
-  height: 27vw;
-  margin-top: 95px;
-  background: url(../../assets/images/illustrations/bg.svg) no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,16 +8,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .bamboo.small {
+      background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
+    }
+    .tree.one{
+      background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
+    }
+    .tree.two{
+      background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
+    }
+    .tree.small {
+      background: url(../../assets/images/illustrations/smallTree.svg) no-repeat center/cover;
+    }
+    .panda {
+      background: url(../../assets/images/illustrations/Panda.svg) no-repeat center/cover;
+    }
+    .bamboo {
+      background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
+    }
+  }
+}
+
+
+@media (min-width: 1921px) {
+  .illustrations {
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat center/cover;
+    width: 100%;
+    margin-top: 95px;
+    height: 27vw;
+  }
+  .pics {
     width: 100%;
     min-height: @illustrations-height;
-    overflow: hidden;
-    .bamboo.small {
+      .bamboo.small {
       position: relative;
       top: -5vw;
       left: 0vw;
       width: 6.05vw;
       height: 11.5vw;
-      background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
     }
     .tree.one{
       position: relative;
@@ -29,7 +53,6 @@
       left: -7vw;
       width: 6.77vw;
       height: 11.97vw;
-      background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
     }
     .tree.two{
       position: relative;
@@ -37,7 +60,6 @@
       left: -8vw;
       width: 6.77vw;
       height: 11.97vw;
-      background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
     }
     .tree.small {
       position: relative;
@@ -45,7 +67,6 @@
       left: 4.5vw;
       width: 4.65vw;
       height: 8.22vw;
-      background: url(../../assets/images/illustrations/smallTree.svg) no-repeat center/cover;
     }
     .panda {
       position: relative;
@@ -53,7 +74,6 @@
       left: -4vw;
       width: 8.8vw;
       height: 8.07vw;
-      background: url(../../assets/images/illustrations/Panda.svg) no-repeat center/cover;
     }
     .bamboo {
       position: relative;
@@ -61,7 +81,109 @@
       left: -19vw;
       width: 7.65vw;
       height: 14.5vw;
-      background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
     }
   }
 }
+
+@media (max-width: 1920px) {
+  .illustrations {
+    margin-top: 120px;
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat left/cover;
+    width: 100%;
+    height: 500px;
+    overflow: hidden
+  }
+  .pics {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    .bamboo {
+      position: absolute;
+      left: 1040px;
+      top: 95px;
+      width: 147px;
+      height: 280px;
+    }
+    .bamboo.small {
+      position: absolute;
+      left: 0;
+      top: 50px;
+      width: 116px;
+      height: 221px;
+    }
+    .tree.one{
+      position: absolute;
+      left: 220px;
+      top: 39px;
+      width: 130px;
+      height: 230px;
+    }
+    .tree.two{
+      position: absolute;
+      left: 1615px;
+      top: 150px;
+      width: 130px;
+      height: 230px;
+    }
+    .tree.small {
+      position: absolute;
+      left: 798px;
+      top: 100px;
+      width: 89.38px;
+      height: 158px;
+    }
+    .panda {
+      position: absolute;
+      left: 950px;
+      top: 200px;
+      width: 170px;
+      height: 155px;
+    }
+  }
+
+}
+
+@media (max-width: 1220px) {
+  .illustrations {
+    margin-top: 22px;
+  }
+  .pics {
+    top: 25px;
+    .bamboo.small {
+      position: absolute;
+      left: -10px;
+      top: 50px;
+      width: 116px;
+      height: 221px;
+    }
+    .tree.one{
+      position: absolute;
+      left: 260px;
+      top: 39px;
+      width: 130px;
+      height: 230px;
+    }
+    .tree.small {
+      position: absolute;
+      left: 610px;
+      top: 100px;
+      width: 89.38px;
+      height: 158px;
+    }
+    .panda {
+      position: absolute;
+      left: 915px;
+      top: 230px;
+      width: 170px;
+      height: 155px;
+    }
+    .bamboo {
+        position: absolute;
+        left: 1000px;
+        top: 115px;
+        width: 147px;
+        height: 280px;
+    }
+  }
+}
+

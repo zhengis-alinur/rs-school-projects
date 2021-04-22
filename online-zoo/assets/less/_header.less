@@ -157,11 +157,7 @@ header  {
 }
 
 footer {
-  height: 200px;
   background-color: #196469;
-  .container {
-    margin-top: 45px;
-  }
   .main-nav {
     margin-left: 78px;
   }
@@ -182,6 +178,12 @@ footer {
   .user-button {
     display: none;
   }
+  footer {
+    .container {
+      margin-top: 45px;
+      margin-bottom: 45px;
+    }
+  }
 }
 
 @media (max-width: 1220px) {
@@ -191,6 +193,12 @@ footer {
   .login,
   .signup {
     display: none;
+  }
+  footer {
+    .container {
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
   }
 }
 

@@ -24,12 +24,6 @@ h2 {
   text-transform: uppercase;
   color: #0D444D;
 }
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28.13px;
-}
 svg {
   position: absolute;
 }
@@ -198,11 +192,7 @@ header .signup:focus {
   border-radius: 100px;
 }
 footer {
-  height: 200px;
   background-color: #196469;
-}
-footer .container {
-  margin-top: 45px;
 }
 footer .main-nav {
   margin-left: 78px;
@@ -225,6 +215,10 @@ footer .design-info {
   .user-button {
     display: none;
   }
+  footer .container {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
 }
 @media (max-width: 1220px) {
   .user-button {
@@ -233,6 +227,10 @@ footer .design-info {
   .login,
   .signup {
     display: none;
+  }
+  footer .container {
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1100px) {
@@ -290,10 +288,11 @@ footer .design-info {
 }
 .intro .container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
 }
 .intro .container .text {
-  margin-top: 5.5%;
+  position: relative;
 }
 .intro .container .watch-now {
   position: relative;
@@ -360,12 +359,11 @@ footer .design-info {
   transform: rotate(-360deg);
 }
 .btn-with-icon {
+  position: relative;
   display: flex;
   align-items: center;
   background: none;
   border: 2px solid #19707D;
-  border-radius: 100px;
-  padding: 14px 20px;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   font-weight: 400;
@@ -398,6 +396,7 @@ footer .design-info {
   position: absolute;
 }
 .how-it-works .steps {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -434,10 +433,6 @@ footer .design-info {
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
 }
 .illustrations {
-  width: 100%;
-  height: 27vw;
-  margin-top: 95px;
-  background: url(../../assets/images/illustrations/bg.svg) no-repeat center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,57 +441,177 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  min-height: 600px;
-  overflow: hidden;
 }
 .illustrations .pics .bamboo.small {
-  position: relative;
-  top: -5vw;
-  left: 0vw;
-  width: 6.05vw;
-  height: 11.5vw;
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
 }
 .illustrations .pics .tree.one {
-  position: relative;
-  top: -5vw;
-  left: -7vw;
-  width: 6.77vw;
-  height: 11.97vw;
   background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center / cover;
 }
 .illustrations .pics .tree.two {
-  position: relative;
-  top: 1vw;
-  left: -8vw;
-  width: 6.77vw;
-  height: 11.97vw;
   background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center / cover;
 }
 .illustrations .pics .tree.small {
-  position: relative;
-  top: -3.5vw;
-  left: 4.5vw;
-  width: 4.65vw;
-  height: 8.22vw;
   background: url(../../assets/images/illustrations/smallTree.svg) no-repeat center / cover;
 }
 .illustrations .pics .panda {
-  position: relative;
-  top: 1.5vw;
-  left: -4vw;
-  width: 8.8vw;
-  height: 8.07vw;
   background: url(../../assets/images/illustrations/Panda.svg) no-repeat center / cover;
 }
 .illustrations .pics .bamboo {
-  position: relative;
-  top: -1.5vw;
-  left: -19vw;
-  width: 7.65vw;
-  height: 14.5vw;
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
+}
+@media (min-width: 1921px) {
+  .illustrations {
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat center / cover;
+    width: 100%;
+    margin-top: 95px;
+    height: 27vw;
+  }
+  .pics {
+    width: 100%;
+    min-height: 600px;
+  }
+  .pics .bamboo.small {
+    position: relative;
+    top: -5vw;
+    left: 0vw;
+    width: 6.05vw;
+    height: 11.5vw;
+  }
+  .pics .tree.one {
+    position: relative;
+    top: -5vw;
+    left: -7vw;
+    width: 6.77vw;
+    height: 11.97vw;
+  }
+  .pics .tree.two {
+    position: relative;
+    top: 1vw;
+    left: -8vw;
+    width: 6.77vw;
+    height: 11.97vw;
+  }
+  .pics .tree.small {
+    position: relative;
+    top: -3.5vw;
+    left: 4.5vw;
+    width: 4.65vw;
+    height: 8.22vw;
+  }
+  .pics .panda {
+    position: relative;
+    top: 1.5vw;
+    left: -4vw;
+    width: 8.8vw;
+    height: 8.07vw;
+  }
+  .pics .bamboo {
+    position: relative;
+    top: -1.5vw;
+    left: -19vw;
+    width: 7.65vw;
+    height: 14.5vw;
+  }
+}
+@media (max-width: 1920px) {
+  .illustrations {
+    margin-top: 120px;
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat left / cover;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  .pics {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  .pics .bamboo {
+    position: absolute;
+    left: 1040px;
+    top: 95px;
+    width: 147px;
+    height: 280px;
+  }
+  .pics .bamboo.small {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 116px;
+    height: 221px;
+  }
+  .pics .tree.one {
+    position: absolute;
+    left: 220px;
+    top: 39px;
+    width: 130px;
+    height: 230px;
+  }
+  .pics .tree.two {
+    position: absolute;
+    left: 1615px;
+    top: 150px;
+    width: 130px;
+    height: 230px;
+  }
+  .pics .tree.small {
+    position: absolute;
+    left: 798px;
+    top: 100px;
+    width: 89.38px;
+    height: 158px;
+  }
+  .pics .panda {
+    position: absolute;
+    left: 950px;
+    top: 200px;
+    width: 170px;
+    height: 155px;
+  }
+}
+@media (max-width: 1220px) {
+  .illustrations {
+    margin-top: 22px;
+  }
+  .pics {
+    top: 25px;
+  }
+  .pics .bamboo.small {
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    width: 116px;
+    height: 221px;
+  }
+  .pics .tree.one {
+    position: absolute;
+    left: 260px;
+    top: 39px;
+    width: 130px;
+    height: 230px;
+  }
+  .pics .tree.small {
+    position: absolute;
+    left: 610px;
+    top: 100px;
+    width: 89.38px;
+    height: 158px;
+  }
+  .pics .panda {
+    position: absolute;
+    left: 915px;
+    top: 230px;
+    width: 170px;
+    height: 155px;
+  }
+  .pics .bamboo {
+    position: absolute;
+    left: 1000px;
+    top: 115px;
+    width: 147px;
+    height: 280px;
+  }
 }
 .buttons {
   display: flex;
@@ -525,9 +640,6 @@ footer .design-info {
 .slider-button:focus {
   outline: none;
   border: none;
-}
-.pets-in-zoo {
-  margin-top: 77px;
 }
 .pets-in-zoo .container {
   position: relative;
@@ -559,7 +671,6 @@ footer .design-info {
 }
 .pets-in-zoo .pets-container {
   position: relative;
-  left: -15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -579,7 +690,6 @@ footer .design-info {
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 10px 0 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: white;
@@ -637,25 +747,16 @@ footer .design-info {
   max-height: 94px;
   display: flex;
   justify-content: space-between;
-  padding: 17px 30px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: white;
 }
 .pets-in-zoo .pet .caption .button-tv {
   position: relative;
-  top: 12px;
-  width: 32px;
-  height: 32px;
   border: none;
   background: url(../../assets/icons/tv-icon.svg) no-repeat center / cover;
 }
 .pets-in-zoo .pet p {
-  margin: 7px 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.72px;
   color: #909090;
 }
 .pets-in-zoo .slider-button {
@@ -670,7 +771,6 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
 }
 .pay-and-feed .container {
   display: flex;
@@ -681,22 +781,15 @@ footer .design-info {
   display: flex;
   position: relative;
   width: 100%;
-  top: -4.39vw;
 }
 .pay-and-feed .container .head h2 {
   position: relative;
-  top: 11px;
   width: 100%;
   color: #C5E1E6;
 }
 .pay-and-feed .container .head .donate-button {
-  width: 430px;
+  position: relative;
   white-space: nowrap;
-  padding: 14px 63px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.75px;
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
@@ -719,12 +812,9 @@ footer .design-info {
 }
 .pay-and-feed .container .don-steps {
   position: relative;
-  top: 10px;
-  left: -21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 .pay-and-feed .container .don-step {
   display: flex;
@@ -775,7 +865,6 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  left: 0;
 }
 .testimonials .testimonial .review {
   position: relative;
@@ -843,10 +932,14 @@ footer .design-info {
   top: 13px;
 }
 .look-animals .animals {
+  position: relative;
   display: flex;
   width: 89%;
   justify-content: space-between;
   overflow-x: hidden;
+}
+.look-animals .buttons {
+  position: relative;
 }
 .look-animals .animal {
   display: flex;
@@ -911,11 +1004,16 @@ footer .design-info {
 }
 @media (min-width: 1919px) {
   .container {
-    width: 80%;
+    width: 1536px;
+  }
+  .intro .text {
+    width: 700px;
+    margin-top: 6.4%;
+    margin-left: 8px;
   }
   .intro-panda {
-    width: 59%;
-    height: 750px;
+    height: 776px;
+    width: 902px;
     clip-path: url(#intro-path);
   }
   .pet-pic {
@@ -927,10 +1025,32 @@ footer .design-info {
     height: 29vw;
     background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
   }
+  .arrow {
+    width: 300px;
+    height: 50px;
+    background-image: url(../../assets/icons/arrow.svg);
+  }
+  .arrow.one {
+    left: 11vw;
+  }
+  .arrow.two {
+    left: 37vw;
+  }
+  .reviews {
+    left: 8px;
+  }
+  .testimonial {
+    width: 25vw;
+  }
 }
 @media (min-width: 1780px) and (max-width: 1918px) {
   .container {
     width: 80%;
+  }
+  .intro .text {
+    width: 700px;
+    margin-top: 6.4%;
+    margin-left: 8px;
   }
   .pay-and-feed {
     height: 29vw;
@@ -976,10 +1096,10 @@ footer .design-info {
     background-image: url(../../assets/icons/arrow-desktop.svg);
   }
   .arrow.one {
-    left: 20vw;
+    left: 18vw;
   }
   .arrow.two {
-    left: 51vw;
+    left: 50.5vw;
   }
   .pet-pic {
     width: 170px;
@@ -1001,6 +1121,16 @@ footer .design-info {
   }
 }
 @media (min-width: 1221px) {
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+  }
+  .btn-with-icon {
+    border-radius: 100px;
+    padding: 14px 20px;
+  }
   .intro {
     background: url(../../assets/images/intro/intro-bg.svg) no-repeat center / cover;
   }
@@ -1020,8 +1150,8 @@ footer .design-info {
     font-weight: 500;
     line-height: 75.84px;
   }
-  .intro button {
-    margin-top: 87px;
+  .intro .watch-now {
+    top: 100px;
   }
   .intro .subtitle {
     width: 480px;
@@ -1033,7 +1163,141 @@ footer .design-info {
     color: #F3F7F8;
   }
   .how-it-works .title {
-    top: -125px;
+    top: -112px;
+    left: 35px;
+  }
+  .how-it-works .steps {
+    top: 13px;
+    left: 5px;
+  }
+  .pets-in-zoo {
+    margin-top: 94px;
+  }
+  .don-steps {
+    top: 15px;
+    left: -20px;
+    width: 80%;
+  }
+  .look-animals .slider {
+    width: 99%;
+    top: 10px;
+    left: 25px;
+  }
+  .look-animals .buttons {
+    left: -50px;
+  }
+  .pets-in-zoo p {
+    margin: 7px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.72px;
+  }
+  .pets-in-zoo .img-container {
+    padding: 10px 0 0;
+  }
+  .pets-in-zoo .button-tv {
+    top: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .pets-in-zoo .caption {
+    padding: 17px 30px;
+  }
+  .pay-and-feed {
+    margin-top: 80px;
+  }
+  .pay-and-feed .head {
+    top: -80px;
+  }
+  .pay-and-feed .head h2 {
+    top: 11px;
+  }
+  .pay-and-feed .head .donate-button {
+    width: 430px;
+    padding: 14px 63px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.75px;
+  }
+  .look-animals {
+    margin-top: 90px;
+    margin-bottom: 130px;
+  }
+}
+@media (max-width: 1220px) {
+  .pets-in-zoo .img-container {
+    padding: 32px 0 10px 10px;
+  }
+  .pets-in-zoo .btn-with-icon {
+    top: 10px;
+    left: -8px;
+    border-radius: 100px;
+    padding: 5px 20px;
+  }
+  .pets-in-zoo .caption {
+    padding: 15px 25px;
+  }
+  .pets-in-zoo h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17.24px;
+    font-weight: 500;
+    line-height: 20.2px;
+  }
+  .pets-in-zoo p {
+    margin: 7px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.84px;
+    font-weight: 400;
+    line-height: 15.05px;
+  }
+  .pets-in-zoo .button-tv {
+    top: 12px;
+    left: 7px;
+    width: 23px;
+    height: 23px;
+  }
+  .pay-and-feed {
+    margin-top: 60px;
+  }
+  .pay-and-feed .don-steps {
+    top: 0px;
+    left: -20px;
+    width: 97.5%;
+  }
+  .pay-and-feed .head {
+    top: -65px;
+  }
+  .pay-and-feed .head h2 {
+    top: 11px;
+    left: -70px;
+  }
+  .pay-and-feed .head .donate-button {
+    top: -10px;
+    width: 430px;
+    padding: 7px 63px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.75px;
+  }
+  .testimonials {
+    margin-top: 60px;
+  }
+  .testimonials .btn-with-icon {
+    top: 0px;
+    left: -5px;
+    border-radius: 100px;
+    padding: 5px 20px;
+  }
+  .look-animals {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  .look-animals .head {
+    height: 40px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 1220px) and (min-width: 1150px) {
@@ -1066,8 +1330,11 @@ footer .design-info {
   .intro button {
     top: 50px;
   }
+  .pets-in-zoo {
+    margin-top: 60px;
+  }
   .how-it-works .title {
-    top: -80px;
+    top: -56px;
   }
   .donate-button {
     position: relative;
@@ -1095,9 +1362,6 @@ footer .design-info {
   .pet {
     width: 31.25%;
     margin: 0 20px 20px 0;
-  }
-  .pay-and-feed {
-    background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center / cover;
   }
 }
 @media (max-width: 1150px) {
