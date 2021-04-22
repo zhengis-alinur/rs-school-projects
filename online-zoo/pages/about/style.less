@@ -346,7 +346,6 @@ svg {
         color: @custom-white;
       }
       .donate-button {
-        position: relative;
         white-space: nowrap;
         text-transform: uppercase;
         border-radius: 100px;
@@ -1262,6 +1261,16 @@ svg {
       }
     }
   }
+  .pay-and-feed {
+    .donate-button {
+      position: relative;
+    }
+  }
+  .testimonials {
+    .btn-with-icon {
+      position: relative;
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -1341,19 +1350,108 @@ svg {
     }
   }
 
-  .pay-and-feed {
-    height: 1000px;
-    .don-steps {
-      flex-direction: column;
-    }
-    .donate-button {
+  .pets-in-zoo {
+    .penguin {
       display: none;
     }
+    .btn-with-icon {
+      margin-top: 45px;
+    }
+  }
+
+
+  .pay-and-feed {
     margin-bottom: 0;
+    background: url(../../assets/images/pay-and-feed/bg-320.svg) no-repeat center/cover;
+    height: 900px;
+    .title {
+      top: -10px;
+      min-width: 150px;
+    }
+    .container {
+      left: -15px;
+      top: -53px;
+    }
+    .don-steps {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 640px;
+    }
+    .donate-button {
+      position: absolute;
+      top: 750px;
+      left: 10px;
+      height: 40px;
+      padding: 10px 50px;
+    }
+    .arrow {
+      width: 21px;
+      height: 21px;
+      margin: auto 0;
+      background-image: url(../../assets/icons/small-arrow.svg);
+      transform: rotate(90deg);
+      left: 39vw;
+      &.one {
+        top: 185px;
+      }
+      &.two {
+        top: 425px;
+      }
+    }
   }
   .testimonials {
+    margin-top: 35px;
+    .container {
+      padding: 0 10px;
+    }
     .reviews {
+      margin-top: 10px;
+      left: 2px;
       flex-direction: column;
+      .testimonial {
+        width: 300px;
+        margin-bottom: 30px;
+      }
+    }
+    .btn-with-icon {
+      position: absolute;
+      top: 705px;
+      left: 10px;
+      height: 25px;
+      padding: 5px 50px;
+    }
+  }
+
+  .look-animals {
+    margin-top: 58px;
+    margin-bottom: 0;
+    .title {
+      width: 300px;
+    }
+    .slider {
+      flex-direction: column;
+      left: 10px;
+    }
+    .animals {
+      flex-wrap: wrap;
+      width: 300px;
+      .animal {
+        margin-bottom: 50px;
+        &.lemur,
+        &.elephant {
+        display: block;
+      }
+      }
+    }
+    .buttons {
+      top: -20px;
+      left: 115px;
+    }
+    .slider-button {
+      transform: rotate(90deg);
+      &.left {
+        display: none;
+      }
     }
   }
 }
