@@ -24,10 +24,6 @@ h2 {
   color: @custom-black;
 }
 
-h3 {
-  .roboto(24px, 500, 28.13px);
-}
-
 svg {
   position: absolute;
 }
@@ -38,9 +34,10 @@ svg {
   height: 41vw;
   .container {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     .text {
-      margin-top: 5.5%;
+      position: relative;
     }
     .watch-now {
       position: relative;
@@ -108,6 +105,7 @@ svg {
 }
 
 .btn-with-icon {
+  position: relative;
   display: flex;
   align-items: center;
   img {
@@ -116,8 +114,6 @@ svg {
   }
   background: none;
   border: 2px solid @button-lined;
-  border-radius: 100px;
-  padding: 14px 20px;
   .roboto-mono(18px,
   400,
   23.74px);
@@ -141,11 +137,11 @@ svg {
 .how-it-works {
   margin-top: 45px;
   position: relative;
-
   .title {
     position: absolute;
   }
   .steps {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -219,7 +215,6 @@ svg {
 }
 
 .pets-in-zoo {
-  margin-top: 77px;
   .container {
     position: relative;
     display: flex;
@@ -250,7 +245,6 @@ svg {
   }
   .pets-container {
     position: relative;
-    left: -15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -269,7 +263,6 @@ svg {
       display: flex;
       justify-content: center;
       position: relative;
-      padding: 10px 0 0;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       background-color: white;
@@ -327,24 +320,16 @@ svg {
       max-height: 94px;
       display: flex;
       justify-content: space-between;
-      padding: 17px 30px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background-color: white;
       .button-tv {
         position: relative;
-        top: 12px;
-        width: 32px;
-        height: 32px;
         border: none;
         background: url(../../assets/icons/tv-icon.svg) no-repeat center/cover;
       }
     }
     p {
-      margin: 7px 0;
-      .roboto(16px,
-      400,
-      18.72px);
       color: @custom-gray;
     }
   }
@@ -362,7 +347,6 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
   .container {
     display: flex;
     flex-direction: column;
@@ -371,20 +355,14 @@ svg {
       display: flex;
       position: relative;
       width: 100%;
-      top: -4.39vw;
       h2 {
         position: relative;
-        top: 11px;
         width: 100%;
         color: @custom-white;
       }
       .donate-button {
-        width: 430px;
+        position: relative;
         white-space: nowrap;
-        padding: 14px 63px;
-        .roboto-mono(18px,
-        400,
-        23.75px);
         text-transform: uppercase;
         border-radius: 100px;
         border: none;
@@ -408,12 +386,9 @@ svg {
     }
     .don-steps {
       position: relative;
-      top: 10px;
-      left: -21px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
     }
     .don-step {
       display: flex;
@@ -466,7 +441,6 @@ svg {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    left: 0;
   }
   .testimonial {
     .review {
@@ -537,10 +511,14 @@ svg {
     top: 13px;
   }
   .animals {
+    position: relative;
     display: flex;
     width: 89%;
     justify-content: space-between;
     overflow-x: hidden;
+  }
+  .buttons {
+    position: relative;
   }
   .animal {
     display: flex;
@@ -605,11 +583,18 @@ svg {
 
 @media (min-width: 1919px) {
   .container {
-    width: 80%;
+    width: 1536px;
+  }
+  .intro {
+    .text {
+      width: 700px;
+      margin-top: 6.4%;
+      margin-left: 8px;
+    }
   }
   .intro-panda {
-    width: 59%;
-    height: 750px;
+    height: 776px;
+    width: 902px;
     clip-path: url(#intro-path);
   }
   .pet-pic {
@@ -621,10 +606,34 @@ svg {
     height: 29vw;
     background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center/cover;
   }
+  .arrow {
+    width: 300px;
+    height: 50px;
+    background-image: url(../../assets/icons/arrow.svg);
+    &.one {
+      left: 11vw;
+    }
+    &.two {
+      left: 37vw;
+    }
+  }
+  .reviews {
+    left: 8px;
+  }
+  .testimonial {
+    width: 25vw;
+  }
 }
 @media (min-width: 1780px) and (max-width: 1918px) {
   .container {
     width: 80%;
+  }
+  .intro {
+    .text {
+      width: 700px;
+      margin-top: 6.4%;
+      margin-left: 8px;
+    }
   }
   .pay-and-feed {
     height: 29vw;
@@ -659,7 +668,7 @@ svg {
 
 @media (max-width: 1780px) {
   .container {
-      width: 100%;
+    width: 100%;
   }
   .intro {
     background: url(../../assets/images/intro/bg-1200.svg) no-repeat center/cover;
@@ -670,10 +679,10 @@ svg {
     height: 50px;
     background-image: url(../../assets/icons/arrow-desktop.svg);
     &.one {
-      left: 20vw;
+      left: 18vw;
     }
     &.two {
-      left: 51vw;
+      left: 50.5vw;
     }
   }
   .pet-pic {
@@ -697,6 +706,13 @@ svg {
 }
 
 @media (min-width: 1221px) {
+  h3 {
+    .roboto(24px, 500, 28.13px);
+  }
+  .btn-with-icon {
+    border-radius: 100px;
+    padding: 14px 20px;
+  }
   .intro {
     background: url(../../assets/images/intro/intro-bg.svg) no-repeat center/cover;
     .title {
@@ -713,8 +729,8 @@ svg {
         75.84px);
       }
     }
-    button {
-      margin-top: 87px;
+    .watch-now {
+      top: 100px;
     }
     .subtitle {
       width: 480px;
@@ -727,8 +743,143 @@ svg {
   }
   .how-it-works {
     .title {
-      top: -125px;
+      top: -112px;
+      left: 35px;
     }
+    .steps {
+      top: 13px;
+      left: 5px;
+    }
+  }
+  .pets-in-zoo {
+    margin-top: 94px;
+  }
+  .don-steps {
+    top: 15px;
+    left: -20px;
+    width: 80%;
+  }
+  .look-animals {
+    .slider {
+      width: 99%;
+      top: 10px;
+      left: 25px;
+    }
+    .buttons {
+      left: -50px;
+    }
+  }
+  .pets-in-zoo {
+    p {
+      margin: 7px 0;
+      .roboto(16px,
+      400,
+      18.72px);
+    }
+    .img-container {
+      padding: 10px 0 0;
+    }
+    .button-tv {
+      top: 12px;
+      width: 32px;
+      height: 32px;
+    }
+    .caption {
+      padding: 17px 30px;
+    }
+  }
+  .pay-and-feed {
+    margin-top: 80px;
+    .head {
+      top: -80px;
+      h2 {
+        top: 11px;
+      }
+      .donate-button {
+        width: 430px;
+        padding: 14px 63px;
+        .roboto-mono(18px,
+        400,
+        23.75px);
+      }
+    }
+  }
+  .look-animals {
+    margin-top: 90px;
+    margin-bottom: 130px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .pets-in-zoo {
+    .img-container {
+      padding: 32px 0 10px 10px;
+    }
+    .btn-with-icon {
+      top: 10px;
+      left: -8px;
+      border-radius: 100px;
+      padding: 5px 20px;
+    }
+    .caption {
+      padding: 15px 25px;
+    }
+
+    h3 {
+      .roboto(17.24px, 500, 20.2px);
+    }
+    p {
+      margin: 7px 0;
+      .roboto(12.84px,
+      400,
+      15.05px);
+    }
+    .button-tv {
+      top: 12px;
+      left: 7px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+  .pay-and-feed {
+    margin-top: 60px;
+    .don-steps {
+      top: 0px;
+      left: -20px;
+      width: 97.5%;
+    }
+    .head {
+      top: -65px;
+      h2 {
+        top: 11px;
+        left: -70px;
+      }
+      .donate-button {
+        top: -10px;
+        width: 430px;
+        padding: 7px 63px;
+        .roboto-mono(18px,
+        400,
+        23.75px);
+      }
+    }
+  }
+  .testimonials {
+    margin-top: 60px;
+    .btn-with-icon {
+      top: 0px;
+      left: -5px;
+      border-radius: 100px;
+      padding: 5px 20px;
+    }
+  }
+  .look-animals {
+    margin-top: 40px;
+    .head {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+    margin-bottom: 80px;
   }
 }
 
@@ -761,9 +912,17 @@ svg {
       top: 50px;
     }
   }
+
+  .pets-in-zoo {
+    margin-top: 60px;
+    .pet {
+
+    }
+  }
+
   .how-it-works {
     .title {
-      top: -80px;
+      top: -56px;
     }
   }
 
@@ -798,9 +957,6 @@ svg {
   .pet {
     width: 31.25%;
     margin: 0 20px 20px 0;
-  }
-  .pay-and-feed {
-    background: url(../../assets/images/pay-and-feed/bg.svg) no-repeat center/cover;
   }
 }
 
