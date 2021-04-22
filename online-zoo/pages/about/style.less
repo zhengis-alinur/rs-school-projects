@@ -412,7 +412,6 @@ svg {
     .head {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 50px;
       h2 {
         position: relative;
         top: 14px;
@@ -445,10 +444,6 @@ svg {
       }
       span {
         position: relative;
-        width: 80%;
-        margin-top: 10px;
-        left: 45px;
-        top: 18px;
       }
     }
   }
@@ -492,7 +487,7 @@ svg {
     display: flex;
     width: 89%;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .buttons {
     position: relative;
@@ -983,6 +978,18 @@ svg {
       line-height: 18.75px;
     }
   }
+
+  .testimonials {
+    .head {
+      margin-bottom: 50px;
+    }
+    span {
+      width: 80%;
+      margin-top: 10px;
+      left: 45px;
+      top: 18px;
+    }
+  }
 }
 
 @media (max-width: 1150px) {
@@ -1086,9 +1093,11 @@ svg {
   }
   .pets-in-zoo {
     margin-top: 27px;
-    overflow-x: hidden;
     .container {
       padding: 0 20px;
+    }
+    .slider {
+      overflow: hidden;
     }
     .btn-with-icon {
       img {
@@ -1190,19 +1199,66 @@ svg {
   }
   .testimonials {
     margin-top: 24px;
+    .head {
+      margin-bottom: 30px;
+    }
     .reviews {
+      left: -8px;
       overflow-x: hidden;
     }
     .testimonial {
       min-width: 256px;
+      margin-right: 20px;
+      .review {
+        padding: 19px 0 0 15px;
+        height: auto;
+        margin-bottom: 25px;
+        span {
+          margin-bottom: 15px;
+        }
+      }
       .date {
+        margin: 0;
         font-size: 12px;
         line-height: 14.06px;
       }
       .feedback {
+        margin: 0;
+        font-size: 14px;
         font-style: italic;
-        line-height: 14px;
         line-height: 20px;
+      }
+      .person {
+        font-size: 14px;
+        line-height: 16.41px;
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .look-animals {
+    .title {
+      position: relative;
+      top: 14px;
+      left: 12px;
+    }
+    left: -20px;
+    .buttons {
+      position: relative;
+      left: 36px;
+    }
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 500px) {
+  .pets-in-zoo {
+    .btn-with-icon {
+      display: block;
+      &.bottom{
+        display: none;
       }
     }
   }
@@ -1210,20 +1266,90 @@ svg {
 
 @media (max-width: 500px) {
   .intro {
+    background: url(../../assets/images/intro/bg-320.svg) no-repeat center/cover;
+    height: 530px;
+    .intro-panda {
+      top: -10px;
+      left: 15px;
+    }
     .container {
+      padding: 20px;
+      top: -23px;
       flex-direction: column;
+    }
+    .title {
+      .rubik(32px, 300, 37.92px);
+      &.bold {
+        .rubik(28px, 500, 33.18px);
+      }
+    }
+    .subtitle {
+      margin-top: 17px;
+    }
+    .btns {
+      position: relative;
+      width: 295px;
+      top: -10px;
+    }
+    .watch-now {
+      padding: 10px 30px;
+      &.donate {
+        left: 0px;
+      }
     }
   }
   .how-it-works {
+    margin-top: 90px;
+    .title {
+      top: -56px;
+      left: 10px;
+    }
     .steps {
+      height: 579px;
+      left: -5px;
       flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .step-item {
+
+      }
     }
   }
+
+  .pets-in-zoo {
+    .slider {
+      position: relative;
+      top: -15px;
+    }
+    .title {
+      position: relative;
+      top: -16px;
+      left: -10px;
+    }
+    .btn-with-icon {
+      display: none;
+      &.bottom{
+        display: block;
+      }
+    }
+    .img-container {
+      height: 60px;
+    }
+    .text {
+      position: relative;
+      top: 20px;
+    }
+  }
+
   .pay-and-feed {
     height: 1000px;
     .don-steps {
       flex-direction: column;
     }
+    .donate-button {
+      display: none;
+    }
+    margin-bottom: 0;
   }
   .testimonials {
     .reviews {

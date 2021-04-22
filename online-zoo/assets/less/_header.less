@@ -166,9 +166,6 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    top: 18px;
-    height: 47px;
-    .roboto(16px, 400, 18.75px);
     text-transform: uppercase;
     color: #fff;
   }
@@ -208,6 +205,11 @@ footer {
   }
   .main-nav {
     display: flex;
+  }
+  .design-info {
+    top: 18px;
+    height: 47px;
+    .roboto(16px, 400, 18.75px);
   }
 }
 
@@ -259,10 +261,22 @@ footer {
       }
     }
   }
+  .design-info {
+    top: 5px;
+    left: 26px;
+    height: 28px;
+    .roboto(10px, 400, 11.72px);
+  }
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 500px) {
+  header {
+    height: 50px;
+    padding: 0;
+    .container {
+      padding: 0 15px;
+    }
+  }
 }
 
 

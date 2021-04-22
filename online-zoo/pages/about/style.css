@@ -202,12 +202,6 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  top: 18px;
-  height: 47px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.75px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -239,6 +233,14 @@ footer .design-info {
   }
   .main-nav {
     display: flex;
+  }
+  .design-info {
+    top: 18px;
+    height: 47px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
   }
 }
 @media (max-width: 1100px) {
@@ -280,6 +282,24 @@ footer .design-info {
   }
   header .main-nav li .link.current::after {
     display: none;
+  }
+  .design-info {
+    top: 5px;
+    left: 26px;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.72px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    height: 50px;
+    padding: 0;
+  }
+  header .container {
+    padding: 0 15px;
   }
 }
 .intro {
@@ -645,6 +665,42 @@ footer .design-info {
     height: 155px;
   }
 }
+@media (max-width: 600px) {
+  .illustrations {
+    margin-top: 0;
+    background-position-x: -350px;
+  }
+  .illustrations .pics {
+    height: auto;
+  }
+  .illustrations .bamboo.small {
+    display: none;
+  }
+  .illustrations .tree.one {
+    display: none;
+  }
+  .illustrations .tree.small {
+    position: absolute;
+    left: 225px;
+    top: 0px;
+    width: 49.74px;
+    height: 87.9px;
+  }
+  .illustrations .panda {
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    width: 90px;
+    height: 83px;
+  }
+  .illustrations .bamboo {
+    position: absolute;
+    left: -10px;
+    top: -99px;
+    width: 82px;
+    height: 155px;
+  }
+}
 .buttons {
   display: flex;
   flex-direction: column-reverse;
@@ -876,7 +932,6 @@ footer .design-info {
 .testimonials .container .head {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 .testimonials .container .head h2 {
   position: relative;
@@ -908,10 +963,6 @@ footer .design-info {
 }
 .testimonials .testimonial .review span {
   position: relative;
-  width: 80%;
-  margin-top: 10px;
-  left: 45px;
-  top: 18px;
 }
 .testimonials .date {
   color: #b2b2b2;
@@ -1421,6 +1472,15 @@ footer .design-info {
     font-style: italic;
     line-height: 18.75px;
   }
+  .testimonials .head {
+    margin-bottom: 50px;
+  }
+  .testimonials span {
+    width: 80%;
+    margin-top: 10px;
+    left: 45px;
+    top: 18px;
+  }
 }
 @media (max-width: 1150px) {
   h2 {
@@ -1530,10 +1590,12 @@ footer .design-info {
   }
   .pets-in-zoo {
     margin-top: 27px;
-    overflow-x: hidden;
   }
   .pets-in-zoo .container {
     padding: 0 20px;
+  }
+  .pets-in-zoo .slider {
+    overflow: hidden;
   }
   .pets-in-zoo .btn-with-icon {
     font-family: 'Roboto Mono', monospace;
@@ -1630,34 +1692,150 @@ footer .design-info {
   .testimonials {
     margin-top: 24px;
   }
+  .testimonials .head {
+    margin-bottom: 30px;
+  }
   .testimonials .reviews {
+    left: -8px;
     overflow-x: hidden;
   }
   .testimonials .testimonial {
     min-width: 256px;
+    margin-right: 20px;
+  }
+  .testimonials .testimonial .review {
+    padding: 19px 0 0 15px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .testimonials .testimonial .review span {
+    margin-bottom: 15px;
   }
   .testimonials .testimonial .date {
+    margin: 0;
     font-size: 12px;
     line-height: 14.06px;
   }
   .testimonials .testimonial .feedback {
+    margin: 0;
+    font-size: 14px;
     font-style: italic;
-    line-height: 14px;
     line-height: 20px;
+  }
+  .testimonials .testimonial .person {
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .testimonials .testimonial .person img {
+    width: 40px;
+  }
+  .look-animals {
+    left: -20px;
+    margin-bottom: 50px;
+  }
+  .look-animals .title {
+    position: relative;
+    top: 14px;
+    left: 12px;
+  }
+  .look-animals .buttons {
+    position: relative;
+    left: 36px;
+  }
+}
+@media (min-width: 500px) {
+  .pets-in-zoo .btn-with-icon {
+    display: block;
+  }
+  .pets-in-zoo .btn-with-icon.bottom {
+    display: none;
   }
 }
 @media (max-width: 500px) {
+  .intro {
+    background: url(../../assets/images/intro/bg-320.svg) no-repeat center / cover;
+    height: 530px;
+  }
+  .intro .intro-panda {
+    top: -10px;
+    left: 15px;
+  }
   .intro .container {
+    padding: 20px;
+    top: -23px;
     flex-direction: column;
   }
+  .intro .title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 37.92px;
+  }
+  .intro .title.bold {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 33.18px;
+  }
+  .intro .subtitle {
+    margin-top: 17px;
+  }
+  .intro .btns {
+    position: relative;
+    width: 295px;
+    top: -10px;
+  }
+  .intro .watch-now {
+    padding: 10px 30px;
+  }
+  .intro .watch-now.donate {
+    left: 0px;
+  }
+  .how-it-works {
+    margin-top: 90px;
+  }
+  .how-it-works .title {
+    top: -56px;
+    left: 10px;
+  }
   .how-it-works .steps {
+    height: 579px;
+    left: -5px;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pets-in-zoo .slider {
+    position: relative;
+    top: -15px;
+  }
+  .pets-in-zoo .title {
+    position: relative;
+    top: -16px;
+    left: -10px;
+  }
+  .pets-in-zoo .btn-with-icon {
+    display: none;
+  }
+  .pets-in-zoo .btn-with-icon.bottom {
+    display: block;
+  }
+  .pets-in-zoo .img-container {
+    height: 60px;
+  }
+  .pets-in-zoo .text {
+    position: relative;
+    top: 20px;
   }
   .pay-and-feed {
     height: 1000px;
+    margin-bottom: 0;
   }
   .pay-and-feed .don-steps {
     flex-direction: column;
+  }
+  .pay-and-feed .donate-button {
+    display: none;
   }
   .testimonials .reviews {
     flex-direction: column;
