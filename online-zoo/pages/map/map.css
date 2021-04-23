@@ -243,7 +243,9 @@ footer .design-info {
 }
 @media (max-width: 1100px) {
   header {
+    position: fixed;
     max-height: 50px;
+    z-index: 100;
   }
   header .right {
     display: none;
@@ -301,6 +303,9 @@ footer .design-info {
   }
   header .container {
     padding: 0 15px;
+  }
+  header .main-nav {
+    top: 40px;
   }
 }
 .content {
@@ -466,6 +471,20 @@ footer .design-info {
     line-height: 28.44px;
     position: relative;
     top: 30px;
+  }
+}
+@media (max-width: 1100px) {
+  main,
+  footer {
+    position: relative;
+    top: 72px;
+  }
+}
+@media (max-width: 500px) {
+  main,
+  footer {
+    position: relative;
+    top: 50px;
   }
 }
 @media (max-width: 700px) and (max-device-width: 700px) {

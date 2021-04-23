@@ -251,7 +251,9 @@ footer .design-info {
 }
 @media (max-width: 1100px) {
   header {
+    position: fixed;
     max-height: 50px;
+    z-index: 100;
   }
   header .right {
     display: none;
@@ -309,6 +311,9 @@ footer .design-info {
   }
   header .container {
     padding: 0 15px;
+  }
+  header .main-nav {
+    top: 40px;
   }
 }
 main .container {
@@ -428,6 +433,20 @@ main .illustrations .pics .bamboo {
 @media (max-width: 1780px) {
   .container {
     width: 100%;
+  }
+}
+@media (max-width: 1100px) {
+  main,
+  footer {
+    position: relative;
+    top: 72px;
+  }
+}
+@media (max-width: 500px) {
+  main,
+  footer {
+    position: relative;
+    top: 50px;
   }
 }
 @media (min-width: 600px) {
