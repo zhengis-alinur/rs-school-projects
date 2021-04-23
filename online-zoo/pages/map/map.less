@@ -38,10 +38,8 @@ svg {
   background-color: @primary;
   .wrapper {
     width: 100%;
-    margin-top: 50px;
   }
   .title {
-    .rubik(24px, 400, 28.44px);
     color: @custom-white;
     text-transform: uppercase;
   }
@@ -193,12 +191,42 @@ svg {
   }
 }
 
+@media (min-width: 700px) {
+  .title {
+    .rubik(24px, 400, 28.44px);
+    position: relative;
+    top: 30px;
+  }
+}
+
 @media (max-width: 700px) and (max-device-width: 700px) {
+
+  .title {
+    .rubik(16px, 400, 21.33px);
+    position: relative;
+    top: 30px;
+  }
+
   .wrapper {
     overflow: scroll;
   }
   .map {
     width: 709px;
     height: 460px;
+  }
+}
+
+@media (min-width: 400px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 400px) and (max-device-width: 400px) {
+  .title {
+    display: none;
+  }
+  .wrapper {
+    margin-top: 0;
   }
 }
