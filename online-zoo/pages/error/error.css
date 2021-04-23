@@ -53,7 +53,7 @@ footer .left {
 header label,
 footer label {
   font-size: 40px;
-  line-height: 70px;
+  line-height: 45px;
   color: white;
 }
 header #toggle,
@@ -198,11 +198,7 @@ header .signup:focus {
   border-radius: 100px;
 }
 footer {
-  height: 200px;
   background-color: #196469;
-}
-footer .container {
-  margin-top: 45px;
 }
 footer .main-nav {
   margin-left: 78px;
@@ -212,18 +208,16 @@ footer .design-info {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  top: 18px;
-  height: 47px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.75px;
   text-transform: uppercase;
   color: #fff;
 }
 @media (min-width: 1221px) {
   .user-button {
     display: none;
+  }
+  footer .container {
+    margin-top: 45px;
+    margin-bottom: 45px;
   }
 }
 @media (max-width: 1220px) {
@@ -234,6 +228,10 @@ footer .design-info {
   .signup {
     display: none;
   }
+  footer .container {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 1100px) {
   label {
@@ -242,8 +240,19 @@ footer .design-info {
   .main-nav {
     display: flex;
   }
+  .design-info {
+    top: 18px;
+    height: 47px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+  }
 }
 @media (max-width: 1100px) {
+  header {
+    max-height: 50px;
+  }
   header .right {
     display: none;
   }
@@ -282,6 +291,24 @@ footer .design-info {
   }
   header .main-nav li .link.current::after {
     display: none;
+  }
+  .design-info {
+    top: 5px;
+    left: 26px;
+    height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.72px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    height: 50px;
+    padding: 0;
+  }
+  header .container {
+    padding: 0 15px;
   }
 }
 main .container {
