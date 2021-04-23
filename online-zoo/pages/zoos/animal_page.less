@@ -41,26 +41,19 @@ svg {
 }
 
 main {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   .container {
     position: relative;
-    top: -6px;
+    top: 0px;
     display: flex;
     justify-content: space-between;
-    .sidebar {
-      height: 240px;
-      min-width: 155px;
-    }
     .img-wrapper {
       position: relative;
-      display: flex;
       align-items: center;
       .frame {
-        width: 98px;
-        height: 95px;
         margin-top: 15px;
         transition: transform .5s linear;
         &.current {
@@ -93,11 +86,6 @@ main {
         transform: rotate(360deg);
       }
 
-      .pet-name {
-        .roboto-mono(14px, 500, 18.46px);
-        text-transform: uppercase;
-      }
-
       &:hover .pet-name {
         color: @primary;
       }
@@ -119,7 +107,6 @@ main {
         .buttons {
           display: flex;
           justify-content: space-between;
-          width: 116px;
           a {
             transition: transform .3s ease;
             &:hover {
@@ -140,23 +127,19 @@ main {
         }
       }
       .live-yt {
-        margin-top: 42px;
         iframe {
-          width: 100%;
           margin-top: 8px;
           margin-right: 20px;
           border-radius: 20px;
         }
       }
       .p-title {
-        .rubik(18px, 400, 21.33px);
-          color: @custom-black;
+        color: @custom-black;
       }
       .side-cameras {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 56px;
         .cameras {
           margin-top: 8px;
         }
@@ -203,7 +186,6 @@ main {
         overflow: hidden;
         .shot {
           position: relative;
-          margin-right: 35px;
           border-radius: 10px;
           background: url(../../assets/images/animal-page/preview-photo.jpg) no-repeat center/cover;
         }
@@ -220,32 +202,11 @@ main {
     .about {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      margin-top: 100px;
       color: @custom-black;
-      .title {
-          margin-bottom: 25px;
-      }
-      .information {
-        max-width: 600px;
-        .info {
-          margin-bottom: 40px;
-        }
-      }
-      .interesting-facts {
+      ul {
         position: relative;
-        left: -40px;
-        max-width: 574px;
-        ul {
-          position: relative;
-          left: 22px;
-          list-style-image: url(../../assets/images/animal-page/list-image.svg);
-          li {
-            margin-bottom: 15px;
-          }
-        }
+        list-style-image: url(../../assets/images/animal-page/list-image.svg);
       }
-
       a {
         color: @custom-black;
         text-decoration: underline;
@@ -258,65 +219,18 @@ main {
       h4 {
         .roboto(16px, 400, 18.75px);
       }
-      p, a {
-        margin-top: 8px;
-      }
     }
   }
 
+@import "../../assets/less/_illustrations";
   .illustrations {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 20vw;
-    background: url(../../assets/images/illustrations/bg.svg) no-repeat center/cover;
-    background-position: top;
-    .pics {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      .tree.one{
-        position: relative;
-        top: -3.5vw;
-        left: 20vw;
-        width: 6.77vw;
-        height: 11.97vw;
-        background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
-      }
-      .tree.two{
-        position: relative;
-        width: 6.77vw;
-        height: 11.97vw;
-        top: 3vw;
-        left: -4vw;
-        background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center/cover;
-      }
-      .panda {
-        position: relative;
-        top: -2vw;
-        left: 19vw;
-        width: 8.8vw;
-        height: 8.07vw;
-        background: url(../../assets/images/illustrations/Panda.svg) no-repeat center/cover;
-      }
-      .bamboo {
-        position: relative;
-        width: 7.5vw;
-        height: 14.5vw;
-        top: -4vw;
-        left: -8vw;
-        background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center/cover;
-      }
-    }
-      .donate-button {
+  }
+  .donate-button {
         position: absolute;
-        bottom: 3vw;
+        bottom: 10vw;
         margin: 0 auto;
         padding: 14px 68px;
-        .roboto-mono(18px, 400, 23.75px);
         text-transform: uppercase;
         border-radius: 100px;
         border: none;
@@ -337,9 +251,7 @@ main {
           border: none;
         }
       }
-  }
 }
-
 
 @media (min-width: 1920px) {
   .container {
@@ -366,6 +278,7 @@ main {
     width: ~"calc(100% - 155px)"
   }
   .sidebar {
+    margin-top: 0px;
     position: sticky;
     top: 15px;
   }
@@ -380,78 +293,281 @@ main {
     min-width: 19.7vw;
     height: 12.5vw;
   }
-
 }
 
-@media (max-width: 1780px) and (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-  .sidebar {
-    position: sticky;
-    top: 15px;
-  }
-  .content {
-    width: 86.5%;
-  }
-  .live-yt {
-    iframe {
-      height: 600px;
-    }
-  }
-  .shot {
-    min-width: 23vw;
-    height: 14vw;
-  }
-  .buttons {
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1199px) {
-  .sidebar {
-    position: sticky;
-    top: 15px;
-  }
-  .img-wrapper {
-    flex-direction: column;
-    margin: 0 auto 45px;
-  }
+@media (min-width: 1220px) and (max-width: 1920px) {
   .content {
     width: ~"calc(100% - 155px)"
   }
+  .img-wrapper {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 65px;
+    top: 25px;
+    left: 10px;;
+    .frame {
+      position: absolute;
+      top: -25px;
+      z-index: -10;
+    }
+  }
+  .illustrations {
+    height: 21vw;
+  }
+}
+
+@media (min-width: 1220px){
+  .content {
+    width: ~"calc(100% - 155px)"
+  }
+  .sidebar {
+    position: sticky;
+    top: 15px;
+    min-width: 155px;
+  }
+  .frame {
+    width: 98px;
+    height: 95px;
+  }
+  .img-wrapper {
+    left: -30px;
+    .roboto-mono(14px, 500, 18.46px);
+    text-transform: uppercase;
+  }
+  .content {
+    .head {
+      .buttons {
+        width: 116px;
+      }
+    }
+  }
+  .side-cameras {
+    margin-top: 56px;
+    .shot {
+      min-width: 20vw;
+      height: 12.5vw;
+      margin-right: 30px;
+    }
+  }
   .live-yt {
+    margin-top: 42px;
+    .p-title {
+      .rubik(18px, 400, 21.33px);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+    }
+  }
+  .about {
+    margin-top: 80px;
+    width: 100%;
+    .title {
+        margin-bottom: 25px;
+      }
+    .information {
+      max-width: 600px;
+      .info {
+        margin-bottom: 40px;
+      }
+    }
+    .interesting-facts {
+      position: relative;
+      left: -80px;
+      max-width: 574px;
+      ul {
+        left: 22px;
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    p, a {
+      margin-top: 8px;
+    }
+  }
+  .donate-button {
+    .roboto-mono(18px, 400, 23.75px);
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1220px) {
+  .content {
+    width: ~"calc(100% - 155px)";
+    top: -13px;
+    left: -20px;
+  }
+  .sidebar {
+    margin-right: 60px;
+  }
+
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 37px;
+    .frame {
+      position: absolute;
+      z-index: -10;
+      width: 80px;
+      height: 77px;
+      top: 10px;
+    }
+    .img {
+      position: relative;
+      top: 30px;
+      width: 65px;
+    }
+    .pet-name {
+      position: relative;
+      .roboto(14px, 400, 16.41px);
+      top: 37px;
+    }
+  }
+  .live-yt {
+    margin-top: 26px;
+    .p-title {
+      .rubik(18px, 400, 21.33px);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+    }
+  }
+  .side-cameras {
+    margin-top: 26px;
+    .p-title {
+      .rubik(18px, 400, 21.33px);
+    }
+    .shot {
+      min-width: 25.5vw;
+      height: 17vw;
+      margin-right: 15px;
+    }
+  }
+  .about {
+    margin-top: 60px;
+    width: 92%;
+    .interesting-facts {
+    }
+  }
+  .donate-button {
+    .roboto-mono(14px, 400, 16px);
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 1180px) {
+  .container {
+    padding: 0 18px;
+  }
+  main {
+    margin-top: 8px;
+  }
+  .sidebar {
+    position: sticky;
+    width: 50px;
+    top: 10px;
+  }
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 37px;
+    .roboto(12px, 400, 14.06px);
+    .frame {
+      position: absolute;
+      z-index: -10;
+      width: 49px;
+      height: 47.5px;
+      top: 10px;
+    }
+    .img {
+      position: relative;
+      top: 30px;
+      width: 40px;
+    }
+    .pet-name {
+      position: relative;
+      top: 37px;
+    }
+  }
+  .content {
+    width: ~"calc(100% - 70px)";
+    .title {
+      font-size: 18px;
+      line-height: 21.09px;
+    }
+    .head {
+      .buttons {
+        position: relative;
+        left: -10px;
+        top: 5px;
+        width: 93px;
+      }
+      img {
+        width: 35px;
+      }
+    }
+  }
+  .live-yt {
+    margin-top: 0;
     iframe {
       height: 314px;
+      width: 100%;
+    }
+    .p-title {
+      .rubik(14px, 400, 16.59px);
     }
   }
   .about {
     flex-direction: column;
   }
-  .shot {
-    min-width: 23vw;
-    height: 14vw;
+  .side-cameras {
+    margin-top: 25px;
+    .shot {
+      min-width: 37vw;
+      height: 23.5vw;
+      margin-right: 10px;
+    }
+  }
+  .about {
+    margin-top: 50px;
+    .title {
+        margin-bottom: 20px;
+      }
+    .information {
+      max-width: 600px;
+      .info {
+        margin-bottom: 30px;
+      }
+
+    }
+    .interesting-facts {
+      position: relative;
+      top: -10px;
+      max-width: 574px;
+      .title {
+        margin-bottom: 20px;
+      }
+      ul {
+        left: 22px;
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    p, a {
+      margin-bottom: 6px;
+    }
   }
 }
 
 @media (min-width: 600px) {
   .sidebar {
-    .img-wrapper {
-      justify-content: center;
-    }
-    .img {
-      position: absolute;
-      top: 25px;
-      left: 38px;
-      transition: transform .5s linear;
-    }
-
-    .pet-name {
-      position: absolute;
-      bottom: -15px;
-      .roboto-mono(14px, 500, 18.46px);
-      text-transform: uppercase;
-    }
+    height: 240;
+  }
+  .img-wrapper {
+    display: flex;
+  }
+  .dropdown {
+    display: none;
   }
 }
 
@@ -459,19 +575,52 @@ main {
   main {
     margin: 0;
     .container {
+      padding: 0 10px;
       flex-direction: column;
     }
   }
+  .content {
+    .title {
+      .roboto(18px, 400, 21.09px);
+    }
+  }
+  .live-yt {
+    margin-top: 0;
+    iframe {
+      height: 180px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .p-title {
+      .rubik(14px, 400, 16.59px);
+    }
+  }
+
+  .buttons {
+    position: relative;
+    left: -5px;
+    img {
+      width: 25px;
+    }
+  }
+
   .sidebar {
     position: relative;
-    left: -28px;
+    left: -10px;
     width: 100%;
+    height: 60px;
     margin: 0 auto;
     padding: 0;
+    .dropdown {
+      position: relative;
+      display: block;
+      left: 145px;
+    }
     .frame {
       display: none;
     }
     .img-wrapper {
+      display: none;
       flex-direction: row;
       justify-content: flex-start;
       width: 100vw;
@@ -484,15 +633,60 @@ main {
         top: -30px;
         width: 40px;
       }
+      &.first {
+        display: flex;
+      }
     }
     .pet-name {
       margin-left: 20px;
       color: white;
     }
+
+  }
+  .side-cameras {
+    margin-top: 10px;
   }
   .shot {
-    min-width: 23vw;
-    height: 14vw;
+    min-width: 42vw;
+    height: 27vw;
+    margin-right: 10px;
+  }
+  .about {
+    flex-direction: column;
+    margin-top: 22px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .information {
+      max-width: 600px;
+      .info {
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
+        margin-bottom: 28px;
+      }
+
+    }
+    .interesting-facts {
+      position: relative;
+      width: 90%;
+      top: -10px;
+      .title {
+        margin-bottom: 20px;
+      }
+      ul {
+        left: 22px;
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    p, a {
+      margin-bottom: 6px;
+    }
   }
 }
 

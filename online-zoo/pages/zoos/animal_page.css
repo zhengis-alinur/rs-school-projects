@@ -53,7 +53,7 @@ footer .left {
 header label,
 footer label {
   font-size: 40px;
-  line-height: 70px;
+  line-height: 45px;
   color: white;
 }
 header #toggle,
@@ -250,6 +250,9 @@ footer .design-info {
   }
 }
 @media (max-width: 1100px) {
+  header {
+    max-height: 50px;
+  }
   header .right {
     display: none;
   }
@@ -317,29 +320,22 @@ footer .design-info {
   text-transform: uppercase;
 }
 main {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
 }
 main .container {
   position: relative;
-  top: -6px;
+  top: 0px;
   display: flex;
   justify-content: space-between;
 }
-main .container .sidebar {
-  height: 240px;
-  min-width: 155px;
-}
 main .container .img-wrapper {
   position: relative;
-  display: flex;
   align-items: center;
 }
 main .container .img-wrapper .frame {
-  width: 98px;
-  height: 95px;
   margin-top: 15px;
   transition: transform 0.5s linear;
 }
@@ -369,13 +365,6 @@ main .container .img-wrapper .img {
 main .container .img-wrapper:hover .img.active {
   transform: rotate(360deg);
 }
-main .container .img-wrapper .pet-name {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18.46px;
-  text-transform: uppercase;
-}
 main .container .img-wrapper:hover .pet-name {
   color: #2A8086;
 }
@@ -398,7 +387,6 @@ main .container .content .head {
 main .container .content .head .buttons {
   display: flex;
   justify-content: space-between;
-  width: 116px;
 }
 main .container .content .head .buttons a {
   transition: transform 0.3s ease;
@@ -417,27 +405,18 @@ main .container .content .head .buttons a:focus {
   outline: none;
   border: none;
 }
-main .container .content .live-yt {
-  margin-top: 42px;
-}
 main .container .content .live-yt iframe {
-  width: 100%;
   margin-top: 8px;
   margin-right: 20px;
   border-radius: 20px;
 }
 main .container .content .p-title {
-  font-family: 'Rubik', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.33px;
   color: #0D444D;
 }
 main .container .content .side-cameras {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 56px;
 }
 main .container .content .side-cameras .cameras {
   margin-top: 8px;
@@ -484,7 +463,6 @@ main .container .content .cameras {
 }
 main .container .content .cameras .shot {
   position: relative;
-  margin-right: 35px;
   border-radius: 10px;
   background: url(../../assets/images/animal-page/preview-photo.jpg) no-repeat center / cover;
 }
@@ -499,31 +477,11 @@ main .container .content .cameras .live-icon {
 main .container .about {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-top: 100px;
   color: #0D444D;
 }
-main .container .about .title {
-  margin-bottom: 25px;
-}
-main .container .about .information {
-  max-width: 600px;
-}
-main .container .about .information .info {
-  margin-bottom: 40px;
-}
-main .container .about .interesting-facts {
+main .container .about ul {
   position: relative;
-  left: -40px;
-  max-width: 574px;
-}
-main .container .about .interesting-facts ul {
-  position: relative;
-  left: 22px;
   list-style-image: url(../../assets/images/animal-page/list-image.svg);
-}
-main .container .about .interesting-facts ul li {
-  margin-bottom: 15px;
 }
 main .container .about a {
   color: #0D444D;
@@ -545,83 +503,290 @@ main .container .about h4 {
   font-weight: 400;
   line-height: 18.75px;
 }
-main .container .about p,
-main .container .about a {
-  margin-top: 8px;
-}
 main .illustrations {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 20vw;
-  background: url(../../assets/images/illustrations/bg.svg) no-repeat center / cover;
-  background-position: top;
 }
 main .illustrations .pics {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+}
+main .illustrations .pics .bamboo.small {
+  background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
 }
 main .illustrations .pics .tree.one {
-  position: relative;
-  top: -3.5vw;
-  left: 20vw;
-  width: 6.77vw;
-  height: 11.97vw;
   background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center / cover;
 }
 main .illustrations .pics .tree.two {
-  position: relative;
-  width: 6.77vw;
-  height: 11.97vw;
-  top: 3vw;
-  left: -4vw;
   background: url(../../assets/images/illustrations/bigTree.svg) no-repeat center / cover;
 }
+main .illustrations .pics .tree.small {
+  background: url(../../assets/images/illustrations/smallTree.svg) no-repeat center / cover;
+}
 main .illustrations .pics .panda {
-  position: relative;
-  top: -2vw;
-  left: 19vw;
-  width: 8.8vw;
-  height: 8.07vw;
   background: url(../../assets/images/illustrations/Panda.svg) no-repeat center / cover;
 }
 main .illustrations .pics .bamboo {
-  position: relative;
-  width: 7.5vw;
-  height: 14.5vw;
-  top: -4vw;
-  left: -8vw;
   background: url(../../assets/images/illustrations/Bamboo.svg) no-repeat center / cover;
 }
-main .illustrations .donate-button {
+@media (min-width: 1921px) {
+  main .illustrations {
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat center / cover;
+    width: 100%;
+    margin-top: 95px;
+    height: 27vw;
+  }
+  main .pics {
+    width: 100%;
+    min-height: 600px;
+  }
+  main .pics .bamboo.small {
+    position: relative;
+    top: -5vw;
+    left: 0vw;
+    width: 6.05vw;
+    height: 11.5vw;
+  }
+  main .pics .tree.one {
+    position: relative;
+    top: -5vw;
+    left: -7vw;
+    width: 6.77vw;
+    height: 11.97vw;
+  }
+  main .pics .tree.two {
+    position: relative;
+    top: 1vw;
+    left: -8vw;
+    width: 6.77vw;
+    height: 11.97vw;
+  }
+  main .pics .tree.small {
+    position: relative;
+    top: -3.5vw;
+    left: 4.5vw;
+    width: 4.65vw;
+    height: 8.22vw;
+  }
+  main .pics .panda {
+    position: relative;
+    top: 1.5vw;
+    left: -4vw;
+    width: 8.8vw;
+    height: 8.07vw;
+  }
+  main .pics .bamboo {
+    position: relative;
+    top: -1.5vw;
+    left: -19vw;
+    width: 7.65vw;
+    height: 14.5vw;
+  }
+}
+@media (max-width: 1920px) {
+  main .illustrations {
+    margin-top: 120px;
+    background: url(../../assets/images/illustrations/bg.svg) no-repeat left / cover;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  main .pics {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  main .pics .bamboo {
+    position: absolute;
+    left: 1040px;
+    top: 95px;
+    width: 147px;
+    height: 280px;
+  }
+  main .pics .bamboo.small {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 116px;
+    height: 221px;
+  }
+  main .pics .tree.one {
+    position: absolute;
+    left: 220px;
+    top: 39px;
+    width: 130px;
+    height: 230px;
+  }
+  main .pics .tree.two {
+    position: absolute;
+    left: 1615px;
+    top: 150px;
+    width: 130px;
+    height: 230px;
+  }
+  main .pics .tree.small {
+    position: absolute;
+    left: 798px;
+    top: 100px;
+    width: 89.38px;
+    height: 158px;
+  }
+  main .pics .panda {
+    position: absolute;
+    left: 950px;
+    top: 200px;
+    width: 170px;
+    height: 155px;
+  }
+}
+@media (max-width: 1220px) {
+  main .illustrations {
+    margin-top: 22px;
+  }
+  main .pics {
+    top: 25px;
+  }
+  main .pics .bamboo.small {
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    width: 116px;
+    height: 221px;
+  }
+  main .pics .tree.one {
+    position: absolute;
+    left: 260px;
+    top: 39px;
+    width: 130px;
+    height: 230px;
+  }
+  main .pics .tree.small {
+    position: absolute;
+    left: 610px;
+    top: 100px;
+    width: 89.38px;
+    height: 158px;
+  }
+  main .pics .panda {
+    position: absolute;
+    left: 915px;
+    top: 230px;
+    width: 170px;
+    height: 155px;
+  }
+  main .pics .bamboo {
+    position: absolute;
+    left: 1000px;
+    top: 115px;
+    width: 147px;
+    height: 280px;
+  }
+}
+@media (max-width: 800px) {
+  main .illustrations {
+    background-position-x: -120px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  main .pics {
+    top: 25px;
+  }
+  main .pics .bamboo.small {
+    display: none;
+  }
+  main .pics .tree.one {
+    position: absolute;
+    left: 33px;
+    top: 120px;
+    width: 72px;
+    height: 128px;
+  }
+  main .pics .tree.small {
+    position: absolute;
+    left: 225px;
+    top: 150px;
+    width: 49.74px;
+    height: 87.9px;
+  }
+  main .pics .panda {
+    position: absolute;
+    left: 395px;
+    top: 225px;
+    width: 90px;
+    height: 83px;
+  }
+  main .pics .bamboo {
+    position: absolute;
+    left: 440px;
+    top: 165px;
+    width: 82px;
+    height: 155px;
+  }
+}
+@media (max-width: 600px) {
+  main .illustrations {
+    margin-top: 0;
+    background-position-x: -350px;
+  }
+  main .illustrations .pics {
+    height: auto;
+  }
+  main .illustrations .bamboo.small {
+    display: none;
+  }
+  main .illustrations .tree.one {
+    display: none;
+  }
+  main .illustrations .tree.small {
+    position: absolute;
+    left: 225px;
+    top: 0px;
+    width: 49.74px;
+    height: 87.9px;
+  }
+  main .illustrations .panda {
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    width: 90px;
+    height: 83px;
+  }
+  main .illustrations .bamboo {
+    position: absolute;
+    left: -10px;
+    top: -99px;
+    width: 82px;
+    height: 155px;
+  }
+}
+main .illustrations {
+  position: relative;
+}
+main .donate-button {
   position: absolute;
-  bottom: 3vw;
+  bottom: 10vw;
   margin: 0 auto;
   padding: 14px 68px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.75px;
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
   background-color: #C5E1E6;
   transition: all 0.2s linear;
 }
-main .illustrations .donate-button:hover {
+main .donate-button:hover {
   background-color: #F3F7F8;
   outline: none;
   border: none;
 }
-main .illustrations .donate-button:focus {
+main .donate-button:focus {
   outline: none;
   border: none;
 }
-main .illustrations .donate-button:active {
+main .donate-button:active {
   transform: scale(0.98);
   outline: none;
   border: none;
@@ -650,6 +815,7 @@ main .illustrations .donate-button:active {
     width: calc(100% - 155px);
   }
   .sidebar {
+    margin-top: 0px;
     position: sticky;
     top: 15px;
   }
@@ -661,69 +827,293 @@ main .illustrations .donate-button:active {
     height: 12.5vw;
   }
 }
-@media (max-width: 1780px) and (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-  .sidebar {
-    position: sticky;
-    top: 15px;
-  }
-  .content {
-    width: 86.5%;
-  }
-  .live-yt iframe {
-    height: 600px;
-  }
-  .shot {
-    min-width: 23vw;
-    height: 14vw;
-  }
-  .buttons {
-    margin-left: 10px;
-  }
-}
-@media (min-width: 601px) and (max-width: 1199px) {
-  .sidebar {
-    position: sticky;
-    top: 15px;
-  }
-  .img-wrapper {
-    flex-direction: column;
-    margin: 0 auto 45px;
-  }
+@media (min-width: 1220px) and (max-width: 1920px) {
   .content {
     width: calc(100% - 155px);
   }
-  .live-yt iframe {
-    height: 314px;
-  }
-  .about {
+  .img-wrapper {
+    position: relative;
     flex-direction: column;
+    margin-bottom: 65px;
+    top: 25px;
+    left: 10px;
   }
-  .shot {
-    min-width: 23vw;
-    height: 14vw;
+  .img-wrapper .frame {
+    position: absolute;
+    top: -25px;
+    z-index: -10;
+  }
+  .illustrations {
+    height: 21vw;
   }
 }
-@media (min-width: 600px) {
-  .sidebar .img-wrapper {
-    justify-content: center;
+@media (min-width: 1220px) {
+  .content {
+    width: calc(100% - 155px);
   }
-  .sidebar .img {
-    position: absolute;
-    top: 25px;
-    left: 38px;
-    transition: transform 0.5s linear;
+  .sidebar {
+    position: sticky;
+    top: 15px;
+    min-width: 155px;
   }
-  .sidebar .pet-name {
-    position: absolute;
-    bottom: -15px;
+  .frame {
+    width: 98px;
+    height: 95px;
+  }
+  .img-wrapper {
+    left: -30px;
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     font-weight: 500;
     line-height: 18.46px;
     text-transform: uppercase;
+  }
+  .content .head .buttons {
+    width: 116px;
+  }
+  .side-cameras {
+    margin-top: 56px;
+  }
+  .side-cameras .shot {
+    min-width: 20vw;
+    height: 12.5vw;
+    margin-right: 30px;
+  }
+  .live-yt {
+    margin-top: 42px;
+  }
+  .live-yt .p-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.33px;
+  }
+  .live-yt iframe {
+    width: 100%;
+    height: 600px;
+  }
+  .about {
+    margin-top: 80px;
+    width: 100%;
+  }
+  .about .title {
+    margin-bottom: 25px;
+  }
+  .about .information {
+    max-width: 600px;
+  }
+  .about .information .info {
+    margin-bottom: 40px;
+  }
+  .about .interesting-facts {
+    position: relative;
+    left: -80px;
+    max-width: 574px;
+  }
+  .about .interesting-facts ul {
+    left: 22px;
+  }
+  .about .interesting-facts ul li {
+    margin-bottom: 15px;
+  }
+  .about p,
+  .about a {
+    margin-top: 8px;
+  }
+  .donate-button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.75px;
+  }
+}
+@media (min-width: 1150px) and (max-width: 1220px) {
+  .content {
+    width: calc(100% - 155px);
+    top: -13px;
+    left: -20px;
+  }
+  .sidebar {
+    margin-right: 60px;
+  }
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 37px;
+  }
+  .img-wrapper .frame {
+    position: absolute;
+    z-index: -10;
+    width: 80px;
+    height: 77px;
+    top: 10px;
+  }
+  .img-wrapper .img {
+    position: relative;
+    top: 30px;
+    width: 65px;
+  }
+  .img-wrapper .pet-name {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    top: 37px;
+  }
+  .live-yt {
+    margin-top: 26px;
+  }
+  .live-yt .p-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.33px;
+  }
+  .live-yt iframe {
+    width: 100%;
+    height: 600px;
+  }
+  .side-cameras {
+    margin-top: 26px;
+  }
+  .side-cameras .p-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.33px;
+  }
+  .side-cameras .shot {
+    min-width: 25.5vw;
+    height: 17vw;
+    margin-right: 15px;
+  }
+  .about {
+    margin-top: 60px;
+    width: 92%;
+  }
+  .donate-button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1180px) {
+  .container {
+    padding: 0 18px;
+  }
+  main {
+    margin-top: 8px;
+  }
+  .sidebar {
+    position: sticky;
+    width: 50px;
+    top: 10px;
+  }
+  .img-wrapper {
+    flex-direction: column;
+    margin: 0 auto 37px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+  }
+  .img-wrapper .frame {
+    position: absolute;
+    z-index: -10;
+    width: 49px;
+    height: 47.5px;
+    top: 10px;
+  }
+  .img-wrapper .img {
+    position: relative;
+    top: 30px;
+    width: 40px;
+  }
+  .img-wrapper .pet-name {
+    position: relative;
+    top: 37px;
+  }
+  .content {
+    width: calc(100% - 70px);
+  }
+  .content .title {
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+  .content .head .buttons {
+    position: relative;
+    left: -10px;
+    top: 5px;
+    width: 93px;
+  }
+  .content .head img {
+    width: 35px;
+  }
+  .live-yt {
+    margin-top: 0;
+  }
+  .live-yt iframe {
+    height: 314px;
+    width: 100%;
+  }
+  .live-yt .p-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.59px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .side-cameras {
+    margin-top: 25px;
+  }
+  .side-cameras .shot {
+    min-width: 37vw;
+    height: 23.5vw;
+    margin-right: 10px;
+  }
+  .about {
+    margin-top: 50px;
+  }
+  .about .title {
+    margin-bottom: 20px;
+  }
+  .about .information {
+    max-width: 600px;
+  }
+  .about .information .info {
+    margin-bottom: 30px;
+  }
+  .about .interesting-facts {
+    position: relative;
+    top: -10px;
+    max-width: 574px;
+  }
+  .about .interesting-facts .title {
+    margin-bottom: 20px;
+  }
+  .about .interesting-facts ul {
+    left: 22px;
+  }
+  .about .interesting-facts ul li {
+    margin-bottom: 15px;
+  }
+  .about p,
+  .about a {
+    margin-bottom: 6px;
+  }
+}
+@media (min-width: 600px) {
+  .sidebar {
+    height: 240;
+  }
+  .img-wrapper {
+    display: flex;
+  }
+  .dropdown {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -731,19 +1121,54 @@ main .illustrations .donate-button:active {
     margin: 0;
   }
   main .container {
+    padding: 0 10px;
     flex-direction: column;
+  }
+  .content .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+  }
+  .live-yt {
+    margin-top: 0;
+  }
+  .live-yt iframe {
+    height: 180px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .live-yt .p-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.59px;
+  }
+  .buttons {
+    position: relative;
+    left: -5px;
+  }
+  .buttons img {
+    width: 25px;
   }
   .sidebar {
     position: relative;
-    left: -28px;
+    left: -10px;
     width: 100%;
+    height: 60px;
     margin: 0 auto;
     padding: 0;
+  }
+  .sidebar .dropdown {
+    position: relative;
+    display: block;
+    left: 145px;
   }
   .sidebar .frame {
     display: none;
   }
   .sidebar .img-wrapper {
+    display: none;
     flex-direction: row;
     justify-content: flex-start;
     width: 100vw;
@@ -757,12 +1182,56 @@ main .illustrations .donate-button:active {
     top: -30px;
     width: 40px;
   }
+  .sidebar .img-wrapper.first {
+    display: flex;
+  }
   .sidebar .pet-name {
     margin-left: 20px;
     color: white;
   }
+  .side-cameras {
+    margin-top: 10px;
+  }
   .shot {
-    min-width: 23vw;
-    height: 14vw;
+    min-width: 42vw;
+    height: 27vw;
+    margin-right: 10px;
+  }
+  .about {
+    flex-direction: column;
+    margin-top: 22px;
+  }
+  .about .title {
+    margin-bottom: 20px;
+  }
+  .about .information {
+    max-width: 600px;
+  }
+  .about .information .info {
+    margin-bottom: 28px;
+  }
+  .about .information .info h4 {
+    font-size: 14px;
+  }
+  .about .information .info p {
+    font-size: 12px;
+  }
+  .about .interesting-facts {
+    position: relative;
+    width: 90%;
+    top: -10px;
+  }
+  .about .interesting-facts .title {
+    margin-bottom: 20px;
+  }
+  .about .interesting-facts ul {
+    left: 22px;
+  }
+  .about .interesting-facts ul li {
+    margin-bottom: 15px;
+  }
+  .about p,
+  .about a {
+    margin-bottom: 6px;
   }
 }

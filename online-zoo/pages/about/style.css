@@ -1201,6 +1201,10 @@ footer .design-info {
     border-radius: 100px;
     padding: 14px 20px;
   }
+  .testimonials .btn-with-icon {
+    height: 20px;
+    width: 200px;
+  }
   .intro {
     background: url(../../assets/images/intro/intro-bg.svg) no-repeat center / cover;
   }
@@ -1292,8 +1296,11 @@ footer .design-info {
     line-height: 23.75px;
   }
   .look-animals {
-    margin-top: 90px;
+    margin-top: 110px;
     margin-bottom: 130px;
+  }
+  .testimonials {
+    margin-top: 90px;
   }
 }
 @media (max-width: 1220px) {
